@@ -1,0 +1,2463 @@
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(5, 10, 12, 0.8), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Override broken local Tenor Sans paths from app.css */
+@font-face {
+	font-display: swap;
+	font-family: "Tenor Sans";
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local("Tenor Sans"),
+		url("https://fonts.gstatic.com/s/tenorsans/v21/bx6ANxqUneKx06UkIXISr3I.ttf") format("truetype");
+}
+
+#mt_captcha_json_value {
+	width: 78%;
+}
+
+#mt_captcha_site_private_key {
+	width: 68%;
+}
+
+.required {
+	color: red;
+}
+
+/* Hero title block — prevent top clipping, room for large type */
+.page-template-accueil .bloc-header-titre.bloc-header-titre-accueil {
+	overflow: visible;
+}
+
+.page-template-accueil .accueilBlocTitreH1 {
+	align-items: center;
+	height: auto;
+	justify-content: center;
+	min-height: 315px;
+	overflow: visible;
+	padding-top: clamp(28px, 4vh, 52px);
+}
+
+.page-template-accueil .accueilBlocTitreH1 .accueilH1 {
+	margin-top: 0;
+	width: 100%;
+}
+
+/* Hero tagline: theme handles horizontal (left + translateX); responsive vertical only */
+.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+	bottom: clamp(6px, 1.8vh, 14px);
+	display: flex !important;
+	opacity: 1;
+	visibility: visible;
+	z-index: 3;
+}
+
+.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+	opacity: 1 !important;
+	transform: translateY(clamp(10px, 2vh, 18px));
+}
+
+.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .draw-arrow {
+	opacity: 1;
+}
+
+/* Small phones */
+@media screen and (min-width: 480px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(10px, 2.2vh, 18px);
+	}
+}
+
+/* Large phones / small tablets */
+@media screen and (min-width: 600px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(12px, 2.5vh, 22px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(12px, 2.2vh, 20px));
+	}
+}
+
+/* Tablet */
+@media screen and (min-width: 800px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(22px, 3.5vh, 34px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(10px, 1.8vh, 16px));
+	}
+}
+
+/* Small desktop / laptop */
+@media (min-width: 1024px) and (max-width: 1159px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(34px, 4.5vh, 48px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(12px, 2vh, 22px));
+	}
+}
+
+/* Desktop */
+@media screen and (min-width: 1160px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(42px, 5vh, 58px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(14px, 2.2vh, 28px));
+	}
+}
+
+/* Large desktop */
+@media screen and (min-width: 1650px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(50px, 5.5vh, 68px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(18px, 2.5vh, 34px));
+	}
+}
+
+/* Short viewports — keep tagline nearer hero text (desktop/tablet only) */
+@media screen and (max-height: 700px) and (min-width: 800px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(2px, 1vh, 10px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(clamp(6px, 1.2vh, 12px));
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-height: 820px) {
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(20px, 3vh, 36px);
+	}
+}
+
+/* Mobile — tagline sits below welcome stack (into gap above monitor) */
+@media screen and (max-width: 799px) {
+	.page-template-accueil .accueilBlocTitreH1 {
+		min-height: auto;
+		padding-bottom: 62px;
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(-32px, -6vh, -14px);
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline .citation-txt {
+		transform: translateY(10px);
+	}
+}
+
+@media screen and (max-width: 399px) {
+	.page-template-accueil .accueilBlocTitreH1 {
+		padding-bottom: 52px;
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 > .hero-accueil-tagline.down-q.q {
+		bottom: clamp(-24px, -5vh, -10px);
+	}
+}
+
+@media (min-width: 1024px) {
+	.page-template-accueil .accueilBlocTitreH1 {
+		min-height: 360px;
+		padding-top: clamp(36px, 5vh, 64px);
+	}
+}
+
+@media (min-width: 1650px) {
+	.page-template-accueil .accueilBlocTitreH1 {
+		min-height: 420px;
+	}
+}
+
+/* Hero loop — hide letters until reveal starts (after 100% load) */
+.hero-loop-root.hero-loop-pending .hero-phase--welcome i,
+.hero-loop-root.hero-loop-pending .hero-phase--cta i {
+	opacity: 0 !important;
+}
+
+/* masqueAccueil.png missing from zip — disable broken CSS mask */
+.hero-loop-root.hero-loop-no-mask .line i {
+	-webkit-mask-image: none !important;
+	mask-image: none !important;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.creative-and-humaine {
+	margin-top: 15px;
+}
+
+@media (min-width: 800px) {
+	.hero-loop-root .hero-welcome-desktop.line.agence-de-communication,
+	.hero-loop-root .hero-welcome-creative.line.creative-and-humaine {
+		display: flex !important;
+	}
+
+	.hero-loop-root .hero-welcome-mobile.line.mobile-only {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1024px) {
+	.hero-loop-root .hero-welcome-desktop,
+	.hero-loop-root .hero-welcome-creative {
+		display: flex !important;
+	}
+}
+
+@media (max-width: 1023px) {
+	.hero-loop-root .hero-welcome-mobile {
+		align-items: center;
+		display: flex !important;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.hero-loop-root .hero-welcome-mobile .line {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.hero-loop-root .hero-welcome-mobile .line:not(:first-child) {
+		margin-top: 15px;
+	}
+}
+
+/* Hero loop — one slot, welcome ↔ CTA, repeating */
+.hero-loop-slot {
+	position: relative;
+	width: 100%;
+	min-height: 120px;
+}
+
+@media (min-width: 1024px) {
+	.hero-loop-slot {
+		min-height: 240px;
+	}
+}
+
+@media (min-width: 1650px) {
+	.hero-loop-slot {
+		min-height: 280px;
+	}
+}
+
+/* CTA row — same tight word spacing as welcome (fixed gaps, no flex-grow) */
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-desktop,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile {
+	width: 100%;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile.line.mobile-only {
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile.line.mobile-only > .line {
+	justify-content: center;
+	width: 100%;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile.line.mobile-only > .line:not(:first-child) {
+	margin-top: 15px;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile .hero-cta-row-prefix {
+	justify-content: center;
+}
+
+@media (min-width: 1024px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-desktop {
+		display: flex;
+		width: 100%;
+	}
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row {
+	width: 100%;
+	flex-wrap: nowrap;
+	align-items: baseline;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .space,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication .space,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication .space {
+	flex: 0 0 15px;
+	width: 15px;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication {
+	flex: 0 0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: baseline;
+}
+
+/* CTA typography — larger than welcome line to fill the row */
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > i,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .hero-pipe {
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 58px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .hero-pipe {
+	font-weight: 200;
+}
+
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication i,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+	font-family: Tenor Sans, sans-serif;
+	font-size: 58px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .hero-pipe,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+		font-size: 82px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .hero-pipe,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+		font-size: 100px;
+	}
+}
+
+@media (min-width: 1650px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .hero-pipe,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-communication i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+		font-size: 112px;
+	}
+}
+
+.hero-loop-root .hero-phase {
+	opacity: 0;
+	width: 100%;
+}
+
+.hero-loop-root .hero-phase.is-active {
+	opacity: 1;
+}
+
+.hero-loop-root .hero-phase[hidden] {
+	display: none !important;
+}
+
+/* Welcome only — ARCHMATION word (CTA phrase uses .hero-phase--cta rules above) */
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters,
+.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters i {
+	font-family: Tenor Sans, sans-serif;
+	font-size: 38px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters i {
+		font-size: 58px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--welcome .line.archmation-letters i {
+		font-size: 64px;
+	}
+}
+
+.hero-loop-root .hero-cta-row .hero-pipe {
+	color: #f0a090;
+	font-weight: 200;
+}
+
+.hero-loop-root .line i.is-visible {
+	opacity: 1 !important;
+}
+
+@keyframes heroLoopMaskReveal {
+	from {
+		-webkit-mask-position: -97% 0%;
+		mask-position: -97% 0%;
+		opacity: 0;
+	}
+	to {
+		-webkit-mask-position: 0% 0%;
+		mask-position: 0% 0%;
+		opacity: 1;
+	}
+}
+
+/* Mobile CTA — two lines (LET US | / phrase), sizes that fit narrow screens */
+@media (max-width: 1023px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile .hero-cta-row > i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile .hero-cta-row > .hero-pipe,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+		font-size: 46px;
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication {
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile .hero-cta-row > i,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile .hero-cta-row > .hero-pipe,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication i {
+		font-size: 38px;
+	}
+
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-row > .space,
+	.page-template-accueil .accueilBlocTitreH1 .hero-phase--cta .hero-cta-mobile-communication .space {
+		flex: 0 0 10px;
+		width: 10px;
+	}
+}
+
+/* Desktop / mobile visibility aligned with theme (1024px) */
+@media (max-width: 1023px) {
+	.hero-loop-root .hero-welcome-desktop,
+	.hero-loop-root .hero-welcome-creative,
+	.hero-loop-root .hero-cta-desktop {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1024px) {
+	.hero-loop-root .hero-phase .mobile-only {
+		display: none !important;
+	}
+}
+
+/* Archmation expertise hero (#accueilFondNoir)
+ * Theme sets html{font-size:62.5%} (10px/rem) in app.css — sizes below use px/clamp
+ * calibrated for that root, not default 16px rem. */
+.page-template-accueil #accueilVideo {
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilFondNoir {
+	clear: both;
+	overflow: hidden;
+	padding-top: 0;
+	position: relative;
+	z-index: 2;
+}
+
+.page-template-accueil #react-expertise-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #react-services-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(24px, 3vw, 40px);
+	padding-top: clamp(24px, 3vw, 40px);
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__bg-base {
+	background: #0a0a0c;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__bg-radial {
+	background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__bg-gradient {
+	background: linear-gradient(135deg, #000 0%, #101015 45%, #08080a 100%);
+	inset: 0;
+	opacity: 0.8;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__bg-dots {
+	background-image: radial-gradient(white 1px, transparent 1px);
+	background-size: 26px 26px;
+	inset: 0;
+	opacity: 0.04;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilFondNoir .archmation-services__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilFondNoir .archmation-services__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__header {
+	margin-bottom: 64px;
+	text-align: center;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__label {
+	color: rgba(255, 255, 255, 0.6);
+	display: inline-block;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__title {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(44px, 7vw, 72px);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__cards {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilFondNoir .archmation-services__cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilFondNoir .archmation-services__cards {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card-wrap {
+	position: relative;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	box-sizing: border-box;
+	height: 100%;
+	overflow: hidden;
+	padding: 32px;
+	position: relative;
+	transition:
+		background-color 0.5s ease,
+		border-color 0.5s ease;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card:hover {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card-accent {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 9999px;
+	filter: blur(32px);
+	height: 80px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(40px, -40px);
+	transition: background-color 0.5s ease;
+	width: 80px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card:hover .archmation-services__card-accent {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__icon-wrap {
+	margin-bottom: 24px;
+	position: relative;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__icon {
+	color: #fff;
+	height: 40px;
+	transition: transform 0.3s ease;
+	width: 40px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card:hover .archmation-services__icon {
+	transform: scale(1.1);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card-title {
+	color: #fff;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.3;
+	margin: 0 0 16px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__card-desc {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(14px, 1.5vw, 16px);
+	line-height: 1.7;
+	margin: 0 0 32px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__btn {
+	align-items: center;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	color: #fff;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	padding: 10px 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__btn:hover {
+	background: #fff;
+	border-color: rgba(255, 255, 255, 0.4);
+	color: #000;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise {
+	color: #fff;
+	min-height: 320px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__grain {
+	inset: 0;
+	opacity: 0.03;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__grain-svg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__lines {
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__line {
+	background: #fff;
+	height: 1px;
+	position: absolute;
+	transform-origin: center;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__line--1 {
+	left: -5rem;
+	opacity: 0;
+	top: 25%;
+	transform: rotate(45deg);
+	width: 37.5rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__line--2 {
+	opacity: 0;
+	right: -5rem;
+	top: 33%;
+	transform: rotate(-12deg);
+	width: 50rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__line--3 {
+	bottom: 25%;
+	left: 25%;
+	opacity: 0;
+	transform: rotate(30deg);
+	width: 25rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise.is-inview .archmation-expertise__line--1 {
+	animation: archLineFade 2s ease forwards;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise.is-inview .archmation-expertise__line--2 {
+	animation: archLineFade2 2s ease 0.3s forwards;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise.is-inview .archmation-expertise__line--3 {
+	animation: archLineFade3 2s ease 0.6s forwards;
+}
+
+@keyframes archLineFade {
+	to { opacity: 0.1; }
+}
+
+@keyframes archLineFade2 {
+	to { opacity: 0.08; }
+}
+
+@keyframes archLineFade3 {
+	to { opacity: 0.05; }
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-top: clamp(64px, 8vw, 96px);
+	padding-bottom: clamp(48px, 6vw, 80px);
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilFondNoir .archmation-expertise__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilFondNoir .archmation-expertise__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil #accueilFondNoir .archmation-expertise__inner {
+		max-width: 1650px;
+	}
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__grid {
+	align-items: center;
+	display: grid;
+	gap: clamp(48px, 6vw, 96px);
+	grid-template-columns: 1fr;
+	width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilFondNoir .archmation-expertise__grid {
+		gap: clamp(64px, 6vw, 96px);
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__col--left {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__badge {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 0.6);
+	display: inline-block;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.3em;
+	line-height: 1;
+	padding: 8px 16px;
+	text-transform: uppercase;
+	width: fit-content;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__headlines {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__title {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(44px, 7vw, 72px);
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__title--italic {
+	font-style: italic;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__title-accent {
+	font-style: italic;
+	font-weight: 300;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote {
+	padding-top: 1rem;
+	position: relative;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote .down-q.q {
+	align-items: flex-end;
+	bottom: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 32px;
+	left: auto;
+	margin: 0;
+	position: static;
+	transform: none;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote-copy {
+	flex-shrink: 0;
+	line-height: normal;
+	margin-left: 10px;
+	padding-bottom: 2px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote-arrow {
+	display: block;
+	flex-shrink: 0;
+	height: 86px;
+	overflow: visible;
+	transform: scaleY(-1);
+	transform-origin: center center;
+	width: 43px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote .draw-arrow {
+	fill: none;
+	stroke: rgba(255, 255, 255, 0.4);
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	stroke-width: 3;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote-text {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__quote-by {
+	color: rgba(255, 255, 255, 0.3);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.04em;
+	margin: 4px 0 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding-top: 1rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn {
+	align-items: center;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	gap: 12px;
+	letter-spacing: 0.08em;
+	padding: 16px 32px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn-icon {
+	height: 16px;
+	transition: transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn--primary {
+	background: #fff;
+	color: #000;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn--primary:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn--primary:hover .archmation-expertise__btn-icon {
+	transform: translateX(4px);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn--ghost {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: #fff;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__btn--ghost:hover {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: #fff;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__col--right {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	position: relative;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__watermark {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(128px, 18vw, 192px);
+	font-weight: 700;
+	left: -32px;
+	line-height: 1;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: -64px;
+	user-select: none;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__body {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding-top: clamp(32px, 5vw, 80px);
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__desc {
+	font-family: avenir-lt-pro, sans-serif;
+	line-height: 1.75;
+	margin: 0;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__desc--primary {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: clamp(18px, 2.4vw, 24px);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__desc--muted {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: clamp(17px, 2.2vw, 21px);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__highlight {
+	color: #fff;
+	font-weight: 500;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__rating {
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	gap: 1.5rem;
+	padding-top: 2rem;
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__google {
+	flex-shrink: 0;
+	height: 30px;
+	width: 30px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__score {
+	align-items: baseline;
+	display: flex;
+	gap: 0.25rem;
+	line-height: 1;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__score-value {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(40px, 4vw, 48px);
+	font-weight: 600;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__score-plus {
+	color: rgba(255, 255, 255, 0.4);
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(26px, 2.5vw, 30px);
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__stars-row {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin-top: 0.35rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__stars {
+	align-items: center;
+	display: inline-flex;
+	gap: 0.15rem;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__stars svg {
+	height: 15px;
+	width: 15px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__star--dim {
+	opacity: 0.3;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__rating-label {
+	color: rgba(255, 255, 255, 0.4);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(13px, 1.4vw, 15px);
+	letter-spacing: 0.04em;
+	margin-left: 6px;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__divider {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+	height: 1px;
+	margin-top: clamp(32px, 4vw, 48px);
+	transform: scaleX(0);
+	transform-origin: left;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise.is-inview .archmation-expertise__divider {
+	animation: archDividerGrow 1.2s ease 1s forwards;
+}
+
+@keyframes archDividerGrow {
+	to { transform: scaleX(1); }
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise.is-inview .archmation-expertise__watermark {
+	animation: archWatermarkFade 1s ease 0.8s forwards;
+}
+
+@keyframes archWatermarkFade {
+	to { opacity: 0.05; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilFondNoir .archmation-expertise__line,
+	.page-template-accueil #accueilFondNoir .archmation-expertise__watermark,
+	.page-template-accueil #accueilFondNoir .archmation-expertise__divider {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.page-template-accueil #accueilFondNoir .archmation-expertise__watermark {
+		opacity: 0.05 !important;
+	}
+
+	.page-template-accueil #accueilFondNoir .archmation-expertise__line {
+		opacity: 0.08 !important;
+	}
+
+	.page-template-accueil #accueilFondNoir .archmation-expertise__divider {
+		transform: scaleX(1) !important;
+	}
+}
+
+
+
+/* Industries section (#accueilIndustries) — React + Motion */
+.page-template-accueil #accueilIndustries.archmation-industries {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-industries-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__root {
+	background: #000;
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(24px, 3vw, 40px);
+	padding-top: clamp(24px, 3vw, 40px);
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__root ul,
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__root li {
+	list-style: none !important;
+	margin-left: 0 !important;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__grid-bg {
+	inset: 0;
+	opacity: 0.02;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__grid-pattern {
+	background-image:
+		linear-gradient(white 1px, transparent 1px),
+		linear-gradient(90deg, white 1px, transparent 1px);
+	background-size: 60px 60px;
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__layout {
+	display: grid;
+	gap: 64px;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__layout {
+		gap: 80px;
+		grid-template-columns: 1.4fr 1fr;
+	}
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(36px, 5vw, 48px);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__divider {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), transparent);
+	height: 1px;
+	margin-top: 32px;
+	transform-origin: left center;
+	width: 100%;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__list {
+	display: grid;
+	gap: 4px 40px;
+	grid-template-columns: 1fr;
+	list-style: none;
+	margin: 40px 0 0;
+	padding: 0;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__item {
+	list-style: none;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__row {
+	align-items: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	gap: 16px;
+	padding: 16px 0;
+	transition: border-color 0.3s ease;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__row:hover {
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__icon-wrap {
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 9999px;
+	display: inline-flex;
+	flex-shrink: 0;
+	height: 40px;
+	justify-content: center;
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease;
+	width: 40px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__row:hover .archmation-industries__icon-wrap {
+	background: #fff;
+	border-color: rgba(255, 255, 255, 0.4);
+	color: #000;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__icon {
+	height: 16px;
+	width: 16px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__label {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 16px;
+	transition: color 0.3s ease;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__row:hover .archmation-industries__label {
+	color: #fff;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__arrow {
+	color: #fff;
+	flex-shrink: 0;
+	height: 16px;
+	margin-left: auto;
+	opacity: 0;
+	transform: translateX(-8px);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__row:hover .archmation-industries__arrow {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__aside {
+	position: relative;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__panel {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 24px;
+	overflow: hidden;
+	padding: 32px;
+	position: relative;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__panel {
+		padding: 40px;
+	}
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__panel-glow {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 9999px;
+	filter: blur(48px);
+	height: 128px;
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	width: 128px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__panel-title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(28px, 4vw, 36px);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.15;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlights {
+	list-style: none;
+	margin: 32px 0 0;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight {
+	align-items: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	gap: 16px;
+	list-style: none;
+	padding: 16px 0;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight:last-child {
+	border-bottom: 0;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight-icon-wrap {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+	display: inline-flex;
+	flex-shrink: 0;
+	height: 36px;
+	justify-content: center;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+	width: 36px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight:hover .archmation-industries__highlight-icon-wrap {
+	background: #fff;
+	color: #000;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight-icon {
+	height: 16px;
+	width: 16px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight-copy {
+	color: rgba(255, 255, 255, 0.8);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__highlight-value {
+	color: #fff;
+	font-weight: 500;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__cta {
+	align-items: center;
+	background: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	box-sizing: border-box;
+	color: #000;
+	display: flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	gap: 12px;
+	justify-content: center;
+	letter-spacing: 0.2em;
+	margin-top: 24px;
+	padding: 16px 32px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+	width: 100%;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__cta:hover {
+	background: transparent;
+	color: #fff;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__cta-icon {
+	height: 16px;
+	transition: transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__cta:hover .archmation-industries__cta-icon {
+	transform: translate(4px, -4px);
+}
+
+/* Process section (#accueilProcess) — React + Motion */
+.page-template-accueil #accueilProcess.archmation-process {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-process-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__bg-base {
+	background: #0a0a0c;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__bg-radial {
+	background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__bg-gradient {
+	background: linear-gradient(135deg, #000 0%, #101015 45%, #08080a 100%);
+	inset: 0;
+	opacity: 0.8;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__bg-dots {
+	background-image: radial-gradient(white 1px, transparent 1px);
+	background-size: 26px 26px;
+	inset: 0;
+	opacity: 0.04;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__header {
+	text-align: center;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__label {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.35em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(36px, 5vw, 60px);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.15;
+	margin: 20px 0 0;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__steps-wrap {
+	margin-top: 80px;
+	position: relative;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__line {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+	display: none;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 52px;
+	transform-origin: left center;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__line {
+		display: block;
+	}
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__steps {
+	display: grid;
+	gap: 48px;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__steps {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilProcess.archmation-process .archmation-process__steps {
+		gap: 24px;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	text-align: center;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__node {
+	position: relative;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__icon-wrap {
+	align-items: center;
+	background: #0d0d10;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 9999px;
+	display: inline-flex;
+	height: 104px;
+	justify-content: center;
+	position: relative;
+	transition:
+		background-color 0.5s ease,
+		border-color 0.5s ease,
+		color 0.5s ease;
+	width: 104px;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step:hover .archmation-process__icon-wrap {
+	background: #fff;
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #000;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__icon {
+	color: #fff;
+	height: 32px;
+	transition: color 0.5s ease;
+	width: 32px;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step:hover .archmation-process__icon {
+	color: #000;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__ring {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transition:
+		opacity 0.7s ease,
+		transform 0.7s ease;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step:hover .archmation-process__ring {
+	opacity: 1;
+	transform: scale(1.25);
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__badge {
+	align-items: center;
+	background: #fff;
+	border-radius: 9999px;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+	color: #000;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	height: 28px;
+	justify-content: center;
+	position: absolute;
+	right: -4px;
+	top: -4px;
+	width: 28px;
+	z-index: 2;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step-title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(20px, 2.2vw, 24px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin: 28px 0 0;
+}
+
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__step-desc {
+	color: rgba(255, 255, 255, 0.55);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+	margin: 12px auto 0;
+	max-width: 15rem;
+}
+
+/* Value section (#accueilValue) — React + Motion */
+.page-template-accueil #accueilValue.archmation-value {
+	align-items: stretch !important;
+	background: #060608 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-value-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__bg-base {
+	background: #060608;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__bg-vertical {
+	background: linear-gradient(180deg, #0e0e12 0%, #060608 40%, #0b0b0f 100%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__bg-spotlight-left {
+	background: radial-gradient(ellipse 50% 60% at 15% 30%, rgba(255, 255, 255, 0.06), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__bg-spotlight-right {
+	background: radial-gradient(ellipse 40% 50% at 90% 80%, rgba(255, 255, 255, 0.04), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__bg-grid {
+	background-image:
+		linear-gradient(to right, white 1px, transparent 1px),
+		linear-gradient(to bottom, white 1px, transparent 1px);
+	background-size: 64px 64px;
+	inset: 0;
+	opacity: 0.025;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__layout {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__layout {
+		grid-template-columns: 1.6fr 1fr;
+	}
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 24px;
+	overflow: hidden;
+	position: relative;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-image {
+	filter: grayscale(100%);
+	height: 100%;
+	inset: 0;
+	object-fit: cover;
+	position: absolute;
+	transition: transform 1.2s ease-out;
+	width: 100%;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero:hover .archmation-value__hero-image {
+	transform: scale(1.05);
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-overlay-top {
+	background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+	inset: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-overlay-side {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+	inset: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-badge {
+	position: absolute;
+	right: 24px;
+	top: 24px;
+	z-index: 2;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-badge-inner {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	display: flex;
+	height: 64px;
+	justify-content: center;
+	width: 64px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-badge-icon {
+	color: #fff;
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: 30rem;
+	padding: 32px;
+	position: relative;
+	z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-content {
+		min-height: 34rem;
+		padding: 48px;
+	}
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__label {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.35em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(30px, 4vw, 48px);
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 20px 0 0;
+	max-width: 36rem;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__title-accent {
+	font-style: italic;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__desc {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(14px, 1.5vw, 16px);
+	line-height: 1.7;
+	margin: 24px 0 0;
+	max-width: 32rem;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__cards {
+	display: grid;
+	gap: 24px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 24px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 32px;
+	position: relative;
+	transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover {
+	background: #fff;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-icon-wrap {
+	position: absolute;
+	right: 24px;
+	top: 24px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-icon-inner {
+	align-items: center;
+	background: #000;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 9999px;
+	display: flex;
+	height: 48px;
+	justify-content: center;
+	transition: transform 0.5s ease;
+	width: 48px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-icon-inner {
+	transform: rotate(12deg);
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-icon {
+	color: #fff;
+	height: 20px;
+	width: 20px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-label {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	transition: color 0.5s ease;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-label {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(24px, 2.5vw, 30px);
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 20px 0 0;
+	transition: color 0.5s ease;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-title {
+	color: #000 !important;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-desc {
+	color: rgba(255, 255, 255, 0.55);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+	margin: 16px 0 0;
+	transition: color 0.5s ease;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-desc {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-footer {
+	margin-top: auto;
+	padding-top: 24px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-link {
+	align-items: center;
+	color: transparent;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	gap: 8px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	transition: color 0.5s ease;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-link {
+	color: #000;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card-link-icon {
+	height: 16px;
+	opacity: 0;
+	transform: translateX(-8px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilValue.archmation-value .archmation-value__card:hover .archmation-value__card-link-icon {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__hero-image,
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__card,
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__card-icon-inner,
+	.page-template-accueil #accueilValue.archmation-value .archmation-value__card-link-icon {
+		transition: none;
+	}
+}
+
+/* About section (#accueilQSN) — React + Motion */
+.page-template-accueil #accueilQSN.archmation-about {
+	align-items: stretch !important;
+	background: #000;
+	clear: both;
+	color: #fff;
+	display: block !important;
+	flex-direction: column !important;
+	justify-content: flex-start !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-about-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__root {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__grain {
+	inset: 0;
+	opacity: 0.02;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__grain-svg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-top: clamp(64px, 8vw, 96px);
+	padding-bottom: clamp(24px, 3vw, 40px);
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__inner {
+		max-width: 1650px;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__grid {
+	align-items: center;
+	display: grid;
+	gap: clamp(48px, 6vw, 96px);
+	grid-template-columns: 1fr;
+	width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__media {
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__frame {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 8px;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap {
+	background: #2f1840;
+	border-radius: 10px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	transition: background-color 1s ease;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap:hover {
+	background: #000;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image {
+	border-radius: 10px;
+	display: block;
+	filter: grayscale(100%) contrast(110%) brightness(92%);
+	height: 450px;
+	object-fit: cover;
+	object-position: center center;
+	position: relative;
+	transition: filter 1s ease;
+	width: 100%;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap:hover .archmation-about__image {
+	filter: none;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-overlay {
+	background: linear-gradient(145deg, #8b6aab 0%, #4a2860 55%, #2f1840 100%);
+	border-radius: 10px;
+	inset: 0;
+	mix-blend-mode: color;
+	opacity: 1;
+	pointer-events: none;
+	position: absolute;
+	transition: opacity 1s ease;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap:hover .archmation-about__image-overlay {
+	opacity: 0;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap::after {
+	background: rgba(35, 15, 50, 0.28);
+	border-radius: 10px;
+	content: "";
+	inset: 0;
+	mix-blend-mode: multiply;
+	opacity: 1;
+	pointer-events: none;
+	position: absolute;
+	transition: opacity 1s ease;
+	z-index: 2;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-wrap:hover::after {
+	opacity: 0;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__image-quote {
+	color: rgba(255, 255, 255, 0.3);
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+	left: 33%;
+	position: absolute;
+	top: 33%;
+	transform: rotate(-6deg);
+	z-index: 3;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge {
+	position: absolute;
+	right: -16px;
+	top: -32px;
+	z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge {
+		right: 25%;
+		top: -48px;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-spin {
+	height: 128px;
+	position: relative;
+	width: 128px;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-spin {
+		height: 160px;
+		width: 160px;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-svg {
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-text {
+	fill: #000;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 8px;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-center {
+	align-items: center;
+	background: #000;
+	border-radius: 50%;
+	display: flex;
+	height: 64px;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 64px;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-center {
+		height: 80px;
+		width: 80px;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-arrow {
+	height: 24px;
+	transform: rotate(-45deg);
+	width: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-arrow {
+		height: 32px;
+		width: 32px;
+	}
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__content {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__label {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__title {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(44px, 7vw, 72px);
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__title-accent {
+	color: #fff;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__desc {
+	line-height: 1.7;
+	margin: 0;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__desc--primary {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(15px, 1.6vw, 17px);
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__desc--muted {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__highlight {
+	color: #fff;
+	font-weight: 500;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__highlight-soft {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__cta-wrap {
+	padding-top: 8px;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__cta {
+	align-items: center;
+	background: #fff;
+	color: #000;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	gap: 16px;
+	letter-spacing: 0.2em;
+	padding: 16px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__cta:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__cta-icon {
+	height: 16px;
+	transition: transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__cta:hover .archmation-about__cta-icon {
+	transform: translateX(4px);
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__divider {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+	height: 1px;
+	margin-top: clamp(32px, 4vw, 48px);
+	transform-origin: left;
+	width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-spin {
+		animation: none !important;
+		transform: none !important;
+	}
+}

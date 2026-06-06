@@ -1,0 +1,208 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+
+
+
+
+
+
+/* PARTIE "PERSONNALISATION" DU COOKIE */
+
+/* Boutons cookie */
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices button{
+    background-color: #fff;
+    opacity: 1 !important;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices .tarteaucitronTitle button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices button[aria-pressed="true"],
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices button[disabled],
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices button:hover {
+    background-color: #000;
+    opacity: 1 !important;
+    color: #fff;
+    border-radius: 0;
+}
+
+
+/* Corps du cookie (personnaliser) */
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine, #tarteaucitron #tarteaucitronServices .tarteaucitronMainLine:hover {
+    border: 3px solid #000;
+    border-right: none;
+    background-color: #fff;
+    border-top: none;
+}
+#tarteaucitron .tarteaucitronBorder {
+    border: none;
+}
+#tarteaucitron #tarteaucitronInfo {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 12px !important;
+}
+#tarteaucitron .tarteaucitronH2, #tarteaucitron #dialogTitle {
+    color: #000;
+}
+#tarteaucitron #dialogTitle {
+    font-weight: bold;
+}
+#tarteaucitronDisclaimerAlert {
+    box-sizing: border-box;
+   }
+
+
+/* bouton fermer */
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronClosePanelCookie,
+#tarteaucitron #tarteaucitronClosePanel {
+    background: #ffffff;
+    color: #000;
+}
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronClosePanelCookie:hover,
+#tarteaucitron #tarteaucitronClosePanel:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+
+/* PARTIE VISIBLE LORSQUE L4ON ARRIVE SUR LE SITE */
+
+#tarteaucitronRoot #tarteaucitronAlertBig {
+    background-color: transparent;
+    color: #000;
+    width: 90%;
+    max-width: 1600px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    visibility: hidden;
+}
+#tarteaucitronRoot #tarteaucitronAlertBig.visible {
+    visibility: visible !important;
+}
+.cookie_sorgniard{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+#tarteaucitronRoot #tarteaucitronAlertBig .sous_cookie {
+    display: flex;
+    justify-content: center;
+}
+
+.cookie_sorgniard{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+#tarteaucitronRoot #tarteaucitronAlertBig .sous_cookie {
+    display: flex;
+    justify-content: center;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert {
+    background-color: #fff;
+    margin: 0;
+    color: #000;
+    min-width: 154px;
+    padding: 21px 0;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+    border-radius:0;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2 span,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2 span,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert span,
+#tarteaucitron #tarteaucitronServices button span {
+    display: none;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert {
+    width: 100%;
+    padding: 10px 27px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+    border-left:1px solid #000;
+}
+
+
+@media screen and (max-width: 1200px){
+    #tarteaucitronRoot #tarteaucitronAlertBig {
+        width: 95%;
+        max-width: 900px;
+        display: block;
+        border-bottom: none;
+        padding: 15px 15px 0 15px;
+        background-color: #fff;
+    }
+    .cookie_sorgniard{
+        flex-direction: column;
+    }
+    #tarteaucitronRoot #tarteaucitronAlertBig .sous_cookie{
+        padding: 0 15px;
+        flex-wrap: wrap;
+        position: relative;
+        column-gap: 5px;
+    }
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert {
+        padding: 15px 15px;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2,
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert {
+        padding: 10px 0;
+        border: 1px solid #fff;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+    }
+}
+@media screen and (max-width: 768px){
+    #tarteaucitronRoot #tarteaucitronAlertBig {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 550px){
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2,
+    #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert {
+        min-width: 132px !important;
+    }
+}
