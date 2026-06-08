@@ -1,11 +1,17 @@
 "use client";
 
 import AboutSection from "@/components/AboutSection";
+import ClientsSection from "@/components/ClientsSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
 import ServicesSection from "@/components/ServicesSection";
+import StatsSection from "@/components/StatsSection";
 import ValueSection from "@/components/ValueSection";
+import BlogsSection from "@/components/BlogsSection";
+import FAQSection from "@/components/FAQSection";
+import SiteFooter from "@/components/SiteFooter";
+import VideoGallerySection from "@/components/VideoGallerySection";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -20,6 +26,12 @@ type ReactMounts = {
   industries: HTMLElement | null;
   process: HTMLElement | null;
   value: HTMLElement | null;
+  clients: HTMLElement | null;
+  stats: HTMLElement | null;
+  videos: HTMLElement | null;
+  blogs: HTMLElement | null;
+  faq: HTMLElement | null;
+  footer: HTMLElement | null;
 };
 
 function appendScript(src?: string, inline?: string): Promise<void> {
@@ -46,6 +58,12 @@ function readReactMounts(host: HTMLElement): ReactMounts {
     industries: host.querySelector<HTMLElement>("#react-industries-root"),
     process: host.querySelector<HTMLElement>("#react-process-root"),
     value: host.querySelector<HTMLElement>("#react-value-root"),
+    clients: host.querySelector<HTMLElement>("#react-clients-root"),
+    stats: host.querySelector<HTMLElement>("#react-stats-root"),
+    videos: host.querySelector<HTMLElement>("#react-videos-root"),
+    blogs: host.querySelector<HTMLElement>("#react-blogs-root"),
+    faq: host.querySelector<HTMLElement>("#react-faq-root"),
+    footer: host.querySelector<HTMLElement>("#react-footer-root"),
   };
 }
 
@@ -59,6 +77,12 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     industries: null,
     process: null,
     value: null,
+    clients: null,
+    stats: null,
+    videos: null,
+    blogs: null,
+    faq: null,
+    footer: null,
   });
   const [sectionKey, setSectionKey] = useState(0);
 
@@ -70,7 +94,20 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     setMounts(readReactMounts(host));
 
     return () => {
-      setMounts({ expertise: null, services: null, about: null, industries: null, process: null, value: null });
+      setMounts({
+        expertise: null,
+        services: null,
+        about: null,
+        industries: null,
+        process: null,
+        value: null,
+        clients: null,
+        stats: null,
+        videos: null,
+        blogs: null,
+        faq: null,
+        footer: null,
+      });
     };
   }, [bodyHtml]);
 
@@ -166,6 +203,27 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         : null}
       {mounts.value
         ? createPortal(<ValueSection key={`value-${sectionKey}`} />, mounts.value)
+        : null}
+      {mounts.clients
+        ? createPortal(<ClientsSection key={`clients-${sectionKey}`} />, mounts.clients)
+        : null}
+      {mounts.stats
+        ? createPortal(<StatsSection key={`stats-${sectionKey}`} />, mounts.stats)
+        : null}
+      {mounts.videos
+        ? createPortal(
+            <VideoGallerySection key={`videos-${sectionKey}`} />,
+            mounts.videos,
+          )
+        : null}
+      {mounts.blogs
+        ? createPortal(<BlogsSection key={`blogs-${sectionKey}`} />, mounts.blogs)
+        : null}
+      {mounts.faq
+        ? createPortal(<FAQSection key={`faq-${sectionKey}`} />, mounts.faq)
+        : null}
+      {mounts.footer
+        ? createPortal(<SiteFooter key={`footer-${sectionKey}`} />, mounts.footer)
         : null}
     </div>
   );

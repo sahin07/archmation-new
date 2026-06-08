@@ -10,6 +10,16 @@ export const PROCESS_MARKER = "<!-- @react:process -->";
 export const PROCESS_END = "<!-- @react:processEnd -->";
 export const VALUE_MARKER = "<!-- @react:value -->";
 export const VALUE_END = "<!-- @react:valueEnd -->";
+export const CLIENTS_MARKER = "<!-- @react:clients -->";
+export const CLIENTS_END = "<!-- @react:clientsEnd -->";
+export const STATS_MARKER = "<!-- @react:stats -->";
+export const STATS_END = "<!-- @react:statsEnd -->";
+export const VIDEOS_MARKER = "<!-- @react:videos -->";
+export const VIDEOS_END = "<!-- @react:videosEnd -->";
+export const BLOGS_MARKER = "<!-- @react:blogs -->";
+export const BLOGS_END = "<!-- @react:blogsEnd -->";
+export const FAQ_MARKER = "<!-- @react:faq -->";
+export const FAQ_END = "<!-- @react:faqEnd -->";
 
 /** @deprecated */
 export const ACCUEIL_FOND_NOIR_START = "<!-- @react:accueilFondNoir -->";
@@ -25,7 +35,20 @@ const PROCESS_SHELL =
   '<section id="accueilProcess" class="sectionPaddingBottom archmation-process"><div id="react-process-root"></div></section>';
 const VALUE_SHELL =
   '<section id="accueilValue" class="sectionPaddingBottom archmation-value"><div id="react-value-root"></div></section>';
-const COLLABORATIONS_ANCHOR = '<section id="accueilCollaborations"';
+const CLIENTS_SHELL =
+  '<section id="accueilClients" class="sectionPaddingBottom archmation-clients"><div id="react-clients-root"></div></section>';
+const STATS_SHELL =
+  '<section id="accueilStats" class="sectionPaddingBottom archmation-stats"><div id="react-stats-root"></div></section>';
+const VIDEOS_SHELL =
+  '<section id="accueilVideoGallery" class="sectionPaddingBottom archmation-videos"><div id="react-videos-root"></div></section>';
+const BLOGS_SHELL =
+  '<section id="accueilBlogs" class="sectionPaddingBottom archmation-blogs"><div id="react-blogs-root"></div></section>';
+const FAQ_SHELL =
+  '<section id="accueilFaq" class="sectionPaddingBottom archmation-faq"><div id="react-faq-root"></div></section>';
+const COLLABORATIONS_ANCHOR = '<div class="overflow-hidden">';
+export const FOOTER_MARKER = "<!-- @react:footerLegacy -->";
+const FOOTER_MOUNT = '<div id="react-footer-root"></div>';
+const FOOTER_ANCHOR = FOOTER_MARKER;
 const ABOUT_ANCHOR = COLLABORATIONS_ANCHOR;
 
 function hasMarkerPair(html: string, startMarker: string, endMarker: string): boolean {
@@ -102,6 +125,91 @@ export function ensureValueMarkers(html: string): string {
   return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
 }
 
+/** Insert clients markers before OUR CLIENTS & WORK when sync-html drops them. */
+export function ensureClientsMarkers(html: string): string {
+  if (hasMarkerPair(html, CLIENTS_MARKER, CLIENTS_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(COLLABORATIONS_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${CLIENTS_MARKER} and ${CLIENTS_END}, or #accueilCollaborations. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${CLIENTS_MARKER}\n    ${CLIENTS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert stats markers before OUR CLIENTS & WORK when sync-html drops them. */
+export function ensureStatsMarkers(html: string): string {
+  if (hasMarkerPair(html, STATS_MARKER, STATS_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(COLLABORATIONS_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${STATS_MARKER} and ${STATS_END}, or #accueilCollaborations. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${STATS_MARKER}\n    ${STATS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert videos markers before OUR CLIENTS & WORK when sync-html drops them. */
+export function ensureVideosMarkers(html: string): string {
+  if (hasMarkerPair(html, VIDEOS_MARKER, VIDEOS_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(COLLABORATIONS_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${VIDEOS_MARKER} and ${VIDEOS_END}, or #accueilCollaborations. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${VIDEOS_MARKER}\n    ${VIDEOS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert blogs markers before OUR CLIENTS & WORK when sync-html drops them. */
+export function ensureBlogsMarkers(html: string): string {
+  if (hasMarkerPair(html, BLOGS_MARKER, BLOGS_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(COLLABORATIONS_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${BLOGS_MARKER} and ${BLOGS_END}, or #accueilCollaborations. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${BLOGS_MARKER}\n    ${BLOGS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert FAQ markers before footer when sync-html drops them. */
+export function ensureFaqMarkers(html: string): string {
+  if (hasMarkerPair(html, FAQ_MARKER, FAQ_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(FOOTER_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${FAQ_MARKER} and ${FAQ_END}, or #footerSite. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${FAQ_MARKER}\n    ${FAQ_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
 function replaceBetweenMarkers(
   html: string,
   startMarker: string,
@@ -168,6 +276,45 @@ export function buildHomeBodyHtml(bodyHtml: string): string {
     VALUE_END,
     () => VALUE_SHELL,
   );
+
+  html = replaceBetweenMarkers(
+    ensureClientsMarkers(html),
+    CLIENTS_MARKER,
+    CLIENTS_END,
+    () => CLIENTS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureStatsMarkers(html),
+    STATS_MARKER,
+    STATS_END,
+    () => STATS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureVideosMarkers(html),
+    VIDEOS_MARKER,
+    VIDEOS_END,
+    () => VIDEOS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureBlogsMarkers(html),
+    BLOGS_MARKER,
+    BLOGS_END,
+    () => BLOGS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureFaqMarkers(html),
+    FAQ_MARKER,
+    FAQ_END,
+    () => FAQ_SHELL,
+  );
+
+  if (html.includes(FOOTER_MARKER)) {
+    html = html.replace(FOOTER_MARKER, FOOTER_MOUNT);
+  }
 
   return html;
 }

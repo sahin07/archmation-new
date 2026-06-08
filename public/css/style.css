@@ -485,6 +485,68 @@ hr {
 	width: 100%;
 }
 
+/* --------------------------------------------------------------------------
+   Shared section headings (eyebrow + title) — keep all React sections in sync
+   -------------------------------------------------------------------------- */
+.page-template-accueil {
+	--archmation-section-eyebrow-color: rgba(255, 255, 255, 0.5);
+	--archmation-section-eyebrow-font-size: 12px;
+	--archmation-section-eyebrow-font-weight: 500;
+	--archmation-section-eyebrow-letter-spacing: 0.3em;
+	--archmation-section-title-color: #fff;
+	--archmation-section-title-font-size: clamp(36px, 5vw, 56px);
+	--archmation-section-title-font-weight: 400;
+	--archmation-section-title-line-height: 1.15;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__label,
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__label,
+.page-template-accueil #accueilValue.archmation-value .archmation-value__label,
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__label,
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__eyebrow,
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__eyebrow,
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__label {
+	color: var(--archmation-section-eyebrow-color);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: var(--archmation-section-eyebrow-font-size);
+	font-weight: var(--archmation-section-eyebrow-font-weight);
+	letter-spacing: var(--archmation-section-eyebrow-letter-spacing);
+	margin: 0 0 16px;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-services__title,
+.page-template-accueil #accueilFondNoir .archmation-expertise__title,
+.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__title,
+.page-template-accueil #accueilProcess.archmation-process .archmation-process__title,
+.page-template-accueil #accueilValue.archmation-value .archmation-value__title,
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__title,
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__title,
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__title,
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__title,
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__title,
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__title {
+	color: var(--archmation-section-title-color) !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: var(--archmation-section-title-font-size);
+	font-style: italic;
+	font-weight: var(--archmation-section-title-font-weight);
+	line-height: var(--archmation-section-title-line-height);
+	margin: 0;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilFondNoir .archmation-expertise__title-accent,
+.page-template-accueil #accueilValue.archmation-value .archmation-value__title-accent,
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__title-accent,
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__title-accent,
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__title-accent,
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__title-accent {
+	color: var(--archmation-section-title-color);
+	font-style: italic;
+	font-weight: var(--archmation-section-title-font-weight);
+}
+
 .page-template-accueil #accueilFondNoir .archmation-services {
 	color: #fff;
 	overflow: hidden;
@@ -556,25 +618,7 @@ hr {
 }
 
 .page-template-accueil #accueilFondNoir .archmation-services__label {
-	color: rgba(255, 255, 255, 0.6);
 	display: inline-block;
-	font-family: avenir-lt-pro, sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	letter-spacing: 0.2em;
-	margin-bottom: 16px;
-	text-transform: uppercase;
-}
-
-.page-template-accueil #accueilFondNoir .archmation-services__title {
-	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(44px, 7vw, 72px);
-	font-style: italic;
-	font-weight: 400;
-	line-height: 1.1;
-	margin: 0;
-	text-wrap: balance;
 }
 
 .page-template-accueil #accueilFondNoir .archmation-services__cards {
@@ -852,23 +896,8 @@ hr {
 	gap: 0.5rem;
 }
 
-.page-template-accueil #accueilFondNoir .archmation-expertise__title {
-	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(44px, 7vw, 72px);
-	font-weight: 400;
-	line-height: 1.1;
-	margin: 0;
-	text-wrap: balance;
-}
-
 .page-template-accueil #accueilFondNoir .archmation-expertise__title--italic {
 	font-style: italic;
-}
-
-.page-template-accueil #accueilFondNoir .archmation-expertise__title-accent {
-	font-style: italic;
-	font-weight: 300;
 }
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__quote {
@@ -1146,8 +1175,6 @@ hr {
 	}
 }
 
-
-
 /* Industries section (#accueilIndustries) — React + Motion */
 .page-template-accueil #accueilIndustries.archmation-industries {
 	align-items: stretch !important;
@@ -1237,16 +1264,6 @@ hr {
 		gap: 80px;
 		grid-template-columns: 1.4fr 1fr;
 	}
-}
-
-.page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__title {
-	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(36px, 5vw, 48px);
-	font-style: italic;
-	font-weight: 400;
-	line-height: 1.15;
-	margin: 0;
 }
 
 .page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__divider {
@@ -1580,27 +1597,6 @@ hr {
 	text-align: center;
 }
 
-.page-template-accueil #accueilProcess.archmation-process .archmation-process__label {
-	color: rgba(255, 255, 255, 0.5);
-	font-family: avenir-lt-pro, sans-serif;
-	font-size: 12px;
-	font-weight: 500;
-	letter-spacing: 0.35em;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-.page-template-accueil #accueilProcess.archmation-process .archmation-process__title {
-	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(36px, 5vw, 60px);
-	font-style: italic;
-	font-weight: 400;
-	line-height: 1.15;
-	margin: 20px 0 0;
-	text-wrap: balance;
-}
-
 .page-template-accueil #accueilProcess.archmation-process .archmation-process__steps-wrap {
 	margin-top: 80px;
 	position: relative;
@@ -1932,29 +1928,8 @@ hr {
 	}
 }
 
-.page-template-accueil #accueilValue.archmation-value .archmation-value__label {
-	color: rgba(255, 255, 255, 0.6);
-	font-family: avenir-lt-pro, sans-serif;
-	font-size: 12px;
-	font-weight: 500;
-	letter-spacing: 0.35em;
-	margin: 0;
-	text-transform: uppercase;
-}
-
 .page-template-accueil #accueilValue.archmation-value .archmation-value__title {
-	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(30px, 4vw, 48px);
-	font-weight: 400;
-	line-height: 1.1;
-	margin: 20px 0 0;
 	max-width: 36rem;
-	text-wrap: balance;
-}
-
-.page-template-accueil #accueilValue.archmation-value .archmation-value__title-accent {
-	font-style: italic;
 }
 
 .page-template-accueil #accueilValue.archmation-value .archmation-value__desc {
@@ -2096,6 +2071,1908 @@ hr {
 	.page-template-accueil #accueilValue.archmation-value .archmation-value__card,
 	.page-template-accueil #accueilValue.archmation-value .archmation-value__card-icon-inner,
 	.page-template-accueil #accueilValue.archmation-value .archmation-value__card-link-icon {
+		transition: none;
+	}
+}
+
+/* Clients section (#accueilClients) — React + Motion */
+.page-template-accueil #accueilClients.archmation-clients {
+	align-items: stretch !important;
+	background: #050507 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-clients-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__bg-base {
+	background: #050507;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__bg-mesh {
+	background: linear-gradient(135deg, #0a0a0e 0%, #070709 50%, #0d0d12 100%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__bg-radial-top {
+	background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(255, 255, 255, 0.08), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__bg-radial-side {
+	background: radial-gradient(ellipse 40% 40% at 80% 50%, rgba(255, 255, 255, 0.03), transparent 70%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__bg-dots {
+	background-image: radial-gradient(circle, white 1px, transparent 1px);
+	background-size: 48px 48px;
+	inset: 0;
+	opacity: 0.015;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__header {
+	text-align: center;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	height: 96px;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	transition:
+		background-color 0.5s ease,
+		border-color 0.5s ease,
+		transform 0.5s ease;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile {
+		height: 112px;
+	}
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__logo {
+	filter: grayscale(100%);
+	height: 64px;
+	max-width: 90%;
+	object-fit: contain;
+	transition:
+		filter 0.5s ease,
+		transform 0.5s ease;
+	width: auto;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile:hover .archmation-clients__logo {
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__shine {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+	inset: 0;
+	position: absolute;
+	transform: translateX(100%);
+	transition: transform 0.7s ease;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile:hover .archmation-clients__shine {
+	transform: translateX(0);
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile-label {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	inset: 0;
+	justify-content: center;
+	letter-spacing: 0.2em;
+	opacity: 0;
+	position: absolute;
+	text-transform: uppercase;
+	transition: opacity 0.3s ease;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile:hover .archmation-clients__tile-label {
+	opacity: 1;
+}
+
+/* Modal (portaled to body) */
+.page-template-accueil .archmation-clients__modal-backdrop {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	padding: 24px;
+	position: fixed;
+	z-index: 9999;
+}
+
+.page-template-accueil .archmation-clients__modal {
+	margin: 0 auto;
+	max-width: 896px;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil .archmation-clients__modal-close {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	padding: 8px;
+	position: absolute;
+	right: 0;
+	top: -48px;
+	transition: background-color 0.3s ease;
+	z-index: 2;
+}
+
+.page-template-accueil .archmation-clients__modal-close:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.page-template-accueil .archmation-clients__modal-close-icon {
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil .archmation-clients__modal-stage {
+	align-items: center;
+	aspect-ratio: 16 / 9;
+	background: #0a0a0c;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	display: flex;
+	justify-content: center;
+	min-height: 280px;
+	overflow: hidden;
+	position: relative;
+}
+
+.page-template-accueil .archmation-clients__modal-media {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	padding: 40px 72px 56px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.page-template-accueil .archmation-clients__modal-slide {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.page-template-accueil .archmation-clients__modal-image {
+	display: block;
+	filter: none !important;
+	height: auto;
+	max-height: min(220px, 42vh);
+	max-width: min(480px, 78%);
+	object-fit: contain;
+	width: auto;
+}
+
+.page-template-accueil .archmation-clients__modal-nav {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	height: 48px;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease;
+	width: 48px;
+	z-index: 2;
+}
+
+.page-template-accueil .archmation-clients__modal-nav:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.page-template-accueil .archmation-clients__modal-nav--prev {
+	left: 16px;
+}
+
+.page-template-accueil .archmation-clients__modal-nav--next {
+	right: 16px;
+}
+
+.page-template-accueil .archmation-clients__modal-nav-icon {
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil .archmation-clients__modal-dots {
+	bottom: 16px;
+	display: flex;
+	gap: 8px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.page-template-accueil .archmation-clients__modal-dot {
+	background: #fff;
+	border: 0;
+	border-radius: 9999px;
+	cursor: pointer;
+	display: block;
+	height: 6px;
+	padding: 0;
+	width: 6px;
+}
+
+.page-template-accueil .archmation-clients__modal-info {
+	margin-top: 24px;
+}
+
+.page-template-accueil .archmation-clients__modal-title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.page-template-accueil .archmation-clients__modal-meta {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	margin: 8px 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile,
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__logo,
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__shine {
+		transition: none;
+	}
+}
+
+/* Stats section (#accueilStats) — React + Motion */
+.page-template-accueil #accueilStats.archmation-stats {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-stats-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-gradient {
+	background: linear-gradient(to bottom right, #000, #0a0a0f, #000);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-spotlight-left {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%);
+	filter: blur(48px);
+	height: 800px;
+	left: -50%;
+	position: absolute;
+	top: 33%;
+	width: 800px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-spotlight-right {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+	bottom: 0;
+	filter: blur(48px);
+	height: 700px;
+	position: absolute;
+	right: -50%;
+	width: 700px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-spotlight-center {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+	filter: blur(48px);
+	height: 400px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-diagonal {
+	background-image: linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.03) 48%, rgba(255, 255, 255, 0.03) 52%, transparent 52%);
+	background-size: 300px 300px;
+	inset: 0;
+	opacity: 0.35;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__bg-grain {
+	background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 1px);
+	background-size: 80px 80px;
+	inset: 0;
+	opacity: 0.08;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__header {
+	margin-bottom: 64px;
+	text-align: center;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__title-rule {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+	height: 4px;
+	margin: 16px auto 0;
+	width: 64px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__grid {
+	display: grid;
+	gap: 32px;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card {
+	position: relative;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-glow {
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), transparent);
+	border-radius: 16px;
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.5s ease;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card:hover .archmation-stats__card-glow {
+	opacity: 1;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-border {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.5s ease;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card:hover .archmation-stats__card-border {
+	opacity: 1;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-ring {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent, rgba(255, 255, 255, 0.2));
+	border-radius: 16px;
+	filter: blur(4px);
+	inset: -2px;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.5s ease;
+	z-index: -1;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card:hover .archmation-stats__card-ring {
+	opacity: 0.3;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-body {
+	padding: 32px;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-accent {
+	background: rgba(255, 255, 255, 0.2);
+	height: 4px;
+	left: 50%;
+	position: absolute;
+	top: -1px;
+	transform: translateX(-50%);
+	transition:
+		background-color 0.5s ease,
+		width 0.5s ease;
+	width: 48px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card:hover .archmation-stats__card-accent {
+	background: rgba(255, 255, 255, 0.4);
+	width: 80px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__counter-wrap {
+	padding-top: 16px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__counter {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(40px, 5vw, 60px);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__counter-suffix {
+	font-size: clamp(32px, 4vw, 48px);
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-label {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	margin: 16px 0 0;
+	text-transform: uppercase;
+	transition: color 0.5s ease;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card:hover .archmation-stats__card-label {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-dots {
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+	padding-top: 8px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-dot {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	display: block;
+	height: 4px;
+	width: 4px;
+}
+
+.page-template-accueil #accueilStats.archmation-stats .archmation-stats__divider {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+	height: 1px;
+	margin-top: 64px;
+	transform-origin: left center;
+	width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card,
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-accent,
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-glow,
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-border,
+	.page-template-accueil #accueilStats.archmation-stats .archmation-stats__card-ring {
+		transition: none;
+	}
+}
+
+/* Video gallery section (#accueilVideoGallery) — React + Motion */
+.page-template-accueil #accueilVideoGallery.archmation-videos {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-videos-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-mesh {
+	background: linear-gradient(to bottom, #0a0a0f 0%, #050507 50%, #0d0d12 100%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-spotlight-left {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%);
+	filter: blur(48px);
+	height: 600px;
+	left: -33%;
+	position: absolute;
+	top: 25%;
+	width: 600px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-spotlight-right {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+	bottom: 0;
+	filter: blur(48px);
+	height: 500px;
+	position: absolute;
+	right: -25%;
+	width: 500px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-diagonal {
+	background-image: repeating-linear-gradient(
+		45deg,
+		transparent,
+		transparent 2px,
+		rgba(255, 255, 255, 0.35) 2px,
+		rgba(255, 255, 255, 0.35) 4px
+	);
+	background-size: 100px 100px;
+	inset: 0;
+	opacity: 0.02;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__bg-grain {
+	background-image: radial-gradient(circle at 1px 1px, white 0.5px, transparent 0.5px);
+	background-size: 50px 50px;
+	inset: 0;
+	opacity: 0.1;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__header {
+	margin-bottom: 64px;
+	text-align: center;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__carousel {
+	position: relative;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__viewport {
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__track {
+	display: flex;
+	gap: 16px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card {
+	background: transparent;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	flex: 0 0 100%;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card {
+		flex-basis: calc((100% - 16px) / 2);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card {
+		flex-basis: calc((100% - 48px) / 4);
+	}
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__thumb {
+	display: block;
+	filter: grayscale(100%);
+	height: 192px;
+	object-fit: cover;
+	transition: filter 0.5s ease, transform 0.5s ease;
+	width: 100%;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card:hover .archmation-videos__thumb {
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-overlay {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transition: opacity 0.3s ease;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card:hover .archmation-videos__card-overlay {
+	opacity: 1;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__play-wrap {
+	align-items: center;
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	pointer-events: none;
+	position: absolute;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__play-btn {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 9999px;
+	display: flex;
+	height: 64px;
+	justify-content: center;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+	width: 64px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card:hover .archmation-videos__play-btn {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.8);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__play-icon {
+	fill: currentColor;
+	height: 24px;
+	margin-left: 4px;
+	width: 24px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-meta {
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	padding: 16px;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	text-align: left;
+	transition: opacity 0.3s ease;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card:hover .archmation-videos__card-meta {
+	opacity: 1;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-title {
+	color: #fff;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0 0 4px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-company {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	margin: 0;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+	height: 48px;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+	width: 48px;
+	z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav {
+		display: inline-flex;
+	}
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav:hover:not(:disabled) {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav:disabled {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav--prev {
+	left: 0;
+	transform: translate(-64px, -50%);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav--next {
+	right: 0;
+	transform: translate(64px, -50%);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__nav-icon {
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 48px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta {
+	align-items: center;
+	background: #fff;
+	color: #000;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	gap: 16px;
+	letter-spacing: 0.2em;
+	padding: 16px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta-icon {
+	height: 16px;
+	transition: transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta:hover .archmation-videos__cta-icon {
+	transform: translateX(4px);
+}
+
+/* Video modal (portaled to body) */
+.page-template-accueil .archmation-videos__modal-backdrop {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	padding: 24px;
+	position: fixed;
+	z-index: 9999;
+}
+
+.page-template-accueil .archmation-videos__modal {
+	margin: 0 auto;
+	max-width: 1024px;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil .archmation-videos__modal-close {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 9999px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	padding: 8px;
+	position: absolute;
+	right: 0;
+	top: -48px;
+	transition: background-color 0.3s ease;
+	z-index: 2;
+}
+
+.page-template-accueil .archmation-videos__modal-close:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.page-template-accueil .archmation-videos__modal-close-icon {
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil .archmation-videos__modal-player {
+	aspect-ratio: 16 / 9;
+	background: #000;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	position: relative;
+}
+
+.page-template-accueil .archmation-videos__modal-iframe {
+	border: 0;
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.page-template-accueil .archmation-videos__modal-info {
+	margin-top: 24px;
+}
+
+.page-template-accueil .archmation-videos__modal-title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: clamp(22px, 3vw, 32px);
+	font-weight: 400;
+	margin: 0 0 8px;
+}
+
+.page-template-accueil .archmation-videos__modal-meta {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__thumb,
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-overlay,
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__play-btn,
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card-meta,
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta,
+	.page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__cta-icon {
+		transition: none;
+	}
+}
+
+@keyframes archmation-blogs-grid-slide {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(100px, 100px);
+	}
+}
+
+/* Blogs section (#accueilBlogs) — React + Motion */
+.page-template-accueil #accueilBlogs.archmation-blogs {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-blogs-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-mesh {
+	background: linear-gradient(to bottom right, #000, #0a0a10, #000);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-spotlight-top {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%);
+	filter: blur(48px);
+	height: 800px;
+	left: 25%;
+	position: absolute;
+	top: -50%;
+	width: 800px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-spotlight-bottom {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+	bottom: -50%;
+	filter: blur(48px);
+	height: 700px;
+	position: absolute;
+	right: 0;
+	width: 700px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-grid {
+	animation: archmation-blogs-grid-slide 30s linear infinite;
+	background-image:
+		linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+	background-size: 100px 100px;
+	inset: 0;
+	opacity: 0.03;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__header {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__grid {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: minmax(0, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card {
+	cursor: pointer;
+	position: relative;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card-inner {
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	transition:
+		background-color 0.5s ease,
+		border-color 0.5s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card:hover .archmation-blogs__card-inner {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__media {
+	background: #000;
+	flex-shrink: 0;
+	height: 224px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__image {
+	display: block;
+	filter: grayscale(100%);
+	height: 100%;
+	object-fit: cover;
+	transition: filter 0.7s ease, transform 0.7s ease;
+	width: 100%;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card:hover .archmation-blogs__image {
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__media-overlay {
+	background: linear-gradient(to top, #000, transparent);
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__badge {
+	backdrop-filter: blur(8px);
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	color: #fff;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	padding: 4px 12px;
+	position: absolute;
+	right: 16px;
+	text-transform: uppercase;
+	top: 16px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__indicator {
+	align-items: center;
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	pointer-events: none;
+	position: absolute;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__indicator-btn {
+	align-items: center;
+	backdrop-filter: blur(8px);
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 9999px;
+	display: flex;
+	height: 64px;
+	justify-content: center;
+	width: 64px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__indicator-icon {
+	color: #fff;
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: space-between;
+	padding: 24px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card-title {
+	color: #fff !important;
+	display: -webkit-box;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 18px;
+	font-weight: 600;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	line-height: 1.5;
+	margin: 0;
+	overflow: hidden;
+	transition: line-height 0.3s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card:hover .archmation-blogs__card-title {
+	line-height: 1.6;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__excerpt {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 8px 0 0;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition:
+		max-height 0.3s ease,
+		opacity 0.3s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card:hover .archmation-blogs__excerpt {
+	max-height: 80px;
+	opacity: 1;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn {
+	align-items: center;
+	align-self: flex-start;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	color: #fff;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	gap: 8px;
+	letter-spacing: 0.1em;
+	margin-top: auto;
+	overflow: hidden;
+	padding: 10px 24px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		border-color 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn:hover {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn-shine {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+	inset: 0;
+	position: absolute;
+	transform: translateX(100%);
+	transition: transform 0.7s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn:hover .archmation-blogs__read-btn-shine {
+	transform: translateX(0);
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn-label,
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn-icon-wrap {
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn-icon {
+	height: 14px;
+	width: 14px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__corner-glow {
+	background: rgba(255, 255, 255, 0.08);
+	border-radius: 9999px;
+	filter: blur(48px);
+	height: 128px;
+	pointer-events: none;
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	width: 128px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 64px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta {
+	align-items: center;
+	background: #fff;
+	color: #000;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	gap: 16px;
+	letter-spacing: 0.2em;
+	padding: 16px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta-icon {
+	height: 16px;
+	transition: transform 0.3s ease;
+	width: 16px;
+}
+
+.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta:hover .archmation-blogs__cta-icon {
+	transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__bg-grid {
+		animation: none;
+	}
+
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__image,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card-inner,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__excerpt,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__read-btn-shine,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta,
+	.page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__cta-icon {
+		transition: none;
+	}
+}
+
+/* Testimonials (#accueilTemoignages) — WHAT OUR CLIENTS SAY */
+.page-template-accueil #accueilTemoignages {
+	padding-top: clamp(64px, 8vw, 96px) !important;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilTemoignages {
+		padding-top: clamp(96px, 10vw, 128px) !important;
+	}
+}
+
+.page-template-accueil #accueilTemoignages .accueilCollaborationsContenuTitre h2,
+.page-template-accueil #accueilTemoignages .prestaCollaborationsTitre h2 {
+	color: #000 !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: var(--archmation-section-title-font-size);
+	font-style: italic;
+	font-weight: var(--archmation-section-title-font-weight) !important;
+	line-height: var(--archmation-section-title-line-height);
+	margin: 0;
+	text-transform: none;
+	text-wrap: balance;
+}
+
+.page-template-accueil #accueilTemoignages .accueilCollaborationsContenuTitre h2 strong,
+.page-template-accueil #accueilTemoignages .prestaCollaborationsTitre h2 strong {
+	color: #000 !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: inherit !important;
+	font-style: italic;
+	font-weight: var(--archmation-section-title-font-weight) !important;
+	line-height: inherit;
+}
+
+@keyframes archmation-faq-diagonal-slide {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(125px, 125px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+/* FAQ section (#accueilFaq) — React + Motion */
+.page-template-accueil #accueilFaq.archmation-faq {
+	align-items: stretch !important;
+	background: #000 !important;
+	clear: both;
+	color: #fff !important;
+	display: block !important;
+	max-width: none !important;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	position: relative;
+	width: 100% !important;
+	z-index: 2;
+}
+
+.page-template-accueil #react-faq-root {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__root {
+	color: #fff;
+	overflow: hidden;
+	padding-bottom: clamp(64px, 8vw, 96px);
+	padding-top: clamp(64px, 8vw, 96px);
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__root {
+		padding-bottom: clamp(96px, 10vw, 128px);
+		padding-top: clamp(96px, 10vw, 128px);
+	}
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-mesh {
+	background: linear-gradient(to bottom right, #000, #080810, #0a0a15);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-spotlight-top {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 70%);
+	filter: blur(48px);
+	height: 700px;
+	position: absolute;
+	right: 0;
+	top: -25%;
+	width: 700px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-spotlight-bottom {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+	bottom: -25%;
+	filter: blur(48px);
+	height: 600px;
+	left: -25%;
+	position: absolute;
+	width: 600px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-spotlight-center {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+	filter: blur(48px);
+	height: 500px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-diagonal {
+	animation: archmation-faq-diagonal-slide 30s linear infinite;
+	background-image: linear-gradient(
+		45deg,
+		transparent 45%,
+		rgba(255, 255, 255, 0.35) 45%,
+		rgba(255, 255, 255, 0.35) 55%,
+		transparent 55%
+	);
+	background-size: 250px 250px;
+	inset: 0;
+	opacity: 0.02;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-grain {
+	background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 1px);
+	background-size: 80px 80px;
+	inset: 0;
+	opacity: 0.12;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__layout {
+	display: grid;
+	gap: 64px;
+	grid-template-columns: minmax(0, 1fr);
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__layout {
+		gap: 80px;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__label-row {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__eyebrow {
+	margin: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__label-line {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+	height: 1px;
+	transform-origin: left;
+	width: 32px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__title {
+	margin-bottom: 24px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__lede {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	margin: 0 0 48px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn {
+	align-items: center;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	color: #fff;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	gap: 8px;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	padding: 16px 32px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		border-color 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn:hover {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn-shine {
+	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+	inset: 0;
+	position: absolute;
+	transform: translateX(100%);
+	transition: transform 0.7s ease;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn:hover .archmation-faq__contact-btn-shine {
+	transform: translateX(0);
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn-label,
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn-icon {
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn-icon {
+	height: 16px;
+	width: 16px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__item {
+	position: relative;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger {
+	align-items: flex-start;
+	backdrop-filter: blur(4px);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 16px;
+	color: inherit;
+	cursor: pointer;
+	display: flex;
+	gap: 16px;
+	padding: 20px 24px;
+	text-align: left;
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+	width: 100%;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger.is-hovered {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 4px 20px rgba(255, 255, 255, 0.04);
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger.is-expanded {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.3);
+	box-shadow: 0 8px 32px rgba(255, 255, 255, 0.08);
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__icon-wrap {
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__icon {
+	color: #fff;
+	height: 24px;
+	width: 24px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__question {
+	color: #fff;
+	flex: 1;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.35;
+	margin: 0;
+	min-width: 0;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__chevron-wrap {
+	display: inline-flex;
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__chevron {
+	color: rgba(255, 255, 255, 0.5);
+	height: 20px;
+	width: 20px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__answer-wrap {
+	overflow: hidden;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__answer {
+	backdrop-filter: blur(4px);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	margin-left: 48px;
+	margin-top: 8px;
+	padding: 16px;
+}
+
+.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__answer-text {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__bg-diagonal {
+		animation: none;
+	}
+
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger,
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn,
+	.page-template-accueil #accueilFaq.archmation-faq .archmation-faq__contact-btn-shine {
 		transition: none;
 	}
 }
@@ -2357,30 +4234,6 @@ hr {
 	width: 100%;
 }
 
-.page-template-accueil #accueilQSN.archmation-about .archmation-about__label {
-	color: rgba(255, 255, 255, 0.5);
-	font-family: avenir-lt-pro, sans-serif;
-	font-size: 12px;
-	letter-spacing: 0.3em;
-	text-transform: uppercase;
-}
-
-.page-template-accueil #accueilQSN.archmation-about .archmation-about__title {
-	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: clamp(44px, 7vw, 72px);
-	font-weight: 400;
-	line-height: 1.1;
-	margin: 0;
-	text-wrap: balance;
-}
-
-.page-template-accueil #accueilQSN.archmation-about .archmation-about__title-accent {
-	color: #fff;
-	font-style: italic;
-	font-weight: 300;
-}
-
 .page-template-accueil #accueilQSN.archmation-about .archmation-about__copy {
 	display: flex;
 	flex-direction: column;
@@ -2459,5 +4312,455 @@ hr {
 	.page-template-accueil #accueilQSN.archmation-about .archmation-about__badge-spin {
 		animation: none !important;
 		transform: none !important;
+	}
+}
+
+@keyframes archmation-footer-grid-slide {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+/* Legacy app.css pins #fullSite to 100vh; let homepage content (and footer) flow naturally. */
+.page-template-accueil #fullSite {
+	height: auto;
+	min-height: 100vh;
+}
+
+/* Global footer (#archmationFooter) — React + Motion */
+.page-template-accueil #react-footer-root {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer {
+	background: #000;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	z-index: 2;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-mesh {
+	background: linear-gradient(to top, #000, #0a0a10, #050508);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-spotlight-top {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 70%);
+	filter: blur(48px);
+	height: 800px;
+	left: 50%;
+	position: absolute;
+	top: -50%;
+	transform: translateX(-50%);
+	width: 800px;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-spotlight-left {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+	bottom: -25%;
+	filter: blur(48px);
+	height: 600px;
+	left: -25%;
+	position: absolute;
+	width: 600px;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-spotlight-right {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+	bottom: -33%;
+	filter: blur(48px);
+	height: 500px;
+	position: absolute;
+	right: 0;
+	width: 500px;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-grid {
+	animation: archmation-footer-grid-slide 20s linear infinite;
+	background-image:
+		linear-gradient(0deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+	background-size: 100px 100px;
+	inset: 0;
+	opacity: 0.03;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-grain {
+	background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 1px);
+	background-size: 80px 80px;
+	inset: 0;
+	opacity: 0.08;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__orb {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 9999px;
+	filter: blur(24px);
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__orb--right {
+	height: 80px;
+	right: 40px;
+	top: 80px;
+	width: 80px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__orb--left {
+	bottom: 80px;
+	height: 64px;
+	left: 64px;
+	width: 64px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding: clamp(64px, 8vw, 96px) 30px;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__top {
+	display: grid;
+	gap: 48px;
+	grid-template-columns: minmax(0, 1fr);
+	margin-bottom: 64px;
+	text-align: left;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__top {
+		align-items: start;
+		gap: clamp(48px, 5vw, 64px);
+		grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+		margin-bottom: 80px;
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand {
+	text-align: left;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-link {
+	align-items: center;
+	color: inherit;
+	display: inline-flex;
+	gap: 12px;
+	margin-bottom: 0;
+	text-align: left;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-mark {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+	border-radius: 9999px;
+	display: flex;
+	flex-shrink: 0;
+	height: 48px;
+	justify-content: center;
+	padding: 8px;
+	width: 48px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-ring {
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 9999px;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-name {
+	color: #fff;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-tag {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__desc {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	line-height: 1.625;
+	margin: 0;
+	max-width: 20rem;
+	text-align: left;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__socials {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	justify-content: flex-start;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__social {
+	align-items: center;
+	backdrop-filter: blur(4px);
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	color: rgba(255, 255, 255, 0.8);
+	display: inline-flex;
+	height: 40px;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease;
+	width: 40px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__social:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.4);
+	color: #fff;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__social-glow {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), transparent);
+	inset: 0;
+	position: absolute;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__social-icon {
+	height: 18px;
+	position: relative;
+	width: 18px;
+	z-index: 1;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__columns {
+	display: grid;
+	gap: 48px;
+	grid-template-columns: minmax(0, 1fr);
+	text-align: left;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__columns {
+		gap: clamp(48px, 4vw, 80px);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__divider {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	height: 1px;
+	margin-bottom: 32px;
+	transform-origin: left;
+	width: 100%;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bottom {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bottom {
+		flex-direction: row;
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__column {
+	text-align: left;
+	width: 100%;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__column-title {
+	color: #fff;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	margin: 0 0 24px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__links li + li {
+	margin-top: 12px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__link {
+	align-items: center;
+	color: rgba(255, 255, 255, 0.7);
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	gap: 8px;
+	position: relative;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__link:hover {
+	color: #fff;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__link-arrow {
+	display: inline-flex;
+	height: 14px;
+	width: 14px;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__link-underline {
+	background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.6), transparent);
+	bottom: -4px;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform-origin: left;
+	width: 100%;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__copyright {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__copyright {
+		text-align: left;
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal {
+		justify-content: flex-end;
+	}
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal-link {
+	align-items: center;
+	color: rgba(255, 255, 255, 0.5);
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	gap: 8px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal-link:hover {
+	color: #fff;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal-arrow {
+	color: rgba(255, 255, 255, 0.3);
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal-link:hover .archmation-footer__legal-arrow {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__legal-sep {
+	background: rgba(255, 255, 255, 0.2);
+	height: 16px;
+	width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__bg-grid,
+	.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-mark {
+		animation: none !important;
 	}
 }
