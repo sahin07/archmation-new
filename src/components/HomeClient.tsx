@@ -2,6 +2,7 @@
 
 import AboutSection from "@/components/AboutSection";
 import ClientsSection from "@/components/ClientsSection";
+import ClientsSaySection from "@/components/ClientsSaySection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -12,6 +13,7 @@ import BlogsSection from "@/components/BlogsSection";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
+import { HOME_VIDEO_GALLERY_CONTENT } from "@/content/video-gallery";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -31,6 +33,7 @@ type ReactMounts = {
   videos: HTMLElement | null;
   blogs: HTMLElement | null;
   faq: HTMLElement | null;
+  clientsSay: HTMLElement | null;
   footer: HTMLElement | null;
 };
 
@@ -63,6 +66,7 @@ function readReactMounts(host: HTMLElement): ReactMounts {
     videos: host.querySelector<HTMLElement>("#react-videos-root"),
     blogs: host.querySelector<HTMLElement>("#react-blogs-root"),
     faq: host.querySelector<HTMLElement>("#react-faq-root"),
+    clientsSay: host.querySelector<HTMLElement>("#react-clients-say-root"),
     footer: host.querySelector<HTMLElement>("#react-footer-root"),
   };
 }
@@ -82,6 +86,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     videos: null,
     blogs: null,
     faq: null,
+    clientsSay: null,
     footer: null,
   });
   const [sectionKey, setSectionKey] = useState(0);
@@ -93,7 +98,40 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     host.innerHTML = bodyHtml;
     setMounts(readReactMounts(host));
 
+    const mobileMq = window.matchMedia("(max-width: 1159px)");
+    const dropdownItems = host.querySelectorAll<HTMLLIElement>(
+      "#header-menu li.menu-item-has-children",
+    );
+
+    const onDropdownClick = (event: Event) => {
+      if (!mobileMq.matches) return;
+
+      const link = event.currentTarget as HTMLAnchorElement;
+      const item = link.closest("li.menu-item-has-children");
+      if (!item) return;
+
+      event.preventDefault();
+      const isOpen = item.classList.toggle("is-open");
+      link.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+      dropdownItems.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("is-open");
+          other.querySelector("a")?.setAttribute("aria-expanded", "false");
+        }
+      });
+    };
+
+    dropdownItems.forEach((item) => {
+      const link = item.querySelector("a");
+      link?.addEventListener("click", onDropdownClick);
+    });
+
     return () => {
+      dropdownItems.forEach((item) => {
+        const link = item.querySelector("a");
+        link?.removeEventListener("click", onDropdownClick);
+      });
       setMounts({
         expertise: null,
         services: null,
@@ -106,6 +144,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         videos: null,
         blogs: null,
         faq: null,
+        clientsSay: null,
         footer: null,
       });
     };
@@ -212,7 +251,10 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         : null}
       {mounts.videos
         ? createPortal(
-            <VideoGallerySection key={`videos-${sectionKey}`} />,
+            <VideoGallerySection
+              key={`videos-${sectionKey}`}
+              content={HOME_VIDEO_GALLERY_CONTENT}
+            />,
             mounts.videos,
           )
         : null}
@@ -221,6 +263,12 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         : null}
       {mounts.faq
         ? createPortal(<FAQSection key={`faq-${sectionKey}`} />, mounts.faq)
+        : null}
+      {mounts.clientsSay
+        ? createPortal(
+            <ClientsSaySection key={`clients-say-${sectionKey}`} />,
+            mounts.clientsSay,
+          )
         : null}
       {mounts.footer
         ? createPortal(<SiteFooter key={`footer-${sectionKey}`} />, mounts.footer)

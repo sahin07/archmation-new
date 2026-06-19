@@ -60,6 +60,20 @@ const videos: VideoItem[] = [
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const GAP = 16;
 
+export type VideoGallerySectionContent = {
+  titleBefore?: string;
+  titleAccent?: string;
+};
+
+const defaultContent: Required<VideoGallerySectionContent> = {
+  titleBefore: "Glimpses of our",
+  titleAccent: "Work",
+};
+
+type VideoGallerySectionProps = {
+  content?: VideoGallerySectionContent;
+};
+
 function useVisibleCount() {
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -79,10 +93,11 @@ function useVisibleCount() {
   return visibleCount;
 }
 
-export default function VideoGallerySection() {
+export default function VideoGallerySection({ content }: VideoGallerySectionProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const [selectedVideo, setSelectedVideo] = useState<number | null>(null);
+  const { titleBefore, titleAccent } = { ...defaultContent, ...content };
   const [carouselPosition, setCarouselPosition] = useState(0);
   const [slideStep, setSlideStep] = useState(0);
   const [portalReady, setPortalReady] = useState(false);
@@ -235,7 +250,8 @@ export default function VideoGallerySection() {
             transition={{ duration: 0.8, ease: easeOut }}
           >
             <h2 className="archmation-videos__title">
-              Glimpses of our <span className="archmation-videos__title-accent">Work</span>
+              {titleBefore}{" "}
+              <span className="archmation-videos__title-accent">{titleAccent}</span>
             </h2>
           </motion.div>
 

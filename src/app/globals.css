@@ -1,1 +1,148 @@
-/* Next.js app shell — section styles live in /css/style.css */
+@import "tailwindcss";
+
+@source "../components/**/*.{js,ts,jsx,tsx}";
+@source "../app/**/*.{js,ts,jsx,tsx}";
+
+@theme {
+  --font-heading: "Playfair Display", Georgia, serif;
+}
+
+@utility bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+@keyframes slide-grid {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+@utility animate-slide-grid {
+  animation: slide-grid 40s linear infinite;
+}
+
+/* Service / inner pages — compact header + extra shrink on scroll (home unchanged) */
+.page-service {
+  --site-header-offset: 78px;
+  --site-header-offset-scrolled: 64px;
+}
+
+.page-service #fullSite {
+  background: #000;
+}
+
+.page-service .site-chrome__main {
+  background: #000;
+  padding-top: var(--site-header-offset);
+  transition: padding-top 0.3s ease;
+}
+
+@media screen and (min-width: 800px) {
+  .page-service {
+    --site-header-offset: 81.333px;
+    --site-header-offset-scrolled: 72px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .page-service {
+    --site-header-offset: 122.5px;
+    --site-header-offset-scrolled: 78px;
+  }
+}
+
+.page-service.is-header-scrolled {
+  --site-header-offset: var(--site-header-offset-scrolled);
+}
+
+/* Override legacy app.css #headerSite.small heights on inner pages only */
+.page-service #headerSite {
+  height: var(--site-header-offset) !important;
+  transition:
+    height 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.page-service.is-header-scrolled #headerSite {
+  height: var(--site-header-offset-scrolled) !important;
+}
+
+.page-service #headerSite #logoSite {
+  height: 41px;
+  transition: height 0.3s ease, width 0.3s ease;
+  width: 106.667px;
+}
+
+@media screen and (min-width: 800px) {
+  .page-service #headerSite #logoSite {
+    height: 56px;
+    width: 106.667px;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .page-service #headerSite #logoSite {
+    height: 56px;
+    width: 157.333px;
+  }
+}
+
+.page-service.is-header-scrolled #headerSite #logoSite {
+  height: 34px;
+  width: 88px;
+}
+
+@media screen and (min-width: 800px) {
+  .page-service.is-header-scrolled #headerSite #logoSite {
+    height: 38px;
+    width: 92px;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .page-service.is-header-scrolled #headerSite #logoSite {
+    height: 42px;
+    width: 118px;
+  }
+}
+
+.page-service.is-header-scrolled #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li a {
+  font-size: 1.55rem;
+}
+
+/* Stronger bar styling once scrolled */
+.page-service.is-header-scrolled #headerSite {
+  background: hsla(0, 0%, 100%, 0.96);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Service pages — show desktop nav in header bar */
+@media screen and (min-width: 1160px) {
+  .page-service #headerSite .overlay.overlayHeaderMenu.overlay-scale {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .page-service #headerSite .overlay.overlayHeaderMenu #navSite {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .page-service #headerSite .overlay.overlayHeaderMenu #navSite.height-transition-hidden {
+    max-height: none;
+    visibility: visible;
+  }
+}
+
+/* Mobile menu open state */
+.page-service #headerSite .overlay.overlayHeaderMenu.overlay-scale.open {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}

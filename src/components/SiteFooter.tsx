@@ -9,6 +9,7 @@ import {
   Mail,
   type LucideIcon,
 } from "lucide-react";
+import { getServiceHref, SERVICE_NAV } from "@/content/services";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
 type FooterLink = {
@@ -31,32 +32,15 @@ const footerColumns: FooterColumn[] = [
   },
   {
     title: "Services",
-    links: [
-      {
-        label: "Tech Solutions",
-        href: "https://archmation.com/our-services/web-tech-solutions/",
-      },
-      {
-        label: "Video Marketing",
-        href: "https://archmation.com/our-services/video-marketing/",
-      },
-      {
-        label: "Performance Marketing",
-        href: "https://archmation.com/our-services/performance-marketing/",
-      },
-      {
-        label: "Search Engine Optimization",
-        href: "https://archmation.com/our-services/seo/",
-      },
-      {
-        label: "Branding & Design",
-        href: "https://archmation.com/our-services/branding-design/",
-      },
-      {
-        label: "Education",
-        href: "https://archmation.com/our-services/edtech/",
-      },
-    ],
+    links: SERVICE_NAV.map(({ slug, label }) => ({
+      label:
+        slug === "web-tech-solutions"
+          ? "Tech Solutions"
+          : slug === "edtech"
+            ? "Education"
+            : label,
+      href: getServiceHref(slug),
+    })),
   },
   {
     title: "Support",

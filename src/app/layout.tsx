@@ -145,7 +145,7 @@ export default function RootLayout({
               "img:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}",
           }}
         />
-        <link rel="stylesheet" href="/css/style.css?v=20250618" />
+        <link rel="stylesheet" href="/css/style.css?v=20250613c" />
         <style
           id="classic-theme-styles-inline-css"
           dangerouslySetInnerHTML={{

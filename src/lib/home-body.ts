@@ -1,3 +1,5 @@
+import { injectServiceNavLinks } from "@/content/services";
+
 export const EXPERTISE_MARKER = "<!-- @react:expertise -->";
 export const ACCUEIL_FOND_NOIR_END = "<!-- @react:accueilFondNoirEnd -->";
 export const SERVICES_MARKER = "<!-- @react:services -->";
@@ -20,6 +22,8 @@ export const BLOGS_MARKER = "<!-- @react:blogs -->";
 export const BLOGS_END = "<!-- @react:blogsEnd -->";
 export const FAQ_MARKER = "<!-- @react:faq -->";
 export const FAQ_END = "<!-- @react:faqEnd -->";
+export const TESTIMONIALS_MARKER = "<!-- @react:testimonials -->";
+export const TESTIMONIALS_END = "<!-- @react:testimonialsEnd -->";
 
 /** @deprecated */
 export const ACCUEIL_FOND_NOIR_START = "<!-- @react:accueilFondNoir -->";
@@ -45,6 +49,8 @@ const BLOGS_SHELL =
   '<section id="accueilBlogs" class="sectionPaddingBottom archmation-blogs"><div id="react-blogs-root"></div></section>';
 const FAQ_SHELL =
   '<section id="accueilFaq" class="sectionPaddingBottom archmation-faq"><div id="react-faq-root"></div></section>';
+const TESTIMONIALS_SHELL =
+  '<section id="accueilTemoignages" class="sectionPaddingBottom widthGlobalContent"><div id="react-clients-say-root"></div></section>';
 const COLLABORATIONS_ANCHOR = '<div class="overflow-hidden">';
 export const FOOTER_MARKER = "<!-- @react:footerLegacy -->";
 const FOOTER_MOUNT = '<div id="react-footer-root"></div>';
@@ -210,6 +216,23 @@ export function ensureFaqMarkers(html: string): string {
   return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
 }
 
+/** Insert testimonials markers before footer when sync-html drops them. */
+export function ensureTestimonialsMarkers(html: string): string {
+  if (hasMarkerPair(html, TESTIMONIALS_MARKER, TESTIMONIALS_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(FOOTER_ANCHOR);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${TESTIMONIALS_MARKER} and ${TESTIMONIALS_END}, or #footerSite. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n        ${TESTIMONIALS_MARKER}\n        ${TESTIMONIALS_END}\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
 function replaceBetweenMarkers(
   html: string,
   startMarker: string,
@@ -234,8 +257,10 @@ function replaceBetweenMarkers(
 }
 
 export function buildHomeBodyHtml(bodyHtml: string): string {
-  let html = replaceBetweenMarkers(
-    bodyHtml,
+  let html = injectServiceNavLinks(bodyHtml);
+
+  html = replaceBetweenMarkers(
+    html,
     EXPERTISE_MARKER,
     ACCUEIL_FOND_NOIR_END,
     (middle) => {
@@ -310,6 +335,13 @@ export function buildHomeBodyHtml(bodyHtml: string): string {
     FAQ_MARKER,
     FAQ_END,
     () => FAQ_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureTestimonialsMarkers(html),
+    TESTIMONIALS_MARKER,
+    TESTIMONIALS_END,
+    () => TESTIMONIALS_SHELL,
   );
 
   if (html.includes(FOOTER_MARKER)) {

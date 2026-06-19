@@ -11,6 +11,7 @@ import {
   TrendingUp,
   type LucideIcon,
 } from "lucide-react";
+import { getServiceHref, SERVICE_NAV } from "@/content/services";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
 type Service = {
@@ -26,42 +27,42 @@ const services: Service[] = [
     title: "Web/Tech Solutions",
     description:
       "We craft websites, apps, and tech solutions that not only look stunning but also function seamlessly to enhance user experience and drive engagement",
-    href: "https://archmation.com/our-services/web-tech-solutions/",
+    href: getServiceHref(SERVICE_NAV[0].slug),
   },
   {
     icon: Play,
     title: "Video Marketing",
     description:
       "We combine the best of performance-driven Video marketing to highlight your brand's legacy and also generate ROI",
-    href: "https://archmation.com/our-services/video-marketing/",
+    href: getServiceHref(SERVICE_NAV[1].slug),
   },
   {
     icon: TrendingUp,
     title: "Performance Marketing",
     description:
       "Maximize your online presence and reach your target audience effectively through our strategic Google and Meta Ads services",
-    href: "https://archmation.com/our-services/performance-marketing/",
+    href: getServiceHref(SERVICE_NAV[2].slug),
   },
   {
     icon: Target,
     title: "Search Engine Optimization",
     description:
       "We help your website to rank higher on search engine results pages, helping you reach more potential customers and grow your business",
-    href: "https://archmation.com/our-services/seo/",
+    href: getServiceHref(SERVICE_NAV[3].slug),
   },
   {
     icon: Layers,
     title: "Branding & Design",
     description:
       "We can help craft a memorable brand identity that reflects your values and resonates with your target audience",
-    href: "https://archmation.com/our-services/branding-design/",
+    href: getServiceHref(SERVICE_NAV[4].slug),
   },
   {
     icon: BookOpen,
     title: "Education",
     description:
       "With our 8+ years of experience in powering EdTechs, Schools and Coaching Centres, you can boost your institution's growth",
-    href: "https://archmation.com/our-services/edtech/",
+    href: getServiceHref(SERVICE_NAV[5].slug),
   },
 ];
 
