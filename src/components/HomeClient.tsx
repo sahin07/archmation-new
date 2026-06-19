@@ -14,6 +14,7 @@ import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
 import { HOME_VIDEO_GALLERY_CONTENT } from "@/content/video-gallery";
+import { initHeaderNav } from "@/hooks/useHeaderNav";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -98,40 +99,10 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     host.innerHTML = bodyHtml;
     setMounts(readReactMounts(host));
 
-    const mobileMq = window.matchMedia("(max-width: 1159px)");
-    const dropdownItems = host.querySelectorAll<HTMLLIElement>(
-      "#header-menu li.menu-item-has-children",
-    );
-
-    const onDropdownClick = (event: Event) => {
-      if (!mobileMq.matches) return;
-
-      const link = event.currentTarget as HTMLAnchorElement;
-      const item = link.closest("li.menu-item-has-children");
-      if (!item) return;
-
-      event.preventDefault();
-      const isOpen = item.classList.toggle("is-open");
-      link.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
-      dropdownItems.forEach((other) => {
-        if (other !== item) {
-          other.classList.remove("is-open");
-          other.querySelector("a")?.setAttribute("aria-expanded", "false");
-        }
-      });
-    };
-
-    dropdownItems.forEach((item) => {
-      const link = item.querySelector("a");
-      link?.addEventListener("click", onDropdownClick);
-    });
+    const cleanupNav = initHeaderNav(host);
 
     return () => {
-      dropdownItems.forEach((item) => {
-        const link = item.querySelector("a");
-        link?.removeEventListener("click", onDropdownClick);
-      });
+      cleanupNav?.();
       setMounts({
         expertise: null,
         services: null,

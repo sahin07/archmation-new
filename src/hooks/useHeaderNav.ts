@@ -1,11 +1,36 @@
 "use client";
 
-function initMobileServiceDropdown(root: ParentNode) {
-  const mobileMq = window.matchMedia("(max-width: 1159px)");
-  const dropdownItems = root.querySelectorAll<HTMLLIElement>(
+const MOBILE_NAV_MQ = "(max-width: 1159px)";
+
+function getDropdownItems(root: ParentNode) {
+  return root.querySelectorAll<HTMLLIElement>(
     "#header-menu li.menu-item-has-children",
   );
+}
 
+export function closeServiceDropdowns(root: ParentNode) {
+  getDropdownItems(root).forEach((item) => {
+    item.classList.remove("is-open");
+    item.querySelector("a")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+export function closeMobileNavOverlay(root: ParentNode) {
+  const navicon = root.querySelector<HTMLElement>("#navicon");
+  const overlay = root.querySelector<HTMLElement>(".overlayHeaderMenu");
+  navicon?.classList.remove("open");
+  overlay?.classList.remove("open");
+  document.body.classList.remove("menu-open");
+}
+
+export function closeAllHeaderMenus(root: ParentNode) {
+  closeServiceDropdowns(root);
+  closeMobileNavOverlay(root);
+}
+
+function initMobileServiceDropdown(root: ParentNode) {
+  const mobileMq = window.matchMedia(MOBILE_NAV_MQ);
+  const dropdownItems = getDropdownItems(root);
   const cleanups: (() => void)[] = [];
 
   const onDropdownClick = (event: Event) => {
@@ -16,6 +41,8 @@ function initMobileServiceDropdown(root: ParentNode) {
     if (!item) return;
 
     event.preventDefault();
+    event.stopPropagation();
+
     const isOpen = item.classList.toggle("is-open");
     link.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
@@ -27,12 +54,40 @@ function initMobileServiceDropdown(root: ParentNode) {
     });
   };
 
+  const onDocumentClick = (event: MouseEvent) => {
+    const target = event.target as Element | null;
+    if (!target) return;
+    if (target.closest("#header-menu li.menu-item-has-children")) return;
+    closeServiceDropdowns(root);
+  };
+
+  const onSubmenuLinkClick = () => {
+    closeAllHeaderMenus(root);
+  };
+
   dropdownItems.forEach((item) => {
     const link = item.querySelector("a");
     if (!link) return;
     link.addEventListener("click", onDropdownClick);
     cleanups.push(() => link.removeEventListener("click", onDropdownClick));
   });
+
+  root.querySelectorAll<HTMLAnchorElement>(
+    "#header-menu li.menu-item-has-children ul.sub-menu a",
+  ).forEach((link) => {
+    link.addEventListener("click", onSubmenuLinkClick);
+    cleanups.push(() => link.removeEventListener("click", onSubmenuLinkClick));
+  });
+
+  root.querySelectorAll<HTMLAnchorElement>(
+    "#header-menu > li:not(.menu-item-has-children) > a",
+  ).forEach((link) => {
+    link.addEventListener("click", onSubmenuLinkClick);
+    cleanups.push(() => link.removeEventListener("click", onSubmenuLinkClick));
+  });
+
+  document.addEventListener("click", onDocumentClick);
+  cleanups.push(() => document.removeEventListener("click", onDocumentClick));
 
   return () => cleanups.forEach((cleanup) => cleanup());
 }
@@ -125,6 +180,5 @@ export function initHeaderNav(host: ParentNode) {
 
 /** @deprecated Use initHeaderNav inside an effect after header HTML is mounted */
 export function useHeaderNav(host: HTMLElement | null) {
-  // kept for compatibility if imported elsewhere
   void host;
 }

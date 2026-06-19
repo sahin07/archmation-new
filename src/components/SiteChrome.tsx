@@ -1,7 +1,11 @@
 "use client";
 
 import SiteFooter from "@/components/SiteFooter";
-import { initHeaderNav, initHeaderScroll } from "@/hooks/useHeaderNav";
+import {
+  closeAllHeaderMenus,
+  initHeaderNav,
+  initHeaderScroll,
+} from "@/hooks/useHeaderNav";
 import { syncHeaderNavActive } from "@/lib/header-nav-active";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -29,6 +33,12 @@ export default function SiteChrome({ headerHtml, children }: SiteChromeProps) {
       cleanupScroll?.();
     };
   }, [headerHtml, pathname]);
+
+  useEffect(() => {
+    const host = headerHostRef.current;
+    if (!host) return;
+    closeAllHeaderMenus(host);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.classList.add("page-service", "page-template-accueil");

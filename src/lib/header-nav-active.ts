@@ -38,10 +38,6 @@ function markItemActive(li: Element | null) {
 function markItemAncestor(li: Element | null) {
   if (!li) return;
   li.classList.add(...ACTIVE_ANCESTOR_CLASSES);
-
-  const link = li.querySelector("a");
-  link?.setAttribute("aria-expanded", "true");
-  li.classList.add("is-open");
 }
 
 function normalizePathname(pathname: string): string {
