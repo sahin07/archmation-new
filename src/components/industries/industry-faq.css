@@ -1,0 +1,169 @@
+/* Industry FAQ — layout + accordion (background uses hero classes from industry-hero.css / style.css) */
+
+.page-template-accueil.page-service .archmation-industry-faq {
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: block !important;
+	isolation: isolate;
+	min-height: auto !important;
+	overflow: hidden !important;
+	padding: clamp(48px, 6vw, 96px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__layout {
+	display: grid !important;
+	gap: 48px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-faq__layout {
+		align-items: start !important;
+		gap: 64px !important;
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__intro {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 32px !important;
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__intro .archmation-industry-hero__label {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__intro .archmation-industry-hero__title {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__intro .archmation-industry-hero__desc {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__list {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 12px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__item {
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__trigger {
+	align-items: flex-start !important;
+	background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(59, 130, 246, 0.1)) !important;
+	border: 1px solid rgba(192, 132, 252, 0.2) !important;
+	border-radius: 16px !important;
+	box-sizing: border-box !important;
+	color: inherit !important;
+	cursor: pointer !important;
+	display: flex !important;
+	font-family: inherit !important;
+	gap: 16px !important;
+	padding: 20px 24px !important;
+	text-align: left !important;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__trigger.is-hovered {
+	background: linear-gradient(135deg, rgba(168, 85, 247, 0.14), rgba(59, 130, 246, 0.14)) !important;
+	border-color: rgba(192, 132, 252, 0.35) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__trigger.is-expanded {
+	background: linear-gradient(135deg, rgba(168, 85, 247, 0.16), rgba(59, 130, 246, 0.16)) !important;
+	border-color: rgba(192, 132, 252, 0.4) !important;
+	box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__icon-wrap {
+	flex-shrink: 0 !important;
+	margin-top: 2px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__icon {
+	color: #fff !important;
+	height: 24px !important;
+	width: 24px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__question {
+	color: #fff !important;
+	flex: 1 !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	line-height: 1.35 !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__chevron-wrap {
+	display: inline-flex !important;
+	flex-shrink: 0 !important;
+	margin-top: 2px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__chevron {
+	color: rgba(255, 255, 255, 0.5) !important;
+	height: 20px !important;
+	width: 20px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__answer-wrap {
+	overflow: hidden !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__answer {
+	border-top: 1px solid rgba(192, 132, 252, 0.15) !important;
+	margin-top: 0 !important;
+	padding: 0 24px 16px 56px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq__answer-text {
+	color: rgba(255, 255, 255, 0.6) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 1.6 !important;
+	margin: 12px 0 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-industry-faq {
+		padding: clamp(32px, 8vw, 48px) 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-faq__layout {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-faq__intro {
+		gap: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-faq__trigger {
+		padding: 14px 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-faq__answer {
+		padding: 0 16px 14px 16px !important;
+	}
+}

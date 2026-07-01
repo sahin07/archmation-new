@@ -1,0 +1,49 @@
+/* Shared learn-marketing section container — matches industry hero / service pages */
+
+.page-template-accueil.page-service .archmation-master-marketing__inner,
+.page-template-accueil.page-service .archmation-lead-circuit__inner,
+.page-template-accueil.page-service .archmation-instructor__inner {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 1500px !important;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	position: relative !important;
+	width: 100% !important;
+	z-index: 1 !important;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-master-marketing__inner,
+	.page-template-accueil.page-service .archmation-lead-circuit__inner,
+	.page-template-accueil.page-service .archmation-instructor__inner {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-master-marketing__inner,
+	.page-template-accueil.page-service .archmation-lead-circuit__inner,
+	.page-template-accueil.page-service .archmation-instructor__inner {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil.page-service .archmation-master-marketing__inner,
+	.page-template-accueil.page-service .archmation-lead-circuit__inner,
+	.page-template-accueil.page-service .archmation-instructor__inner {
+		max-width: 1650px !important;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.page-template-accueil.page-service .archmation-master-marketing__inner,
+	.page-template-accueil.page-service .archmation-lead-circuit__inner,
+	.page-template-accueil.page-service .archmation-instructor__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}

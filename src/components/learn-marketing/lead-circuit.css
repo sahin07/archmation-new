@@ -1,0 +1,269 @@
+/* Learn Marketing — Lead Circuit section */
+
+.page-template-accueil.page-service .archmation-lead-circuit {
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: block !important;
+	isolation: isolate;
+	min-height: auto !important;
+	overflow: hidden !important;
+	padding: clamp(48px, 6vw, 96px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__header {
+	margin: 0 auto 64px !important;
+	text-align: center !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__eyebrow {
+	color: #f9a8d4 !important;
+	display: block !important;
+	margin: 0 auto 16px !important;
+	text-align: center !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__title {
+	margin: 0 auto !important;
+	text-align: center !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__modules {
+	display: grid !important;
+	gap: 32px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	list-style: none !important;
+	margin: 0 0 80px !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-lead-circuit__modules {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-lead-circuit__modules {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-card {
+	align-items: center !important;
+	background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)) !important;
+	border: 1px solid rgba(148, 163, 184, 0.25) !important;
+	border-radius: 12px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	list-style: none !important;
+	margin: 0 !important;
+	min-height: 192px !important;
+	padding: 32px 24px !important;
+	text-align: center !important;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease,
+		transform 0.3s ease !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-card:hover {
+	border-color: rgba(244, 114, 182, 0.35) !important;
+	box-shadow: 0 16px 40px rgba(236, 72, 153, 0.15) !important;
+	transform: scale(1.03) !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-icon-wrap {
+	align-items: center !important;
+	display: flex !important;
+	height: 56px !important;
+	justify-content: center !important;
+	margin-bottom: 16px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-letter {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 48px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	opacity: 0.9 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-icon {
+	color: #fff !important;
+	opacity: 0.9 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__module-title {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	line-height: 1.35 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__bottom {
+	display: grid !important;
+	gap: 40px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-lead-circuit__bottom {
+		gap: 64px !important;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__block-title {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 28px !important;
+	font-weight: 700 !important;
+	line-height: 1.25 !important;
+	margin: 0 0 32px !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__eligibility-list {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 16px !important;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__eligibility-item {
+	align-items: flex-start !important;
+	display: flex !important;
+	gap: 12px !important;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__check-icon {
+	color: #f9a8d4 !important;
+	flex-shrink: 0 !important;
+	margin-top: 2px !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__eligibility-text {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 16px !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-panel {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 32px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-card {
+	background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)) !important;
+	border: 1px solid rgba(148, 163, 184, 0.25) !important;
+	border-radius: 16px !important;
+	box-sizing: border-box !important;
+	padding: 32px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-card .archmation-lead-circuit__block-title {
+	margin-bottom: 24px !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-list {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 16px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-row {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-label {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	margin: 0 0 4px !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__details-value {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 16px !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__cta-wrap {
+	display: flex !important;
+	justify-content: center !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__cta.archmation-industry-hero__cta {
+	gap: 10px !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit__cta-icon {
+	flex-shrink: 0 !important;
+	position: relative !important;
+	z-index: 1 !important;
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-lead-circuit {
+		padding: clamp(48px, 10vw, 64px) 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__header {
+		margin-bottom: 40px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__modules {
+		margin-bottom: 48px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__block-title {
+		font-size: 24px !important;
+		margin-bottom: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__module-card {
+		min-height: 168px !important;
+		padding: 24px 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__module-title {
+		font-size: 18px !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .archmation-lead-circuit__module-card {
+		transition: none !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__module-card:hover {
+		transform: none !important;
+	}
+}

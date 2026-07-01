@@ -1,0 +1,516 @@
+/* Learn Marketing — Master Marketing hero */
+
+.page-template-accueil.page-service .archmation-master-marketing {
+	align-items: flex-start !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: flex !important;
+	isolation: isolate;
+	min-height: auto !important;
+	overflow: hidden !important;
+	padding: clamp(48px, 6vw, 96px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__grid {
+	align-items: stretch !important;
+	display: grid !important;
+	gap: 40px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-master-marketing__grid {
+		align-items: center !important;
+		gap: 64px !important;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__content {
+		gap: 24px !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__content {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 20px !important;
+	justify-content: flex-start !important;
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__badge-wrap {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__eyebrow {
+	color: #f9a8d4 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__title {
+	line-height: 1.12 !important;
+	margin: 0 !important;
+	text-align: left !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__title-row {
+	display: block !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__title-row--accent {
+	margin-top: 0.08em !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__desc {
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta-row {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 12px !important;
+	margin: 4px 0 0 !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil.page-service .archmation-master-marketing__cta-row {
+		flex-direction: row !important;
+		flex-wrap: wrap !important;
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.page-template-accueil.page-service .archmation-master-marketing__cta {
+		width: 100% !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta {
+	align-items: center !important;
+	border-radius: 9999px !important;
+	box-sizing: border-box !important;
+	cursor: pointer !important;
+	display: inline-flex !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	gap: 8px !important;
+	justify-content: center !important;
+	letter-spacing: 0.04em !important;
+	line-height: 1.2 !important;
+	padding: 12px 32px !important;
+	text-decoration: none !important;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease,
+		color 0.3s ease,
+		transform 0.3s ease !important;
+	white-space: nowrap !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta--primary {
+	background: linear-gradient(90deg, #ec4899, #a855f7) !important;
+	border: none !important;
+	box-shadow: 0 10px 24px rgba(236, 72, 153, 0.25) !important;
+	color: #fff !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta--primary:hover {
+	background: linear-gradient(90deg, #db2777, #9333ea) !important;
+	box-shadow: 0 12px 28px rgba(236, 72, 153, 0.35) !important;
+	color: #fff !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta--secondary {
+	background: transparent !important;
+	border: 1px solid rgba(244, 114, 182, 0.5) !important;
+	color: #f472b6 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__cta--secondary:hover {
+	border-color: #f472b6 !important;
+	color: #fbcfe8 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-col {
+	align-items: center !important;
+	display: flex !important;
+	justify-content: center !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-master-marketing__card-col {
+		justify-content: flex-end !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-float {
+	animation: archmation-master-marketing-pulse 3s ease-in-out infinite !important;
+	background: linear-gradient(
+		135deg,
+		rgba(30, 41, 59, 0.2),
+		rgba(15, 23, 42, 0.2)
+	) !important;
+	border-radius: 24px !important;
+	filter: blur(24px) !important;
+	inset: 0 !important;
+	opacity: 0.3 !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group {
+	max-width: 384px !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-glow {
+	background: linear-gradient(
+		135deg,
+		rgb(30, 41, 59),
+		rgb(51, 65, 85),
+		rgb(15, 23, 42)
+	) !important;
+	border-radius: 24px !important;
+	filter: blur(24px) !important;
+	inset: -8px !important;
+	opacity: 0.4 !important;
+	position: absolute !important;
+	transition: opacity 0.5s ease !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card-glow {
+	opacity: 0.6 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card {
+	aspect-ratio: 1 / 1 !important;
+	background: linear-gradient(135deg, rgb(30, 41, 59), rgb(15, 23, 42)) !important;
+	border: 1px solid rgba(51, 65, 85, 0.5) !important;
+	border-radius: 24px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	overflow: hidden !important;
+	padding: 44px !important;
+	position: relative !important;
+	transition:
+		border-color 0.5s ease,
+		transform 0.5s ease !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card {
+	border-color: rgba(244, 114, 182, 0.3) !important;
+	transform: scale(1.05) !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-inner-glow {
+	background: linear-gradient(
+		to top,
+		rgba(88, 28, 135, 0.3),
+		transparent
+	) !important;
+	border-radius: 24px !important;
+	inset: 0 !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-content {
+	align-items: center !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex: 1 !important;
+	flex-direction: column !important;
+	height: 100% !important;
+	justify-content: flex-start !important;
+	min-height: 0 !important;
+	position: relative !important;
+	text-align: center !important;
+	width: 100% !important;
+	z-index: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-preface-wrap {
+	flex-shrink: 0 !important;
+	margin-bottom: 32px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-preface {
+	color: rgba(249, 168, 212, 0.6) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 18px !important;
+	font-style: normal !important;
+	font-weight: 300 !important;
+	letter-spacing: 0.2em !important;
+	line-height: 1.2 !important;
+	margin: 0 0 8px !important;
+	text-transform: uppercase !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-divider {
+	background: linear-gradient(
+		90deg,
+		rgba(244, 114, 182, 0.3),
+		transparent
+	) !important;
+	height: 4px !important;
+	margin: 0 auto !important;
+	width: 48px !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-body {
+	align-items: center !important;
+	display: flex !important;
+	flex: 1 !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	min-height: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-title-lead {
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 54px !important;
+	font-style: normal !important;
+	font-weight: 900 !important;
+	line-height: 1 !important;
+	margin: 0 0 16px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-title-lead span {
+	-webkit-background-clip: text !important;
+	background-clip: text !important;
+	background-image: linear-gradient(
+		135deg,
+		#fbcfe8,
+		#f472b6
+	) !important;
+	color: transparent !important;
+	display: block !important;
+	white-space: nowrap !important;
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-lead {
+		font-size: clamp(36px, 10vw, 50px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit {
+		font-size: clamp(40px, 12vw, 58px) !important;
+		white-space: normal !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit {
+	-webkit-background-clip: text !important;
+	background-clip: text !important;
+	background-image: linear-gradient(
+		135deg,
+		#f472b6,
+		#c084fc
+	) !important;
+	color: transparent !important;
+	display: block !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 66px !important;
+	font-style: normal !important;
+	font-weight: 900 !important;
+	line-height: 1 !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-subtitle {
+	color: rgba(249, 168, 212, 0.7) !important;
+	flex-shrink: 0 !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 12px !important;
+	font-style: italic !important;
+	letter-spacing: 0.08em !important;
+	line-height: 1.4 !important;
+	margin: auto 0 0 !important;
+	padding-top: 32px !important;
+	text-align: center !important;
+	white-space: nowrap !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-border-glow {
+	background: linear-gradient(
+		90deg,
+		rgba(236, 72, 153, 0.1),
+		transparent,
+		rgba(168, 85, 247, 0.1)
+	) !important;
+	border-radius: 24px !important;
+	inset: 0 !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	transition: opacity 0.5s ease !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card-border-glow {
+	opacity: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-corner {
+	border: none !important;
+	box-sizing: border-box !important;
+	height: 32px !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	transition: border-color 0.3s ease !important;
+	width: 32px !important;
+	z-index: 3 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-corner--tr {
+	border-right: 2px solid rgba(244, 114, 182, 0.4) !important;
+	border-top: 2px solid rgba(244, 114, 182, 0.4) !important;
+	right: 16px !important;
+	top: 16px !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-corner--bl {
+	border-bottom: 2px solid rgba(244, 114, 182, 0.4) !important;
+	border-left: 2px solid rgba(244, 114, 182, 0.4) !important;
+	bottom: 16px !important;
+	left: 16px !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card-corner--tr {
+	border-right-color: rgba(244, 114, 182, 0.65) !important;
+	border-top-color: rgba(244, 114, 182, 0.65) !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card-corner--bl {
+	border-bottom-color: rgba(244, 114, 182, 0.65) !important;
+	border-left-color: rgba(244, 114, 182, 0.65) !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-grid {
+	display: grid !important;
+	gap: 32px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	list-style: none !important;
+	margin: 48px 0 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-master-marketing__info-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-card {
+	background: linear-gradient(
+		135deg,
+		rgba(15, 23, 42, 0.4),
+		rgba(2, 6, 23, 0.4)
+	) !important;
+	border: 1px solid rgba(30, 41, 59, 0.5) !important;
+	border-radius: 12px !important;
+	box-sizing: border-box !important;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 24px !important;
+	transition: border-color 0.3s ease !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-card:hover {
+	border-color: rgba(244, 114, 182, 0.3) !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-label {
+	color: #f472b6 !important;
+	font-size: 14px !important;
+	margin-bottom: 8px !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-body,
+.page-template-accueil.page-service .archmation-master-marketing__info-list {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-list {
+	list-style: none !important;
+	padding: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-list li {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__info-list li::before {
+	content: "• " !important;
+}
+
+@keyframes archmation-master-marketing-pulse {
+	0%,
+	100% {
+		opacity: 0.3;
+	}
+
+	50% {
+		opacity: 0.45;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-master-marketing__info-grid {
+		margin-top: 40px !important;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.page-template-accueil.page-service .archmation-master-marketing__card {
+		padding: 36px 28px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-lead {
+		font-size: clamp(40px, 12vw, 50px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit {
+		font-size: clamp(48px, 14vw, 58px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-subtitle {
+		font-size: 11px !important;
+		letter-spacing: 0.04em !important;
+		padding-top: 24px !important;
+		white-space: normal !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .archmation-master-marketing__card-float {
+		animation: none !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card,
+	.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card {
+		transition: none !important;
+		transform: none !important;
+	}
+}

@@ -1,10 +1,19 @@
 import {
+  INDUSTRIES_MENU_ITEM_ID,
+  INDUSTRY_BASE_PATH,
+  INDUSTRY_NAV,
+  isIndustrySlug,
+} from "@/content/industries";
+import {
   SERVICE_BASE_PATH,
   SERVICE_NAV,
   isServiceSlug,
 } from "@/content/services";
 
 const HOME_ITEM_ID = "menu-item-19";
+const ABOUT_ITEM_ID = "menu-item-20";
+const CONTACT_ITEM_ID = "menu-item-21";
+const LEARN_ITEM_ID = "menu-item-2024";
 const SERVICES_ITEM_ID = "menu-item-22";
 
 const ACTIVE_ITEM_CLASSES = ["current-menu-item", "current_page_item"] as const;
@@ -48,6 +57,38 @@ function normalizePathname(pathname: string): string {
   return path || "/";
 }
 
+function syncServiceNavActive(menu: Element, normalizedPath: string) {
+  const services = menu.querySelector(`#${SERVICES_ITEM_ID}`);
+  markItemAncestor(services);
+
+  const slug = normalizedPath
+    .slice(SERVICE_BASE_PATH.length + 1)
+    .split("/")[0];
+  if (slug && isServiceSlug(slug)) {
+    const navItem = SERVICE_NAV.find((item) => item.slug === slug);
+    const child = navItem
+      ? menu.querySelector(`#${navItem.menuItemId}`)
+      : null;
+    markItemActive(child);
+  }
+}
+
+function syncIndustryNavActive(menu: Element, normalizedPath: string) {
+  const industries = menu.querySelector(`#${INDUSTRIES_MENU_ITEM_ID}`);
+  markItemAncestor(industries);
+
+  const slug = normalizedPath
+    .slice(INDUSTRY_BASE_PATH.length + 1)
+    .split("/")[0];
+  if (slug && isIndustrySlug(slug)) {
+    const navItem = INDUSTRY_NAV.find((item) => item.slug === slug);
+    const child = navItem
+      ? menu.querySelector(`#${navItem.menuItemId}`)
+      : null;
+    markItemActive(child);
+  }
+}
+
 /** Sync WordPress-style active classes on #header-menu from the current pathname. */
 export function syncHeaderNavActive(root: ParentNode, pathname: string) {
   const menu = root.querySelector("#header-menu");
@@ -64,21 +105,27 @@ export function syncHeaderNavActive(root: ParentNode, pathname: string) {
     return;
   }
 
-  if (!normalizedPath.startsWith(SERVICE_BASE_PATH)) {
+  if (normalizedPath.startsWith(SERVICE_BASE_PATH)) {
+    syncServiceNavActive(menu, normalizedPath);
     return;
   }
 
-  const services = menu.querySelector(`#${SERVICES_ITEM_ID}`);
-  markItemAncestor(services);
+  if (normalizedPath.startsWith(INDUSTRY_BASE_PATH)) {
+    syncIndustryNavActive(menu, normalizedPath);
+    return;
+  }
 
-  const slug = normalizedPath
-    .slice(SERVICE_BASE_PATH.length + 1)
-    .split("/")[0];
-  if (slug && isServiceSlug(slug)) {
-    const navItem = SERVICE_NAV.find((item) => item.slug === slug);
-    const child = navItem
-      ? menu.querySelector(`#${navItem.menuItemId}`)
-      : null;
-    markItemActive(child);
+  if (normalizedPath === "/about-us") {
+    markItemActive(menu.querySelector(`#${ABOUT_ITEM_ID}`));
+    return;
+  }
+
+  if (normalizedPath === "/contact-us") {
+    markItemActive(menu.querySelector(`#${CONTACT_ITEM_ID}`));
+    return;
+  }
+
+  if (normalizedPath === "/learn-marketing") {
+    markItemActive(menu.querySelector(`#${LEARN_ITEM_ID}`));
   }
 }

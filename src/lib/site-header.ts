@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
+import { injectIndustryNavLinks } from "@/content/industries";
 import { injectServiceNavLinks } from "@/content/services";
+import { normalizeInternalLinks } from "@/lib/internal-links";
 
 export function buildSiteHeaderHtml(): string {
   const homeBody = fs.readFileSync(
@@ -17,15 +19,11 @@ export function buildSiteHeaderHtml(): string {
 
   let header = homeBody.slice(start, end).trim();
   header = injectServiceNavLinks(header);
+  header = injectIndustryNavLinks(header);
+  header = normalizeInternalLinks(header);
 
-  return header
-    .replace(
-      '<header id="headerSite" class="header clear no-smoothState"',
-      '<header id="headerSite" class="header clear no-smoothState small"',
-    )
-    .replace(/href="https:\/\/archmation\.com\/"/g, 'href="/"')
-    .replace(
-      /<a href="https:\/\/archmation\.com">\s*\n?\s*<svg width="236"/,
-      '<a href="/">\n                            <svg width="236"',
-    );
+  return header.replace(
+    '<header id="headerSite" class="header clear no-smoothState"',
+    '<header id="headerSite" class="header clear no-smoothState small"',
+  );
 }

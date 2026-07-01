@@ -508,6 +508,7 @@ hr {
 .page-template-accueil.page-service .archmation-seo-hero__label,
 .page-template-accueil.page-service .archmation-branding-design-hero__label,
 .page-template-accueil.page-service .archmation-edtech-hero__label,
+.page-template-accueil.page-service .archmation-industry-hero__label,
 .page-template-accueil #accueilValue.archmation-value .archmation-value__label,
 .page-template-accueil #accueilStats.archmation-stats .archmation-stats__label,
 .page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__eyebrow,
@@ -541,6 +542,11 @@ hr {
 .page-template-accueil.page-service .archmation-seo-hero__title,
 .page-template-accueil.page-service .archmation-branding-design-hero__title,
 .page-template-accueil.page-service .archmation-edtech-hero__title,
+.page-template-accueil.page-service .archmation-industry-hero__title,
+.page-template-accueil.page-service .archmation-industry-services__title,
+.page-template-accueil.page-service .archmation-industry-expertise__title,
+.page-template-accueil.page-service .archmation-industry-solutions__title,
+.page-template-accueil.page-service .archmation-industry-faq__title,
 .page-template-accueil.page-service .archmation-videos-shell.archmation-videos .archmation-videos__title {
 	color: var(--archmation-section-title-color) !important;
 	font-family: "Playfair Display", Georgia, serif;
@@ -564,6 +570,8 @@ hr {
 .page-template-accueil.page-service .archmation-seo-hero__title-accent,
 .page-template-accueil.page-service .archmation-branding-design-hero__title-accent,
 .page-template-accueil.page-service .archmation-edtech-hero__title-accent,
+.page-template-accueil.page-service .archmation-industry-hero__title-accent,
+.page-template-accueil.page-service .archmation-industry-expertise__title-accent,
 .page-template-accueil.page-service .archmation-videos-shell.archmation-videos .archmation-videos__title-accent {
 	color: var(--archmation-section-title-color);
 	font-style: italic;
@@ -4955,6 +4963,46 @@ hr {
 	}
 }
 
+/* Header — LEARN WITH US CTA */
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta {
+	align-self: center;
+	margin-left: 0.5rem;
+}
+
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a {
+	background: linear-gradient(180deg, #f85b3d 0%, #c42204 100%);
+	border-radius: 3px;
+	color: #fff !important;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	padding: 0.85rem 1.5rem;
+	text-transform: uppercase;
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a span::before {
+	display: none;
+}
+
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a:hover,
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a:focus-visible {
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+}
+
+@media screen and (max-width: 1159px) {
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a {
+		display: inline-block;
+	}
+}
+
 /* --------------------------------------------------------------------------
    Service pages — shared hero background (performance-marketing style)
    -------------------------------------------------------------------------- */
@@ -4972,6 +5020,7 @@ hr {
 .page-template-accueil.page-service .archmation-performance-marketing-hero__bg-base,
 .page-template-accueil.page-service .archmation-seo-hero__bg-base,
 .page-template-accueil.page-service .archmation-branding-design-hero__bg-base,
+.page-template-accueil.page-service .archmation-industry-hero__bg-base,
 .page-template-accueil.page-service .archmation-edtech-hero__bg-base {
 	background: #000;
 	inset: 0;
@@ -4998,6 +5047,7 @@ hr {
 .page-template-accueil.page-service .archmation-performance-marketing-hero__bg-spotlight,
 .page-template-accueil.page-service .archmation-seo-hero__bg-spotlight,
 .page-template-accueil.page-service .archmation-branding-design-hero__bg-spotlight,
+.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight,
 .page-template-accueil.page-service .archmation-edtech-hero__bg-spotlight {
 	border-radius: 9999px;
 	filter: blur(64px);
@@ -5034,6 +5084,7 @@ hr {
 .page-template-accueil.page-service .archmation-performance-marketing-hero__bg-grid,
 .page-template-accueil.page-service .archmation-seo-hero__bg-grid,
 .page-template-accueil.page-service .archmation-branding-design-hero__bg-grid,
+.page-template-accueil.page-service .archmation-industry-hero__bg-grid,
 .page-template-accueil.page-service .archmation-edtech-hero__bg-grid {
 	animation: archmation-service-hero-grid-slide 40s linear infinite;
 	background-image:
@@ -9443,7 +9494,7 @@ hr {
 		--archmation-section-eyebrow-font-size: 0.65rem;
 	}
 
-	.page-template-accueil.page-service [class*="archmation-"][class*="-hero"] {
+	.page-template-accueil.page-service [class*="archmation-"][class*="-hero"]:not([class*="__"]) {
 		min-height: auto;
 		padding: clamp(32px, 8vw, 48px) 0;
 	}
@@ -9458,7 +9509,7 @@ hr {
 		padding-right: 20px;
 	}
 
-	.page-template-accueil.page-service [class*="-hero__content"] {
+	.page-template-accueil.page-service [class$="-hero__content"] {
 		gap: 24px;
 	}
 
@@ -9649,7 +9700,7 @@ hr {
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
 
-	.page-template-accueil.page-service [class*="archmation-"][class*="-hero"] {
+	.page-template-accueil.page-service [class*="archmation-"][class*="-hero"]:not([class*="__"]) {
 		min-height: auto;
 		padding: clamp(40px, 6vw, 64px) 0;
 	}
@@ -9684,5 +9735,1675 @@ hr {
 
 	.page-template-accueil.page-service .archmation-how-it-works__steps {
 		gap: 24px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero {
+		padding: clamp(32px, 8vw, 48px) 0;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__grid {
+		gap: 32px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__content-stack {
+		gap: 24px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__desc {
+		font-size: 16px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__cta {
+		justify-content: center;
+		width: auto;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__features-panel {
+		margin-top: 8px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		gap: 12px;
+		grid-template-columns: 1fr;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__feature {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 14px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-services__inner {
+		padding: clamp(48px, 10vw, 64px) 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-services__header {
+		gap: 24px;
+		margin-bottom: 32px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-services__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-services__intro {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-services__card-inner {
+		padding: 24px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-expertise__inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Real Estate industry hero
+   -------------------------------------------------------------------------- */
+@keyframes archmation-industry-hero-shimmer {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes archmation-industry-hero-glow {
+	0%,
+	100% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes archmation-industry-hero-float-up {
+	0%,
+	100% {
+		opacity: 0.6;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes archmation-industry-hero-pulse-stat {
+	0%,
+	100% {
+		box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+		transform: scale(1);
+	}
+	50% {
+		box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+		transform: scale(1.02);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero {
+	color: #fff;
+	isolation: isolate;
+	min-height: auto;
+	overflow: hidden;
+	padding: clamp(48px, 6vw, 96px) 0;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg {
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-base {
+	background: #000;
+	inset: 0;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-gradient {
+	background:
+		linear-gradient(135deg, rgba(59, 7, 100, 0.5) 0%, #000 45%, rgba(23, 37, 84, 0.4) 100%);
+	inset: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--tr {
+	animation: archmation-industry-hero-glow 2s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.3);
+	filter: blur(64px);
+	height: 320px;
+	right: 25%;
+	top: -128px;
+	width: 320px;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--bl {
+	animation: archmation-industry-hero-glow 2s ease-in-out infinite;
+	background: rgba(59, 130, 246, 0.2);
+	bottom: -128px;
+	filter: blur(64px);
+	height: 384px;
+	left: 25%;
+	width: 384px;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--mid {
+	background: rgba(99, 102, 241, 0.15);
+	filter: blur(64px);
+	height: 320px;
+	position: absolute;
+	right: -160px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 320px;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-grid {
+	background-image:
+		linear-gradient(0deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
+	background-size: 80px 80px;
+	opacity: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-shimmer {
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg-shimmer::after {
+	animation: archmation-industry-hero-shimmer 2s infinite;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.05),
+		transparent
+	);
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		max-width: 1650px;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__grid {
+	align-items: stretch;
+	display: grid;
+	gap: 48px;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-hero__grid {
+		gap: 64px;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__content {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__content-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__label {
+	display: block;
+	margin: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title {
+	margin: 0;
+	max-width: none !important;
+	min-width: 0 !important;
+	transform: none !important;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title-accent {
+	display: inline;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title-line2 {
+	display: block;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__desc {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(16px, 1.8vw, 18px);
+	line-height: 1.7;
+	margin: 0;
+	max-width: none;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta {
+	align-items: center;
+	align-self: flex-start;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline-flex;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	gap: 8px;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	padding: 14px 32px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta:hover {
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+	border-color: rgba(255, 255, 255, 0.4);
+	box-shadow: none;
+	filter: none;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta-shine {
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(100%);
+	transition: transform 0.7s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta:hover .archmation-industry-hero__cta-shine {
+	transform: translateX(0);
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta-label,
+.page-template-accueil.page-service .archmation-industry-hero__cta-icon {
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__features-panel {
+	align-items: stretch !important;
+	display: block !important;
+	justify-content: flex-start !important;
+	min-width: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__features {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: minmax(0, 1fr);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature {
+	background: linear-gradient(
+		135deg,
+		rgba(168, 85, 247, 0.1),
+		rgba(59, 130, 246, 0.1)
+	);
+	border: 1px solid rgba(192, 132, 252, 0.2);
+	border-radius: 16px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-width: 0;
+	padding: 16px;
+	transition:
+		border-color 0.3s ease,
+		transform 0.3s ease;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature:hover {
+	border-color: rgba(192, 132, 252, 0.5);
+	transform: translateY(-2px);
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-icon {
+	font-size: 1.5rem;
+	line-height: 1;
+	margin-bottom: 4px;
+	transition: transform 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature:hover .archmation-industry-hero__feature-icon {
+	transform: scale(1.1);
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-title {
+	color: #fff;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-desc {
+	color: rgba(255, 255, 255, 0.6);
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(14px, 1.6vw, 16px);
+	line-height: 1.7;
+	margin: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__visual {
+	height: auto;
+	min-height: 24rem;
+	min-width: 0;
+	overflow: visible;
+	padding: 1rem 0;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__visual-stage {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 24rem;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__visual-core {
+	align-items: center;
+	display: flex;
+	height: auto;
+	justify-content: center;
+	max-width: 28rem;
+	min-height: 17.5rem;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__visual-decor {
+	align-items: center;
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stats {
+	align-items: start;
+	align-content: center;
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	height: auto;
+	list-style: none;
+	margin: 0;
+	max-width: 28rem;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-industry-hero__stats {
+		gap: 24px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-industry-hero__stats {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		max-width: 22rem;
+		width: min(100%, 22rem);
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__stat--3 {
+		grid-column: 1 / -1;
+		justify-self: center;
+		max-width: 11rem;
+		width: 100%;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__ring {
+	border-radius: 9999px;
+	border-style: solid;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__ring--inner {
+	animation: archmation-industry-hero-float-up 2.5s ease-in-out infinite;
+	border-color: rgba(168, 85, 247, 0.2);
+	border-width: 2px;
+	height: 160px;
+	width: 160px;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__ring--outer {
+	animation: archmation-industry-hero-float-up 3s ease-in-out infinite reverse;
+	border-color: rgba(59, 130, 246, 0.1);
+	border-width: 2px;
+	height: 224px;
+	width: 224px;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-industry-hero__ring--inner {
+		height: 208px;
+		width: 208px;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__ring--outer {
+		height: 288px;
+		width: 288px;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__center-icon {
+	animation: archmation-industry-hero-float-up 2.5s ease-in-out infinite;
+	filter: blur(0.5px);
+	font-size: 3.5rem;
+	line-height: 1;
+	opacity: 0.22;
+	position: absolute;
+	z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-industry-hero__center-icon {
+		font-size: 4rem;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat {
+	align-self: start;
+	animation: archmation-industry-hero-pulse-stat 2.5s ease-in-out infinite;
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+	background: linear-gradient(
+		135deg,
+		rgba(168, 85, 247, 0.1),
+		rgba(59, 130, 246, 0.1)
+	);
+	border: 1px solid rgba(192, 132, 252, 0.3);
+	border-radius: 16px;
+	box-sizing: border-box;
+	display: block;
+	height: auto;
+	min-height: 0;
+	min-width: 0;
+	overflow: hidden;
+	padding: 24px;
+	position: relative;
+	text-align: center;
+	transition: border-color 0.3s ease;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat--2 {
+	animation-duration: 2.8s;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat--3 {
+	animation-duration: 3.1s;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat:hover {
+	border-color: rgba(192, 132, 252, 0.6);
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat::after {
+	background: linear-gradient(90deg, #a855f7, #ec4899);
+	border-radius: inherit;
+	content: "";
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat:hover::after {
+	opacity: 0.1;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat-icon {
+	display: block;
+	font-size: 1.875rem;
+	line-height: 1;
+	margin: 0 0 12px;
+	position: relative;
+	transition: transform 0.3s ease;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat:hover .archmation-industry-hero__stat-icon {
+	transform: scale(1.25);
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat-value {
+	color: #e9d5ff;
+	display: block;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(1.5rem, 2.4vw, 1.875rem);
+	font-weight: 900;
+	line-height: 1.15;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+	.page-template-accueil.page-service .archmation-industry-hero__stat-value {
+		background: linear-gradient(90deg, #d8b4fe, #f9a8d4);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat-suffix {
+	font-size: 1.125rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__stat-label {
+	color: #9ca3af;
+	font-family: avenir-lt-pro, sans-serif;
+	font-size: clamp(12px, 1.3vw, 14px);
+	line-height: 1.35;
+	margin: 8px 0 0;
+	position: relative;
+	z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .archmation-industry-hero__bg-grid,
+	.page-template-accueil.page-service .archmation-industry-hero__bg-shimmer::after,
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--tr,
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--bl,
+	.page-template-accueil.page-service .archmation-industry-hero__ring--inner,
+	.page-template-accueil.page-service .archmation-industry-hero__ring--outer,
+	.page-template-accueil.page-service .archmation-industry-hero__center-icon,
+	.page-template-accueil.page-service .archmation-industry-hero__stat {
+		animation: none !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Industry services section (Real Estate, etc.)
+   -------------------------------------------------------------------------- */
+.page-template-accueil.page-service .archmation-industry-services {
+	background: #fff;
+	font-family: "avenir-lt-pro", sans-serif;
+	max-width: none !important;
+	overflow: hidden;
+	position: relative;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__accent-bar {
+	background: linear-gradient(90deg, #9333ea, #a855f7, #c084fc);
+	height: 4px;
+	inset: 0 0 auto;
+	position: absolute;
+	z-index: 2;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__pattern {
+	inset: 0;
+	opacity: 0.03;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__pattern svg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__blob {
+	border-radius: 9999px;
+	filter: blur(64px);
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__blob--tr {
+	background: linear-gradient(135deg, #f3e8ff, #faf5ff);
+	height: 24rem;
+	opacity: 0.2;
+	right: 0;
+	top: 5rem;
+	width: 24rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__blob--bl {
+	background: linear-gradient(45deg, #f3e8ff, transparent);
+	bottom: 2.5rem;
+	height: 18rem;
+	left: 0;
+	opacity: 0.15;
+	width: 18rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding: clamp(4rem, 8vw, 8rem) 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-services__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-industry-services__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil.page-service .archmation-industry-services__inner {
+		max-width: 1650px;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-services__header {
+	display: grid;
+	gap: clamp(2rem, 4vw, 3rem);
+	grid-template-columns: 1fr;
+	margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-services__header {
+		align-items: start;
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-services__title {
+	color: #111827 !important;
+	font-size: clamp(2.75rem, 4.8vw, 4rem) !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: 1.15 !important;
+	margin: 0 !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	text-transform: none !important;
+	text-wrap: balance;
+	transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__intro {
+	color: #374151 !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: 1.7 !important;
+	margin: 0 !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__intro-bold {
+	color: #111827 !important;
+	font-family: inherit !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__intro-accent {
+	color: #9333ea !important;
+	font-family: inherit !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__grid {
+	display: grid;
+	gap: clamp(1.25rem, 2vw, 1.75rem);
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-industry-services__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-services__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card {
+	position: relative;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-glow {
+	background: linear-gradient(135deg, #c084fc, #d8b4fe);
+	border-radius: 0.5rem;
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card:hover .archmation-industry-services__card-glow {
+	opacity: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-inner {
+	background: #fff;
+	border: 2px solid #1f2937;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 18rem;
+	padding: clamp(1.5rem, 2.5vw, 2.25rem);
+	position: relative;
+	transition:
+		border-color 0.3s ease,
+		transform 0.3s ease;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card:hover .archmation-industry-services__card-inner {
+	border-color: transparent;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__icon {
+	font-size: clamp(2.75rem, 4vw, 3.5rem);
+	line-height: 1;
+	margin-bottom: 1.5rem;
+	transition: transform 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card:hover .archmation-industry-services__icon {
+	transform: scale(1.1);
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-title {
+	color: #111827 !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(22px, 2.5vw, 28px) !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	line-height: 1.25 !important;
+	margin: 0 0 1rem !important;
+	text-transform: none !important;
+	transition: color 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card:hover .archmation-industry-services__card-title {
+	color: #9333ea !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-desc {
+	color: #4b5563 !important;
+	flex: 1 1 auto;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: 1.625 !important;
+	margin: 0 !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-line {
+	background: linear-gradient(90deg, #9333ea, #c084fc);
+	height: 4px;
+	margin-top: 1.5rem;
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 0.3s ease;
+	width: 3rem;
+}
+
+/* Industry services — enforce hero typography over legacy app.css */
+.page-template-accueil.page-service .archmation-industry-services span {
+	font-family: "avenir-lt-pro", sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services h3.archmation-industry-services__card-title {
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(22px, 2.5vw, 28px) !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__card-inner p.archmation-industry-services__card-desc {
+	color: #6b7280 !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 1.625 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-services__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   Industry expertise dark section
+   -------------------------------------------------------------------------- */
+@keyframes archmation-industry-expertise-float-a {
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate(20px, -30px) rotate(90deg);
+	}
+}
+
+@keyframes archmation-industry-expertise-float-b {
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate(-25px, -25px) rotate(-90deg);
+	}
+}
+
+@keyframes archmation-industry-expertise-float-c {
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate(15px, 20px) rotate(45deg);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise {
+	background: linear-gradient(180deg, #581c87, #6b21a8, #581c87);
+	overflow: hidden;
+	padding: clamp(64px, 8vw, 96px) 0;
+	position: relative;
+	width: 100%;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__bg {
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__bg-gradient {
+	display: none;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__blob {
+	border-radius: 9999px;
+	filter: blur(64px);
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__blob--pink {
+	animation: archmation-industry-expertise-pulse 3s ease-in-out infinite;
+	background: rgba(236, 72, 153, 0.2);
+	height: 24rem;
+	left: 2.5rem;
+	top: 2.5rem;
+	width: 24rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__blob--purple {
+	animation: archmation-industry-expertise-pulse 3s ease-in-out infinite;
+	animation-delay: 1s;
+	background: rgba(168, 85, 247, 0.2);
+	bottom: 5rem;
+	height: 24rem;
+	right: 2.5rem;
+	width: 24rem;
+}
+
+@keyframes archmation-industry-expertise-pulse {
+	0%,
+	100% {
+		opacity: 0.85;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orbs {
+	inset: 0;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb {
+	border-radius: 9999px;
+	opacity: 0.3;
+	position: absolute;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--0 {
+	animation: archmation-industry-expertise-float-a 5s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 52px;
+	left: 6%;
+	top: 10%;
+	width: 52px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--1 {
+	animation: archmation-industry-expertise-float-b 7s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 36px;
+	left: 84%;
+	top: 14%;
+	width: 36px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--2 {
+	animation: archmation-industry-expertise-float-c 9s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 68px;
+	left: 70%;
+	top: 6%;
+	width: 68px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--3 {
+	animation: archmation-industry-expertise-float-a 6s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 44px;
+	left: 18%;
+	top: 68%;
+	width: 44px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--4 {
+	animation: archmation-industry-expertise-float-b 8s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 58px;
+	left: 92%;
+	top: 52%;
+	width: 58px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--5 {
+	animation: archmation-industry-expertise-float-c 5s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 32px;
+	left: 42%;
+	top: 82%;
+	width: 32px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--6 {
+	animation: archmation-industry-expertise-float-a 7s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 48px;
+	left: 54%;
+	top: 24%;
+	width: 48px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--7 {
+	animation: archmation-industry-expertise-float-b 9s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 64px;
+	left: 10%;
+	top: 38%;
+	width: 64px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--8 {
+	animation: archmation-industry-expertise-float-c 6s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 28px;
+	left: 78%;
+	top: 72%;
+	width: 28px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--9 {
+	animation: archmation-industry-expertise-float-a 8s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 56px;
+	left: 30%;
+	top: 12%;
+	width: 56px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--10 {
+	animation: archmation-industry-expertise-float-b 5s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 40px;
+	left: 60%;
+	top: 58%;
+	width: 40px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--11 {
+	animation: archmation-industry-expertise-float-c 7s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 46px;
+	left: 46%;
+	top: 44%;
+	width: 46px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--12 {
+	animation: archmation-industry-expertise-float-a 6s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 34px;
+	left: 24%;
+	top: 54%;
+	width: 34px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--13 {
+	animation: archmation-industry-expertise-float-b 8s ease-in-out infinite;
+	background: rgba(168, 85, 247, 0.4);
+	height: 50px;
+	left: 88%;
+	top: 30%;
+	width: 50px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__orb--14 {
+	animation: archmation-industry-expertise-float-c 5s ease-in-out infinite;
+	background: rgba(244, 114, 182, 0.4);
+	height: 38px;
+	left: 52%;
+	top: 78%;
+	width: 38px;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding: 0 30px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-expertise__inner {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-industry-expertise__inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil.page-service .archmation-industry-expertise__inner {
+		max-width: 1650px;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__grid {
+	align-items: center;
+	display: grid;
+	gap: 4rem;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-expertise__grid {
+		gap: 4rem;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 0 24px !important;
+	max-width: none !important;
+	text-transform: none !important;
+	transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__title-accent {
+	-webkit-background-clip: text !important;
+	background-clip: text !important;
+	background-image: linear-gradient(90deg, #f472b6, #d8b4fe) !important;
+	color: transparent !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: inherit !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	-webkit-text-fill-color: transparent !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__desc {
+	color: #d1d5db !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	font-weight: 400 !important;
+	line-height: 1.7 !important;
+	margin: 0 0 48px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skills {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-head {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-label {
+	align-items: center;
+	display: flex;
+	gap: 0.75rem;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-icon {
+	font-size: 24px;
+	line-height: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-name {
+	color: #fff !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	text-transform: none;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-value {
+	color: #f472b6 !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 18px !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-track {
+	background: rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(168, 85, 247, 0.3);
+	border-radius: 9999px;
+	height: 12px;
+	overflow: hidden;
+	position: relative;
+	transition: border-color 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill:hover .archmation-industry-expertise__skill-track {
+	border-color: rgba(244, 114, 182, 0.5);
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill-bar {
+	background: linear-gradient(90deg, #ec4899, #a855f7);
+	border-radius: 9999px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: background 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__skill:hover .archmation-industry-expertise__skill-bar {
+	background: linear-gradient(90deg, #ec4899, #f472b6);
+	box-shadow: 0 4px 16px rgba(236, 72, 153, 0.45);
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stats {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+	margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil.page-service .archmation-industry-expertise__stats {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat {
+	background: linear-gradient(135deg, #7e22ce, #581c87);
+	border: 1px solid rgba(168, 85, 247, 0.5);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	padding: 2rem;
+	position: relative;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat:hover {
+	border-color: rgba(244, 114, 182, 0.5);
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat-shine {
+	background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.1), transparent);
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat:hover .archmation-industry-expertise__stat-shine {
+	opacity: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat-body {
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat-value {
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(90deg, #fff, #fbcfe8);
+	color: transparent !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(32px, 4vw, 48px) !important;
+	font-weight: 700 !important;
+	line-height: 1.1 !important;
+	margin: 0 0 0.5rem !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__stat-label {
+	color: #e9d5ff !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.08em !important;
+	line-height: 1.4 !important;
+	margin: 0 !important;
+	text-transform: uppercase;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-card {
+	background: linear-gradient(135deg, #7e22ce, #581c87);
+	border: 1px solid rgba(168, 85, 247, 0.5);
+	border-radius: 0.75rem;
+	overflow: hidden;
+	padding: clamp(2rem, 4vw, 3rem);
+	position: relative;
+	transition: border-color 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-card:hover {
+	border-color: rgba(244, 114, 182, 0.5);
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-glow {
+	background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), transparent, rgba(168, 85, 247, 0.2));
+	filter: blur(24px);
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-card:hover .archmation-industry-expertise__cta-glow {
+	opacity: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-title {
+	color: #fff !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(24px, 3vw, 36px) !important;
+	font-weight: 700 !important;
+	line-height: 1.2 !important;
+	margin: 0 0 1rem !important;
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-desc {
+	color: #d1d5db !important;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	line-height: 1.7 !important;
+	margin: 0 0 2rem !important;
+	position: relative;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-btn {
+	align-items: center;
+	background: linear-gradient(90deg, #ec4899, #f472b6);
+	border: none;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	color: #000 !important;
+	display: inline-flex;
+	font-family: "avenir-lt-pro", sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	gap: 0.5rem;
+	letter-spacing: 0.04em;
+	padding: 12px 32px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:
+		background 0.3s ease,
+		transform 0.3s ease;
+	z-index: 1;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise__cta-btn:hover {
+	background: linear-gradient(90deg, #f472b6, #fbcfe8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .archmation-industry-expertise__orb,
+	.page-template-accueil.page-service .archmation-industry-expertise__blob {
+		animation: none !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-services__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+}
+
+/* Industry expertise — enforce typography over legacy app.css */
+.page-template-accueil.page-service .archmation-industry-expertise h2.archmation-industry-expertise__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise span.archmation-industry-expertise__title-accent {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise h3.archmation-industry-expertise__cta-title {
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(22px, 2.5vw, 28px) !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-expertise p:not(.archmation-industry-expertise__stat-value):not(.archmation-industry-expertise__stat-label),
+.page-template-accueil.page-service .archmation-industry-expertise span:not(.archmation-industry-expertise__title-accent) {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+/* Industry hero — enforce typography over legacy app.css */
+.page-template-accueil.page-service .archmation-industry-hero h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero h3.archmation-industry-hero__feature-title {
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero p,
+.page-template-accueil.page-service .archmation-industry-hero span:not(.archmation-industry-hero__title-accent):not(.archmation-industry-hero__title-line2) {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+/* Industry solutions — enforce typography over legacy app.css */
+.page-template-accueil.page-service .archmation-industry-solutions h2.archmation-industry-solutions__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions p,
+.page-template-accueil.page-service .archmation-industry-solutions span:not(.archmation-industry-solutions__cta-label) {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions h3.archmation-industry-solutions__card-title {
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-weight: 700 !important;
+}
+
+/* Industry FAQ — enforce typography */
+.page-template-accueil.page-service .archmation-industry-faq h2.archmation-industry-faq__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq span.archmation-industry-faq__title-accent {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-faq p,
+.page-template-accueil.page-service .archmation-industry-faq span:not(.archmation-industry-faq__title-accent):not(.archmation-industry-faq__cta-label) {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-contact h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-dream-team h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-lead-circuit h3,
+.page-template-accueil.page-service .archmation-lead-circuit p,
+.page-template-accueil.page-service .archmation-lead-circuit dd,
+.page-template-accueil.page-service .archmation-lead-circuit dt,
+.page-template-accueil.page-service .archmation-lead-circuit a.archmation-industry-hero__cta {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-preface,
+.page-template-accueil.page-service .archmation-master-marketing__card-title-lead,
+.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit,
+.page-template-accueil.page-service .archmation-master-marketing__card-subtitle {
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-style: normal !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing__card-subtitle {
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing p,
+.page-template-accueil.page-service .archmation-master-marketing li,
+.page-template-accueil.page-service .archmation-master-marketing a.archmation-master-marketing__cta {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-master-marketing .archmation-industry-hero__label {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-instructor h2.archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .archmation-instructor p,
+.page-template-accueil.page-service .archmation-instructor li,
+.page-template-accueil.page-service .archmation-instructor span,
+.page-template-accueil.page-service .archmation-instructor a.archmation-instructor__cta {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-contact h3.archmation-industry-contact__card-title,
+.page-template-accueil.page-service .archmation-industry-contact h3.archmation-industry-contact__form-title {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-contact p,
+.page-template-accueil.page-service .archmation-industry-contact label,
+.page-template-accueil.page-service .archmation-industry-contact input,
+.page-template-accueil.page-service .archmation-industry-contact select,
+.page-template-accueil.page-service .archmation-industry-contact textarea,
+.page-template-accueil.page-service .archmation-industry-contact button {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .archmation-dream-team h3.archmation-dream-team__name,
+.page-template-accueil.page-service .archmation-dream-team p.archmation-dream-team__role {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+/* Industry pages — mobile padding enforce (must load after base rules) */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-industry-services__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
 	}
 }

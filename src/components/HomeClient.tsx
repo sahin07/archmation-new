@@ -17,6 +17,7 @@ import { HOME_VIDEO_GALLERY_CONTENT } from "@/content/video-gallery";
 import { initHeaderNav } from "@/hooks/useHeaderNav";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import "@/components/home-responsive.css";
 
 type HomeClientProps = {
   bodyHtml: string;
@@ -191,7 +192,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
   }, []);
 
   return (
-    <div className="site-html-root" style={{ width: "100%" }}>
+    <div className="home-page site-html-root" style={{ width: "100%" }}>
       <div ref={htmlHostRef} />
       {mounts.expertise
         ? createPortal(<ExpertiseSection key={`expertise-${sectionKey}`} />, mounts.expertise)

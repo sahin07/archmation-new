@@ -26,7 +26,7 @@ const footerColumns: FooterColumn[] = [
   {
     title: "Resources",
     links: [
-      { label: "About us", href: "https://archmation.com/about-us/" },
+      { label: "About us", href: "/about-us" },
       { label: "Blogs & Case Studies", href: "https://archmation.com/our-work/" },
     ],
   },
@@ -46,7 +46,7 @@ const footerColumns: FooterColumn[] = [
     title: "Support",
     links: [
       { label: "Sales Support", href: "mailto:hello@archmation.com" },
-      { label: "Contact us", href: "https://archmation.com/contact/" },
+      { label: "Contact us", href: "/contact-us" },
     ],
   },
 ];

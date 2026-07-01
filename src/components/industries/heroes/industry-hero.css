@@ -1,0 +1,335 @@
+/* Industry hero — scoped styles (aligned with expertise / services sections) */
+
+.page-template-accueil.page-service .archmation-industry-hero {
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: block !important;
+	isolation: isolate;
+	min-height: auto !important;
+	overflow: hidden !important;
+	padding: clamp(48px, 6vw, 96px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__bg {
+	inset: 0 !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__inner {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 1500px !important;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	position: relative !important;
+	width: 100% !important;
+	z-index: 1 !important;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		max-width: 1650px !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__grid {
+	align-items: stretch !important;
+	display: grid !important;
+	gap: 40px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-hero__grid {
+		align-items: center !important;
+		gap: 64px !important;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__content,
+.page-template-accueil.page-service .archmation-industry-hero__features-panel {
+	align-self: stretch !important;
+	box-sizing: border-box !important;
+	display: block !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__content-stack {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 32px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__label {
+	display: block !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	text-transform: none !important;
+	text-wrap: balance;
+	transform: none !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title-accent {
+	display: inline !important;
+	font-family: inherit !important;
+	font-size: inherit !important;
+	font-style: italic !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__title-line2 {
+	display: block !important;
+	font-family: inherit !important;
+	font-size: inherit !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	line-height: inherit !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__desc {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 1.7 !important;
+	margin: 0 !important;
+	max-width: none !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__cta {
+	align-items: center !important;
+	align-self: flex-start !important;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+	border-radius: 9999px !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: inline-flex !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 12px !important;
+	font-weight: 600 !important;
+	gap: 8px !important;
+	letter-spacing: 0.1em !important;
+	max-width: 100% !important;
+	overflow: hidden !important;
+	padding: 14px 32px !important;
+	position: relative !important;
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__features {
+	display: grid !important;
+	gap: 16px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+/* Stacked layout (mobile + tablet): 2 columns when enough width */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+/* Desktop right column: single column for readable cards */
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+}
+
+/* Wide desktop: 2x2 grid */
+@media screen and (min-width: 1400px) {
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature {
+	background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(59, 130, 246, 0.1)) !important;
+	border: 1px solid rgba(192, 132, 252, 0.2) !important;
+	border-radius: 16px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 8px !important;
+	list-style: none !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+	padding: 16px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-icon {
+	flex-shrink: 0 !important;
+	font-size: 24px !important;
+	line-height: 1 !important;
+	margin-bottom: 4px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-title {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	line-height: 1.35 !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-hero__feature-desc {
+	color: rgba(255, 255, 255, 0.6) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — match expertise / services breakpoints
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-industry-hero {
+		padding: clamp(32px, 8vw, 48px) 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__inner {
+		padding-bottom: 0 !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		padding-top: 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__grid,
+	.page-template-accueil.page-service .archmation-industry-hero__content-stack,
+	.page-template-accueil.page-service .archmation-industry-hero__content,
+	.page-template-accueil.page-service .archmation-industry-hero__features-panel,
+	.page-template-accueil.page-service .archmation-industry-hero__label,
+	.page-template-accueil.page-service .archmation-industry-hero__desc,
+	.page-template-accueil.page-service .archmation-industry-hero__cta-label,
+	.page-template-accueil.page-service .archmation-industry-hero__cta-shine {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__grid {
+		gap: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__content-stack {
+		gap: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__label {
+		margin-bottom: 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+		line-height: 1.15 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__desc {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__cta {
+		align-self: flex-start !important;
+		justify-content: center !important;
+		padding: 12px 24px !important;
+		width: auto !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__cta-label,
+	.page-template-accueil.page-service .archmation-industry-hero__cta-icon {
+		display: inline-flex !important;
+		position: relative !important;
+		z-index: 1 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__features {
+		gap: 12px !important;
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__feature {
+		padding: 14px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__feature-title,
+	.page-template-accueil.page-service .archmation-industry-hero__feature-desc {
+		font-size: 14px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--tr,
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--bl,
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--mid {
+		height: 10rem !important;
+		width: 10rem !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--tr {
+		right: -2rem !important;
+		top: -3rem !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--bl {
+		bottom: -3rem !important;
+		left: -2rem !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-hero__bg-spotlight--mid {
+		right: -3rem !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-industry-hero__grid {
+		gap: 48px !important;
+	}
+}

@@ -1,0 +1,418 @@
+/* Industry solutions — scoped styles */
+
+@keyframes archmation-industry-solutions-grid-slide {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(50px);
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions {
+	background: #000 !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: block !important;
+	isolation: isolate;
+	min-height: auto !important;
+	overflow: hidden !important;
+	padding: clamp(64px, 8vw, 80px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__bg {
+	inset: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__bg-gradient {
+	background: linear-gradient(135deg, #020617 0%, #000 50%, #0f172a 100%) !important;
+	inset: 0 !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__bg-grid {
+	animation: archmation-industry-solutions-grid-slide 20s linear infinite !important;
+	background-image:
+		linear-gradient(
+			0deg,
+			transparent 24%,
+			rgba(100, 50, 150, 0.1) 25%,
+			rgba(100, 50, 150, 0.1) 26%,
+			transparent 27%,
+			transparent 74%,
+			rgba(100, 50, 150, 0.1) 75%,
+			rgba(100, 50, 150, 0.1) 76%,
+			transparent 77%,
+			transparent
+		),
+		linear-gradient(
+			90deg,
+			transparent 24%,
+			rgba(100, 50, 150, 0.1) 25%,
+			rgba(100, 50, 150, 0.1) 26%,
+			transparent 27%,
+			transparent 74%,
+			rgba(100, 50, 150, 0.1) 75%,
+			rgba(100, 50, 150, 0.1) 76%,
+			transparent 77%,
+			transparent
+		) !important;
+	background-size: 50px 50px !important;
+	inset: 0 !important;
+	opacity: 0.5 !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__glow {
+	border-radius: 9999px !important;
+	filter: blur(64px) !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__glow--tr {
+	background: linear-gradient(180deg, rgba(88, 28, 135, 0.2), transparent) !important;
+	height: 384px !important;
+	right: -50% !important;
+	top: 0 !important;
+	width: 384px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__glow--bl {
+	background: linear-gradient(0deg, rgba(30, 58, 138, 0.2), transparent) !important;
+	bottom: 0 !important;
+	height: 384px !important;
+	left: -50% !important;
+	width: 384px !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__inner {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 1500px !important;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	position: relative !important;
+	width: 100% !important;
+	z-index: 1 !important;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-solutions__inner {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .archmation-industry-solutions__inner {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__header {
+	display: grid !important;
+	gap: 48px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	margin-bottom: 64px !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .archmation-industry-solutions__header {
+		align-items: center !important;
+		gap: 48px !important;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+		margin-bottom: 80px !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__headline,
+.page-template-accueil.page-service .archmation-industry-solutions__intro-block {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__title {
+	color: #fff !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 !important;
+	max-width: none !important;
+	min-width: 0 !important;
+	text-transform: none !important;
+	text-wrap: balance;
+	transform: none !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__intro {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: 1.7 !important;
+	margin: 0 0 32px !important;
+	text-transform: none !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__intro-bold {
+	color: #fff !important;
+	font-family: inherit !important;
+	font-weight: 700 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__cta {
+	align-items: center !important;
+	align-self: flex-start !important;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+	border-radius: 9999px !important;
+	box-shadow: none !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: inline-flex !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 12px !important;
+	font-weight: 600 !important;
+	gap: 8px !important;
+	letter-spacing: 0.1em !important;
+	overflow: hidden !important;
+	padding: 14px 32px !important;
+	position: relative !important;
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__cta:hover {
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1)) !important;
+	border-color: rgba(255, 255, 255, 0.4) !important;
+	box-shadow: none !important;
+	transform: none !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__cta-label,
+.page-template-accueil.page-service .archmation-industry-solutions__cta-icon {
+	display: inline-flex !important;
+	line-height: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__grid {
+	display: grid !important;
+	gap: 24px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-industry-solutions__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .archmation-industry-solutions__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card {
+	box-sizing: border-box !important;
+	display: block !important;
+	height: 100% !important;
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-inner {
+	border: 1px solid rgba(168, 85, 247, 0.4) !important;
+	border-radius: 12px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	height: 100% !important;
+	min-height: 100% !important;
+	overflow: hidden !important;
+	padding: 32px !important;
+	position: relative !important;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease,
+		transform 0.3s ease !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card--1 .archmation-industry-solutions__card-inner {
+	background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card--2 .archmation-industry-solutions__card-inner {
+	background: linear-gradient(135deg, #1e293b, #334155, #0f172a) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card--3 .archmation-industry-solutions__card-inner {
+	background: linear-gradient(135deg, #0f172a, #000) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card--4 .archmation-industry-solutions__card-inner {
+	background: linear-gradient(135deg, #1e293b, #000) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card:hover .archmation-industry-solutions__card-inner {
+	border-color: rgba(192, 132, 252, 0.6) !important;
+	box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.2) !important;
+	transform: translateY(-12px) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-overlay {
+	background: linear-gradient(180deg, rgba(59, 7, 100, 0.2), transparent, rgba(59, 7, 100, 0.1)) !important;
+	border-radius: 12px !important;
+	inset: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-hover-glow {
+	background: linear-gradient(90deg, rgba(168, 85, 247, 0.3), transparent) !important;
+	border-radius: 12px !important;
+	inset: 0 !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	transition: opacity 0.3s ease !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card:hover .archmation-industry-solutions__card-hover-glow {
+	opacity: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-icon {
+	display: block !important;
+	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) !important;
+	font-size: 48px !important;
+	line-height: 1 !important;
+	margin-bottom: 24px !important;
+	position: relative !important;
+	transition: transform 0.3s ease !important;
+	z-index: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card:hover .archmation-industry-solutions__card-icon {
+	transform: scale(1.1) !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-title {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(22px, 2.5vw, 28px) !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	line-height: 1.25 !important;
+	margin: 0 0 16px !important;
+	position: relative !important;
+	text-transform: none !important;
+	z-index: 1 !important;
+}
+
+.page-template-accueil.page-service .archmation-industry-solutions__card-desc {
+	color: rgba(255, 255, 255, 0.6) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+	position: relative !important;
+	text-transform: none !important;
+	z-index: 1 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-industry-solutions {
+		padding: clamp(48px, 10vw, 64px) 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__header {
+		gap: 32px !important;
+		margin-bottom: 48px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+		line-height: 1.15 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__intro {
+		font-size: 16px !important;
+		margin-bottom: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__cta {
+		font-size: 12px !important;
+		justify-content: center !important;
+		padding: 12px 24px !important;
+		width: auto !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__card-title {
+		font-size: clamp(20px, 5.5vw, 24px) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__card-desc {
+		font-size: 14px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__grid {
+		gap: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__card-inner {
+		padding: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__card-icon {
+		font-size: 40px !important;
+		margin-bottom: 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-industry-solutions__glow--tr,
+	.page-template-accueil.page-service .archmation-industry-solutions__glow--bl {
+		height: 240px !important;
+		width: 240px !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .archmation-industry-solutions__bg-grid {
+		animation: none !important;
+	}
+}

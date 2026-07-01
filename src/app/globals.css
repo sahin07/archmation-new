@@ -32,12 +32,17 @@
 
 .page-service #fullSite {
   background: #000;
+  max-width: 100%;
+  width: 100%;
 }
 
 .page-service .site-chrome__main {
   background: #000;
+  max-width: 100%;
+  overflow-x: clip;
   padding-top: var(--site-header-offset);
   transition: padding-top 0.3s ease;
+  width: 100%;
 }
 
 @media screen and (min-width: 800px) {

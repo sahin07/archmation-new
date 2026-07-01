@@ -1,5 +1,6 @@
 import SiteChrome from "@/components/SiteChrome";
 import { buildSiteHeaderHtml } from "@/lib/site-header";
+import "@/components/services/services-responsive.css";
 
 export default function OurServicesLayout({
   children,
@@ -8,5 +9,9 @@ export default function OurServicesLayout({
 }>) {
   const headerHtml = buildSiteHeaderHtml();
 
-  return <SiteChrome headerHtml={headerHtml}>{children}</SiteChrome>;
+  return (
+    <SiteChrome headerHtml={headerHtml}>
+      <div className="our-services-page">{children}</div>
+    </SiteChrome>
+  );
 }

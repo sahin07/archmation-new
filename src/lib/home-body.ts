@@ -1,4 +1,6 @@
+import { injectIndustryNavLinks } from "@/content/industries";
 import { injectServiceNavLinks } from "@/content/services";
+import { normalizeInternalLinks } from "@/lib/internal-links";
 
 export const EXPERTISE_MARKER = "<!-- @react:expertise -->";
 export const ACCUEIL_FOND_NOIR_END = "<!-- @react:accueilFondNoirEnd -->";
@@ -258,6 +260,7 @@ function replaceBetweenMarkers(
 
 export function buildHomeBodyHtml(bodyHtml: string): string {
   let html = injectServiceNavLinks(bodyHtml);
+  html = injectIndustryNavLinks(html);
 
   html = replaceBetweenMarkers(
     html,
@@ -348,7 +351,7 @@ export function buildHomeBodyHtml(bodyHtml: string): string {
     html = html.replace(FOOTER_MARKER, FOOTER_MOUNT);
   }
 
-  return html;
+  return normalizeInternalLinks(html);
 }
 
 /** @deprecated Use buildHomeBodyHtml */

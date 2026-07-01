@@ -1,0 +1,471 @@
+/* Homepage — mobile & tablet responsive overrides
+   Scoped to .page-template-accueil without .page-service (home only) */
+
+.page-template-accueil:not(.page-service) .home-page,
+.page-template-accueil:not(.page-service) .site-html-root {
+	box-sizing: border-box !important;
+	max-width: 100% !important;
+	overflow-x: clip !important;
+	width: 100% !important;
+}
+
+/* --------------------------------------------------------------------------
+   Shared typography & spacing
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) {
+		--archmation-section-title-font-size: clamp(1.75rem, 8vw, 2.25rem);
+		--archmation-section-eyebrow-font-size: 0.65rem;
+	}
+
+	.page-template-accueil:not(.page-service) .sectionPadding,
+	.page-template-accueil:not(.page-service) .sectionPaddingBottom {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.page-template-accueil:not(.page-service) .widthGlobalContent,
+	.page-template-accueil:not(.page-service) .bloc-header-titre-accueil-contenu {
+		box-sizing: border-box !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Legacy hero + video band
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) .bloc-header-titre.bloc-header-titre-accueil {
+		overflow: hidden !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoCactus {
+		display: none !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideo .accueilVideoContent,
+	.page-template-accueil:not(.page-service) #accueilVideo #headVideo {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideo #accueilVideoVague {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil:not(.page-service) .scroll-down-circle {
+		transform: scale(0.85);
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil:not(.page-service) #accueilVideoCactus {
+		transform: scale(0.8);
+		transform-origin: top right;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Shared React section inners
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 799px) {
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__inner,
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-services__inner,
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__inner,
+	.page-template-accueil:not(.page-service) #accueilIndustries.archmation-industries .archmation-industries__inner,
+	.page-template-accueil:not(.page-service) #accueilProcess.archmation-process .archmation-process__inner,
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__inner,
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__inner,
+	.page-template-accueil:not(.page-service) #accueilStats.archmation-stats .archmation-stats__inner,
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__inner,
+	.page-template-accueil:not(.page-service) #accueilBlogs.archmation-blogs .archmation-blogs__inner,
+	.page-template-accueil:not(.page-service) #accueilFaq.archmation-faq .archmation-faq__inner,
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Expertise + Services (#accueilFondNoir)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__grid {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__watermark {
+		font-size: clamp(72px, 22vw, 120px) !important;
+		left: -12px !important;
+		top: -24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__body {
+		padding-top: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__quote .down-q.q {
+		align-items: flex-start !important;
+		flex-wrap: wrap !important;
+		gap: 12px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__quote-arrow {
+		height: 56px !important;
+		width: 28px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__quote-copy {
+		margin-left: 0 !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__actions {
+		flex-direction: column !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__btn {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+
+	/* Tighten gap between Google rating and Services */
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__inner {
+		padding-bottom: 20px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__divider {
+		margin-top: 16px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__col--right {
+		gap: 20px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-expertise__rating {
+		padding-top: 1.25rem !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-services {
+		padding-top: 12px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-services__card {
+		padding: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFondNoir .archmation-services__btn {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   About (#accueilQSN)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__grid {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__image-wrap,
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__image {
+		height: clamp(280px, 72vw, 380px) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__badge {
+		right: 8px !important;
+		top: 8px !important;
+		transform: scale(0.82);
+		transform-origin: top right;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilQSN.archmation-about .archmation-about__cta {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Industries (#accueilIndustries)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilIndustries.archmation-industries .archmation-industries__layout {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilIndustries.archmation-industries .archmation-industries__panel {
+		padding: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilIndustries.archmation-industries .archmation-industries__cta {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil:not(.page-service) #accueilIndustries.archmation-industries .archmation-industries__layout {
+		gap: 48px !important;
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Process (#accueilProcess)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 639px) {
+	.page-template-accueil:not(.page-service) #accueilProcess.archmation-process .archmation-process__steps {
+		gap: 32px !important;
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilProcess.archmation-process .archmation-process__root {
+		padding-bottom: clamp(56px, 12vw, 80px) !important;
+		padding-top: clamp(56px, 12vw, 80px) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilProcess.archmation-process .archmation-process__steps-wrap {
+		margin-top: 40px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Value (#accueilValue)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__layout {
+		gap: 20px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__hero-content {
+		min-height: clamp(18rem, 62vw, 24rem) !important;
+		padding: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__card {
+		padding: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__hero:hover .archmation-value__hero-image {
+		transform: none !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Clients (#accueilClients)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__title {
+		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__grid {
+		gap: 12px !important;
+		margin-top: 40px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__tile {
+		height: 80px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__logo {
+		height: 48px !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil:not(.page-service) #accueilClients.archmation-clients .archmation-clients__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Stats (#accueilStats)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 479px) {
+	.page-template-accueil:not(.page-service) #accueilStats.archmation-stats .archmation-stats__grid {
+		gap: 20px !important;
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Video gallery (#accueilVideoGallery)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__root {
+		padding-bottom: clamp(48px, 10vw, 64px) !important;
+		padding-top: clamp(48px, 10vw, 64px) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__header {
+		margin-bottom: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__card {
+		flex: 0 0 min(88%, 300px) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__nav--prev {
+		left: 4px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__nav--next {
+		right: 4px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilVideoGallery.archmation-videos .archmation-videos__cta {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Blogs + FAQ
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilBlogs.archmation-blogs .archmation-blogs__header {
+		margin-bottom: 40px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFaq.archmation-faq .archmation-faq__layout {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFaq.archmation-faq .archmation-faq__root {
+		padding-bottom: clamp(48px, 10vw, 64px) !important;
+		padding-top: clamp(48px, 10vw, 64px) !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Clients say (#accueilTemoignages)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say {
+		padding: clamp(48px, 10vw, 64px) 0 !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__header {
+		gap: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__intro {
+		margin-top: 0 !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__quote {
+		left: auto !important;
+		margin-bottom: 12px !important;
+		position: static !important;
+		top: auto !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__quote-text {
+		transform: none !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__title {
+		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__desc p {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__card {
+		flex: 0 0 min(92%, 100%) !important;
+		padding: 20px 18px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__quote-body,
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__role {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__name {
+		font-size: 20px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__cta-wrap {
+		margin-top: 24px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__cta-wrap .buttonOnBackground {
+		justify-content: center !important;
+		text-align: center !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__header {
+		flex-direction: column !important;
+		gap: 32px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilTemoignages .archmation-clients-say__intro {
+		margin-top: 48px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Collaborations gallery (legacy HTML)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilCollaborations .accueilCollaborationsContenuTitre .down-q.q {
+		align-items: flex-start !important;
+		flex-wrap: wrap !important;
+		gap: 12px !important;
+		position: static !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .accueilCollaborationsContenuTitre h2,
+	.page-template-accueil:not(.page-service) #accueilCollaborations .prestaCollaborationsTitre h2 {
+		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+		line-height: 1.15 !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 16px !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery-column {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 16px !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery-item,
+	.page-template-accueil:not(.page-service) #accueilCollaborations .image-wrapper,
+	.page-template-accueil:not(.page-service) #accueilCollaborations .image-wrapper-Big {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery-item img {
+		height: auto !important;
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery {
+		display: grid !important;
+		gap: 20px !important;
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilCollaborations .gallery-column {
+		display: contents !important;
+	}
+}

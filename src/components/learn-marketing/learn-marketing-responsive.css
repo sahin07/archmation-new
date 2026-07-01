@@ -1,0 +1,289 @@
+/* Learn Marketing page — mobile & tablet responsive overrides */
+
+.page-template-accueil.page-service .learn-marketing-page {
+	box-sizing: border-box !important;
+	max-width: 100% !important;
+	overflow-x: clip !important;
+	width: 100% !important;
+}
+
+/* --------------------------------------------------------------------------
+   Shared section spacing
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-master-marketing,
+	.page-template-accueil.page-service .archmation-lead-circuit,
+	.page-template-accueil.page-service .archmation-instructor {
+		padding: clamp(32px, 8vw, 48px) 0 !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Master Marketing hero
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-master-marketing__grid {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__content {
+		gap: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+		line-height: 1.15 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__desc {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__cta-row {
+		gap: 10px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__cta {
+		justify-content: center !important;
+		padding: 12px 20px !important;
+		text-align: center !important;
+		white-space: normal !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-group {
+		max-width: min(384px, 100%) !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card {
+		padding: 32px 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-preface {
+		font-size: 14px !important;
+		letter-spacing: 0.14em !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-preface-wrap {
+		margin-bottom: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-lead {
+		font-size: clamp(36px, 10vw, 50px) !important;
+		margin-bottom: 12px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit {
+		font-size: clamp(40px, 12vw, 58px) !important;
+		white-space: normal !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-subtitle {
+		font-size: 11px !important;
+		letter-spacing: 0.04em !important;
+		padding-top: 24px !important;
+		white-space: normal !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-group:hover .archmation-master-marketing__card {
+		transform: none !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__info-grid {
+		gap: 16px !important;
+		margin-top: 32px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__info-card {
+		padding: 20px !important;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-master-marketing__cta {
+		width: auto !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-master-marketing__grid {
+		gap: 48px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-lead {
+		font-size: 48px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-master-marketing__card-title-circuit {
+		font-size: 56px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Lead Circuit
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-lead-circuit__modules {
+		gap: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__bottom {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__details-card {
+		padding: 24px 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__cta.archmation-industry-hero__cta {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__eligibility-text,
+	.page-template-accueil.page-service .archmation-lead-circuit__details-value {
+		font-size: 15px !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-lead-circuit__bottom {
+		grid-template-columns: minmax(0, 1fr) !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Instructor
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .archmation-instructor__grid {
+		gap: 32px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-group {
+		min-height: 380px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-frame {
+		min-height: 380px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-col {
+		padding-bottom: 48px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__name-badge {
+		left: 12px !important;
+		max-width: calc(100% - 24px) !important;
+		padding: 12px 16px !important;
+		right: 12px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__name {
+		font-size: 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__role {
+		font-size: 11px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__credentials {
+		align-items: flex-start !important;
+		flex-direction: column !important;
+		gap: 6px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__credential-sep {
+		display: none !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__credential-item {
+		gap: 0 !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__copy {
+		gap: 16px !important;
+		margin-bottom: 24px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__cta {
+		justify-content: center !important;
+		white-space: normal !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .archmation-instructor__grid {
+		gap: 40px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-group {
+		min-height: 480px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-frame {
+		min-height: 480px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Reach Out + Client Logos (reused sections on this page)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .learn-marketing-page .archmation-industry-contact .archmation-industry-hero__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__title {
+		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__grid {
+		gap: 12px !important;
+		margin-top: 40px !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__tile {
+		height: 80px !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__logo {
+		height: 48px !important;
+	}
+
+	.page-template-accueil.page-service .learn-marketing-page .archmation-industry-contact button.archmation-industry-hero__cta {
+		justify-content: center !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page-template-accueil.page-service .learn-marketing-page #accueilClients.archmation-clients .archmation-clients__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.page-template-accueil.page-service .archmation-master-marketing__card {
+		padding: 28px 20px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-lead-circuit__module-card {
+		min-height: 152px !important;
+		padding: 20px 16px !important;
+	}
+
+	.page-template-accueil.page-service .archmation-instructor__media-group,
+	.page-template-accueil.page-service .archmation-instructor__media-frame {
+		min-height: 340px !important;
+	}
+}

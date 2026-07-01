@@ -145,7 +145,6 @@ export default function RootLayout({
               "img:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}",
           }}
         />
-        <link rel="stylesheet" href="/css/style.css?v=20250613c" />
         <style
           id="classic-theme-styles-inline-css"
           dangerouslySetInnerHTML={{
@@ -164,6 +163,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/oroya_tarteaucitron_white.css" />
         <link rel="stylesheet" href="/css/app.css" />
         <link rel="stylesheet" href="/css/fancybox.css" />
+        <link rel="stylesheet" href="/css/style.css?v=20250625zb" />
         <Script id="base-url" strategy="beforeInteractive">
           {`const baseURL = \`\${window.location.protocol}//\${window.location.host}\`;`}
         </Script>

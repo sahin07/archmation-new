@@ -1,0 +1,3 @@
+import { PRIMARY_INDUSTRIES_SHARED_CONTENT } from "@/content/primary-industries";
+
+export const HOME_INDUSTRIES_CONTENT = PRIMARY_INDUSTRIES_SHARED_CONTENT;
