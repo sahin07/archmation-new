@@ -55,8 +55,8 @@ export function getServiceHref(slug: ServiceSlug): string {
   return `${SERVICE_BASE_PATH}/${slug}`;
 }
 
-/** Parent "Our Services" menu link — first service until a listing page exists */
-export const SERVICES_MENU_HREF = getServiceHref(SERVICE_SLUGS[0]);
+/** Parent "Our Services" menu link */
+export const SERVICES_MENU_HREF = SERVICE_BASE_PATH;
 
 export function isServiceSlug(slug: string): slug is ServiceSlug {
   return SERVICE_SLUGS.includes(slug as ServiceSlug);

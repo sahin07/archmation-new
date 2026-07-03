@@ -163,7 +163,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/oroya_tarteaucitron_white.css" />
         <link rel="stylesheet" href="/css/app.css" />
         <link rel="stylesheet" href="/css/fancybox.css" />
-        <link rel="stylesheet" href="/css/style.css?v=20250625zb" />
+        <link rel="stylesheet" href="/css/style.css?v=20250703typ" />
         <Script id="base-url" strategy="beforeInteractive">
           {`const baseURL = \`\${window.location.protocol}//\${window.location.host}\`;`}
         </Script>

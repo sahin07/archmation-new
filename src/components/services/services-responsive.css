@@ -367,3 +367,37 @@
 		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
 	}
 }
+
+/* --------------------------------------------------------------------------
+   Our Services listing — Full Spectrum + Digital Wizards (mobile)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__title,
+	.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__title {
+		font-size: clamp(28px, 8vw, 36px) !important;
+		line-height: 1.15 !important;
+	}
+
+	.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__desc {
+		font-size: 16px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Our Services listing — Digital Wizards (mobile)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__layout {
+		gap: 40px !important;
+	}
+
+	.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__cta {
+		justify-content: center !important;
+		text-align: center !important;
+		width: 100% !important;
+	}
+
+	.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__media-wrap:hover .archmation-digital-wizards__media {
+		transform: none !important;
+	}
+}

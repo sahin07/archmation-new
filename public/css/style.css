@@ -500,6 +500,7 @@ hr {
 }
 
 .page-template-accueil #accueilFondNoir .archmation-services__label,
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__eyebrow,
 .page-template-accueil #accueilProcess.archmation-process .archmation-process__label,
 .page-template-accueil.page-service .archmation-how-it-works__label,
 .page-template-accueil.page-service .archmation-web-tech-hero__label,
@@ -524,6 +525,8 @@ hr {
 }
 
 .page-template-accueil #accueilFondNoir .archmation-services__title,
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__title,
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards__title,
 .page-template-accueil #accueilFondNoir .archmation-expertise__title,
 .page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__title,
 .page-template-accueil #accueilProcess.archmation-process .archmation-process__title,
@@ -11398,6 +11401,35 @@ hr {
 .page-template-accueil.page-service .archmation-dream-team h3.archmation-dream-team__name,
 .page-template-accueil.page-service .archmation-dream-team p.archmation-dream-team__role {
 	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum h2.archmation-full-spectrum__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards h2.archmation-digital-wizards__title {
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-style: italic !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum h3.archmation-full-spectrum__card-title,
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum p,
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum a.archmation-full-spectrum__cta,
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum .archmation-full-spectrum__eyebrow {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards p,
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards .archmation-digital-wizards__feature-text,
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards a.archmation-digital-wizards__cta,
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards button.archmation-digital-wizards__play-btn {
+	font-family: avenir-lt-pro, sans-serif !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards .archmation-digital-wizards__title-line,
+.page-template-accueil.page-service .our-services-page .archmation-digital-wizards .archmation-digital-wizards__title-accent {
+	font-family: "Playfair Display", Georgia, serif !important;
 }
 
 /* Industry pages — mobile padding enforce (must load after base rules) */

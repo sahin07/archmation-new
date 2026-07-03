@@ -1,0 +1,259 @@
+/* Our Services listing — Full Spectrum Digital Services */
+
+@keyframes archmation-full-spectrum-grid-move {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(60px);
+	}
+}
+
+@keyframes archmation-full-spectrum-slide-up {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum {
+	background: linear-gradient(to bottom right, #000 0%, #020617 50%, #000 100%) !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	isolation: isolate !important;
+	min-height: 100vh !important;
+	overflow: hidden !important;
+	padding: clamp(64px, 8vw, 96px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__bg-grid {
+	inset: 0 !important;
+	opacity: 0.05 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__bg-grid-inner {
+	animation: archmation-full-spectrum-grid-move 40s linear infinite !important;
+	background-image: linear-gradient(
+		45deg,
+		transparent 25%,
+		rgba(100, 200, 255, 0.03) 25%,
+		rgba(100, 200, 255, 0.03) 50%,
+		transparent 50%,
+		transparent 75%,
+		rgba(100, 200, 255, 0.03) 75%,
+		rgba(100, 200, 255, 0.03)
+	) !important;
+	background-size: 60px 60px !important;
+	height: 100% !important;
+	position: absolute !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__glow {
+	border-radius: 9999px !important;
+	filter: blur(64px) !important;
+	height: 384px !important;
+	opacity: 0.3 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	width: 384px !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__glow--tr {
+	background: rgba(236, 72, 153, 0.05) !important;
+	right: 0 !important;
+	top: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__glow--bl {
+	background: rgba(168, 85, 247, 0.05) !important;
+	bottom: 0 !important;
+	left: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__inner {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 1280px !important;
+	padding-left: clamp(16px, 4vw, 32px) !important;
+	padding-right: clamp(16px, 4vw, 32px) !important;
+	position: relative !important;
+	width: 100% !important;
+	z-index: 1 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__header {
+	margin: 0 0 clamp(48px, 8vw, 80px) !important;
+	text-align: center !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__eyebrow {
+	color: var(--archmation-section-eyebrow-color) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: var(--archmation-section-eyebrow-font-size) !important;
+	font-weight: var(--archmation-section-eyebrow-font-weight) !important;
+	letter-spacing: var(--archmation-section-eyebrow-letter-spacing) !important;
+	line-height: 1.4 !important;
+	margin: 0 0 16px !important;
+	text-transform: uppercase !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__title {
+	color: var(--archmation-section-title-color) !important;
+	font-family: "Playfair Display", Georgia, serif !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: italic !important;
+	font-weight: var(--archmation-section-title-font-weight) !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 !important;
+	text-wrap: balance !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__grid {
+	display: grid !important;
+	gap: 32px !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card {
+	animation: archmation-full-spectrum-slide-up 0.6s ease-out forwards !important;
+	background: linear-gradient(
+		to bottom right,
+		rgba(15, 23, 42, 0.5) 0%,
+		rgba(2, 6, 23, 0.5) 100%
+	) !important;
+	border: 1px solid rgba(51, 65, 85, 0.4) !important;
+	border-radius: 16px !important;
+	box-sizing: border-box !important;
+	padding: 32px !important;
+	position: relative !important;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease,
+		transform 0.3s ease !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card:hover {
+	border-color: rgba(236, 72, 153, 0.4) !important;
+	box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.2) !important;
+	transform: scale(1.05) !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__icon {
+	color: #f472b6 !important;
+	height: 40px !important;
+	margin: 0 0 24px !important;
+	transition: color 0.3s ease !important;
+	width: 40px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card:hover .archmation-full-spectrum__icon {
+	color: #f9a8d4 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card-title {
+	color: #fff !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 500 !important;
+	line-height: 1.3 !important;
+	margin: 0 0 16px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card-desc {
+	color: rgba(255, 255, 255, 0.5) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(14px, 1.5vw, 16px) !important;
+	line-height: 1.7 !important;
+	margin: 0 0 32px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__cta {
+	align-items: center !important;
+	background: linear-gradient(90deg, #ec4899, #a855f7) !important;
+	border: 0 !important;
+	border-radius: 9999px !important;
+	box-shadow: 0 10px 24px rgba(236, 72, 153, 0.25) !important;
+	box-sizing: border-box !important;
+	color: #fff !important;
+	display: inline-flex !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	gap: 8px !important;
+	justify-content: center !important;
+	letter-spacing: 0.04em !important;
+	line-height: 1.2 !important;
+	padding: 12px 24px !important;
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+	transition:
+		background 0.3s ease,
+		box-shadow 0.3s ease,
+		transform 0.3s ease !important;
+	white-space: nowrap !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__cta:hover {
+	background: linear-gradient(to right, #db2777 0%, #9333ea 100%) !important;
+	box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5) !important;
+	color: #fff !important;
+	transform: scale(1.1) !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__cta-icon {
+	flex-shrink: 0 !important;
+	height: 14px !important;
+	width: 14px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card-glow {
+	background: linear-gradient(
+		to right,
+		rgba(236, 72, 153, 0) 0%,
+		rgba(236, 72, 153, 0.1) 50%,
+		rgba(168, 85, 247, 0) 100%
+	) !important;
+	border-radius: 16px !important;
+	inset: 0 !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	transition: opacity 0.3s ease !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card:hover .archmation-full-spectrum__card-glow {
+	opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__bg-grid-inner,
+	.page-template-accueil.page-service .our-services-page .archmation-full-spectrum__card {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}
