@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { injectGoodReadsNavLink } from "@/content/case-studies";
 import { injectIndustryNavLinks } from "@/content/industries";
 import { injectServiceNavLinks } from "@/content/services";
 import { normalizeInternalLinks } from "@/lib/internal-links";
@@ -20,6 +21,7 @@ export function buildSiteHeaderHtml(): string {
   let header = homeBody.slice(start, end).trim();
   header = injectServiceNavLinks(header);
   header = injectIndustryNavLinks(header);
+  header = injectGoodReadsNavLink(header);
   header = normalizeInternalLinks(header);
 
   return header.replace(

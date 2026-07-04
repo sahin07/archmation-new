@@ -6,6 +6,7 @@ import {
   initHeaderNav,
   initHeaderScroll,
 } from "@/hooks/useHeaderNav";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { syncHeaderNavActive } from "@/lib/header-nav-active";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -18,6 +19,8 @@ type SiteChromeProps = {
 export default function SiteChrome({ headerHtml, children }: SiteChromeProps) {
   const headerHostRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+
+  useScrollToTop();
 
   useEffect(() => {
     const host = headerHostRef.current;

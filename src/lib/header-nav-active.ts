@@ -1,4 +1,9 @@
 import {
+  BLOGS_BASE_PATH,
+  CASE_STUDIES_ARCHIVE_PATH,
+  GOOD_READS_MENU_ITEM_ID,
+} from "@/content/case-studies";
+import {
   INDUSTRIES_MENU_ITEM_ID,
   INDUSTRY_BASE_PATH,
   INDUSTRY_NAV,
@@ -127,5 +132,13 @@ export function syncHeaderNavActive(root: ParentNode, pathname: string) {
 
   if (normalizedPath === "/learn-marketing") {
     markItemActive(menu.querySelector(`#${LEARN_ITEM_ID}`));
+    return;
+  }
+
+  if (
+    normalizedPath === CASE_STUDIES_ARCHIVE_PATH ||
+    normalizedPath.startsWith(`${BLOGS_BASE_PATH}/`)
+  ) {
+    markItemActive(menu.querySelector(`#${GOOD_READS_MENU_ITEM_ID}`));
   }
 }

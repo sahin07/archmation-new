@@ -137,7 +137,7 @@ export function initHeaderScroll(
     header.classList.add("small");
   }
 
-  const sync = () => {
+    const sync = () => {
     const scrolled = window.scrollY > threshold;
 
     if (scrolled || compactDefault) {
@@ -153,6 +153,7 @@ export function initHeaderScroll(
     }
   };
 
+  window.scrollTo(0, 0);
   sync();
   window.addEventListener("scroll", sync, { passive: true });
   window.addEventListener("resize", sync, { passive: true });

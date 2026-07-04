@@ -1,0 +1,77 @@
+/* Good Reads (/blogs) — mobile overrides */
+
+.page-template-accueil.page-service .case-studies-page {
+	box-sizing: border-box !important;
+	max-width: 100% !important;
+	overflow-x: clip !important;
+	width: 100% !important;
+}
+
+@media screen and (max-width: 799px) {
+	.page-template-accueil.page-service .case-studies-page #accueilBlogs.archmation-blogs .archmation-blogs__inner {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-service .case-studies-page #accueilBlogs.archmation-blogs .archmation-blogs__header {
+		margin-bottom: 40px !important;
+	}
+
+	.page-template-accueil.page-service .case-studies-page #accueilBlogs.archmation-blogs .archmation-blogs__root {
+		padding-bottom: clamp(48px, 10vw, 64px) !important;
+		padding-top: clamp(48px, 10vw, 64px) !important;
+	}
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__status {
+	margin: 0 0 24px !important;
+	font-family: var(--font-avenir, Avenir, sans-serif) !important;
+	font-size: 15px !important;
+	color: rgba(255, 255, 255, 0.72) !important;
+	text-align: center !important;
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__skeleton {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.06) 0%,
+		rgba(255, 255, 255, 0.12) 50%,
+		rgba(255, 255, 255, 0.06) 100%
+	) !important;
+	background-size: 200% 100% !important;
+	animation: case-studies-skeleton 1.4s ease-in-out infinite !important;
+	border-radius: 8px !important;
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__card--loading .archmation-blogs__media.archmation-blogs__skeleton {
+	min-height: 220px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__skeleton--title {
+	height: 28px !important;
+	margin-bottom: 12px !important;
+	width: 85% !important;
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__skeleton--line {
+	height: 14px !important;
+	margin-bottom: 10px !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .case-studies-page .archmation-blogs__skeleton--line-short {
+	width: 70% !important;
+}
+
+@keyframes case-studies-skeleton {
+	0% {
+		background-position: 200% 0;
+	}
+
+	100% {
+		background-position: -200% 0;
+	}
+}

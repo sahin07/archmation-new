@@ -9,6 +9,7 @@ import {
   Mail,
   type LucideIcon,
 } from "lucide-react";
+import { GOOD_READS_HREF } from "@/content/case-studies";
 import { getServiceHref, SERVICE_NAV } from "@/content/services";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
@@ -27,7 +28,7 @@ const footerColumns: FooterColumn[] = [
     title: "Resources",
     links: [
       { label: "About us", href: "/about-us" },
-      { label: "Blogs & Case Studies", href: "https://archmation.com/our-work/" },
+      { label: "Blogs & Case Studies", href: GOOD_READS_HREF },
     ],
   },
   {

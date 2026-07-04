@@ -1,0 +1,65 @@
+/* Category badge colors — loaded with BlogsSection */
+
+.page-template-accueil .archmation-blogs .archmation-blogs__card-link {
+	display: flex !important;
+	flex: 1 1 auto !important;
+	flex-direction: column !important;
+	height: 100% !important;
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__card-link:focus {
+	outline: none !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__card-link:focus-visible {
+	outline: 2px solid rgba(236, 72, 153, 0.8) !important;
+	outline-offset: 3px !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__card:hover .archmation-blogs__read-btn {
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0.15),
+		rgba(255, 255, 255, 0.1)
+	) !important;
+	border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__card:hover .archmation-blogs__read-btn-shine {
+	transform: translateX(0) !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__badge--blog {
+	background: linear-gradient(
+		135deg,
+		rgba(168, 85, 247, 0.92),
+		rgba(124, 58, 237, 0.92)
+	) !important;
+	border-color: rgba(216, 180, 254, 0.55) !important;
+	box-shadow: 0 4px 18px rgba(168, 85, 247, 0.35) !important;
+	color: #fff !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__badge--case-study {
+	background: linear-gradient(
+		135deg,
+		rgba(236, 72, 153, 0.92),
+		rgba(244, 63, 94, 0.92)
+	) !important;
+	border-color: rgba(251, 182, 206, 0.55) !important;
+	box-shadow: 0 4px 18px rgba(236, 72, 153, 0.35) !important;
+	color: #fff !important;
+}
+
+.page-template-accueil .archmation-blogs .archmation-blogs__badge--default {
+	background: linear-gradient(
+		135deg,
+		rgba(6, 182, 212, 0.88),
+		rgba(59, 130, 246, 0.88)
+	) !important;
+	border-color: rgba(125, 211, 252, 0.5) !important;
+	box-shadow: 0 4px 18px rgba(59, 130, 246, 0.28) !important;
+	color: #fff !important;
+}
