@@ -26,7 +26,7 @@
 
 /* Service / inner pages — compact header + extra shrink on scroll (home unchanged) */
 .page-service {
-  --site-header-offset: 92px;
+  --site-header-offset: 96px;
   --site-header-offset-scrolled: 72px;
 }
 
@@ -47,15 +47,15 @@
 
 @media screen and (min-width: 800px) {
   .page-service {
-    --site-header-offset: 110px;
-    --site-header-offset-scrolled: 84px;
+    --site-header-offset: 118px;
+    --site-header-offset-scrolled: 88px;
   }
 }
 
 @media screen and (min-width: 1160px) {
   .page-service {
-    --site-header-offset: 140px;
-    --site-header-offset-scrolled: 90px;
+    --site-header-offset: 145px;
+    --site-header-offset-scrolled: 92px;
   }
 }
 
@@ -85,43 +85,95 @@
   max-width: 100%;
 }
 
+/* Mobile: pull logo left + vertically center hamburger with logo */
+@media screen and (max-width: 1159px) {
+  #headerSite #logoSite a {
+    justify-content: flex-start !important;
+    margin: 0 0 0 12px !important;
+  }
+
+  #headerSite .navicon {
+    margin: 0 !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  #headerSite .navicon.open {
+    transform: translateY(-50%) !important;
+  }
+}
+
+/* Homepage header needs room for the larger logo */
+#headerSite {
+  height: 96px !important;
+}
+
+@media screen and (min-width: 800px) {
+  #headerSite {
+    height: 128px !important;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  #headerSite {
+    height: 245px !important;
+  }
+}
+
+#headerSite.small {
+  height: 90px !important;
+}
+
+@media screen and (min-width: 800px) {
+  #headerSite.small {
+    height: 110px !important;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  #headerSite.small {
+    height: 120px !important;
+  }
+}
+
 #headerSite #logoSite {
-  height: 64px !important;
+  height: 68px !important;
   transition: height 0.3s ease, width 0.3s ease;
-  width: 220px !important;
+  width: 230px !important;
 }
 
 @media screen and (min-width: 800px) {
   #headerSite #logoSite {
-    height: 84px !important;
-    width: 290px !important;
+    height: 88px !important;
+    width: 300px !important;
   }
 }
 
 @media screen and (min-width: 1650px) {
   #headerSite #logoSite {
-    height: 102px !important;
-    width: 340px !important;
+    height: 104px !important;
+    width: 350px !important;
   }
 }
 
 .page-service #headerSite #logoSite {
-  height: 64px;
+  height: 68px;
   transition: height 0.3s ease, width 0.3s ease;
-  width: 220px;
+  width: 230px;
 }
 
 @media screen and (min-width: 800px) {
   .page-service #headerSite #logoSite {
-    height: 84px;
-    width: 290px;
+    height: 88px;
+    width: 300px;
   }
 }
 
 @media screen and (min-width: 1650px) {
   .page-service #headerSite #logoSite {
-    height: 96px;
-    width: 320px;
+    height: 98px;
+    width: 330px;
   }
 }
 
