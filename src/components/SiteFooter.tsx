@@ -119,19 +119,15 @@ export default function SiteFooter() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <a href="https://archmation.com/" className="archmation-footer__brand-link">
-                <motion.div
-                  className="archmation-footer__brand-mark"
-                  animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  aria-hidden="true"
-                >
-                  <span className="archmation-footer__brand-ring" />
-                </motion.div>
-                <span className="archmation-footer__brand-text">
-                  <span className="archmation-footer__brand-name">ARCHMATION</span>
-                  <span className="archmation-footer__brand-tag">STUDIOS</span>
-                </span>
+              <a href="/" className="archmation-footer__brand-link">
+                <img
+                  src="/images/footer-logo.png"
+                  alt="Archmation Studios"
+                  className="archmation-footer__brand-logo"
+                  width={236}
+                  height={82}
+                  decoding="async"
+                />
               </a>
 
               <p className="archmation-footer__desc">

@@ -164,6 +164,10 @@ export const caseStudyArchiveQueryKeys = {
   all: ["case-study-archive"] as const,
 };
 
+export const homeBlogsQueryKeys = {
+  all: ["home-blogs"] as const,
+};
+
 export const goodReadsQueryKeys = {
   all: ["good-reads"] as const,
   detail: (slug: string) => ["good-reads", slug] as const,

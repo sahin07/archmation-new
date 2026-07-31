@@ -9,7 +9,7 @@ import ProcessSection from "@/components/ProcessSection";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
 import ValueSection from "@/components/ValueSection";
-import BlogsSection from "@/components/BlogsSection";
+import HomeBlogsSection from "@/components/case-studies/HomeBlogsSection";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
@@ -231,7 +231,10 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
           )
         : null}
       {mounts.blogs
-        ? createPortal(<BlogsSection key={`blogs-${sectionKey}`} />, mounts.blogs)
+        ? createPortal(
+            <HomeBlogsSection key={`blogs-${sectionKey}`} />,
+            mounts.blogs,
+          )
         : null}
       {mounts.faq
         ? createPortal(<FAQSection key={`faq-${sectionKey}`} />, mounts.faq)

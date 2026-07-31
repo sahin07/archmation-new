@@ -12,6 +12,7 @@ export {
   fetchPopularCategories,
   fetchPostBySlug,
   goodReadsQueryKeys,
+  homeBlogsQueryKeys,
   wpApi,
 } from "@/lib/wordpress/api";
 export {

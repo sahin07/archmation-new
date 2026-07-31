@@ -15,12 +15,14 @@ type CategoryPostsListingProps = {
   queryKey: readonly unknown[];
   fetchPosts: () => Promise<WordPressPost[]>;
   section: PostsListingSection;
+  showViewAllCta?: boolean;
 };
 
 export default function CategoryPostsListing({
   queryKey,
   fetchPosts,
   section,
+  showViewAllCta = false,
 }: CategoryPostsListingProps) {
   const { data, isLoading, isError } = useQuery({
     queryKey,
@@ -35,7 +37,7 @@ export default function CategoryPostsListing({
       posts={data}
       isLoading={isLoading}
       isError={isError}
-      showViewAllCta={false}
+      showViewAllCta={showViewAllCta}
       section={section}
       readCtaLabel={section.readCtaLabel}
     />

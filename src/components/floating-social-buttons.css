@@ -1,0 +1,69 @@
+.floating-social {
+	position: fixed !important;
+	right: max(16px, env(safe-area-inset-right, 0px)) !important;
+	bottom: max(20px, env(safe-area-inset-bottom, 0px)) !important;
+	z-index: 10050 !important;
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 12px !important;
+	pointer-events: none !important;
+}
+
+.floating-social__btn {
+	align-items: center !important;
+	background: #fff !important;
+	border: none !important;
+	border-radius: 999px !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+	color: #fff !important;
+	display: inline-flex !important;
+	height: 52px !important;
+	justify-content: center !important;
+	pointer-events: auto !important;
+	text-decoration: none !important;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease !important;
+	width: 52px !important;
+}
+
+.floating-social__btn:hover {
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34) !important;
+	transform: translateY(-2px) scale(1.04) !important;
+}
+
+.floating-social__btn:focus-visible {
+	outline: 2px solid #fff !important;
+	outline-offset: 3px !important;
+}
+
+.floating-social__btn--whatsapp {
+	background: #25d366 !important;
+}
+
+.floating-social__btn--linkedin {
+	background: #0a66c2 !important;
+}
+
+.floating-social__icon {
+	display: block !important;
+	height: 26px !important;
+	width: 26px !important;
+}
+
+@media screen and (max-width: 767px) {
+	.floating-social {
+		right: max(12px, env(safe-area-inset-right, 0px)) !important;
+		bottom: max(16px, env(safe-area-inset-bottom, 0px)) !important;
+	}
+
+	.floating-social__btn {
+		height: 48px !important;
+		width: 48px !important;
+	}
+
+	.floating-social__icon {
+		height: 24px !important;
+		width: 24px !important;
+	}
+}

@@ -4588,6 +4588,14 @@ hr {
 	width: fit-content;
 }
 
+.page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-logo {
+	display: block;
+	height: auto;
+	max-width: min(240px, 100%);
+	object-fit: contain;
+	width: 220px;
+}
+
 .page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-mark {
 	align-items: center;
 	backdrop-filter: blur(4px);

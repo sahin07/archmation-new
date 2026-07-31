@@ -4,6 +4,7 @@ import { useId, useRef, useState } from "react";
 import { ArrowRight, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import type { IndustryContactContent } from "@/content/industry-contact/types";
+import { buildContactFormMailtoHref } from "@/lib/contact-form-mailto";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 import "@/components/industries/heroes/industry-hero.css";
 import "@/components/industries/industry-contact.css";
@@ -56,6 +57,11 @@ export default function ReachOutContactSection({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const recipient = content.emails[0] ?? "business@archmation.com";
+    const mailtoHref = buildContactFormMailtoHref(recipient, formData);
+    window.location.href = mailtoHref;
+
     setFormData({
       name: "",
       company: "",

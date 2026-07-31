@@ -76,42 +76,71 @@
   height: var(--site-header-offset-scrolled) !important;
 }
 
-.page-service #headerSite #logoSite {
-  height: 41px;
+#headerSite #logoSite img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  width: auto;
+  max-width: 100%;
+}
+
+#headerSite #logoSite {
+  height: 52px !important;
   transition: height 0.3s ease, width 0.3s ease;
-  width: 106.667px;
+  width: 180px !important;
+}
+
+@media screen and (min-width: 800px) {
+  #headerSite #logoSite {
+    height: 68px !important;
+    width: 230px !important;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  #headerSite #logoSite {
+    height: 88px !important;
+    width: 280px !important;
+  }
+}
+
+.page-service #headerSite #logoSite {
+  height: 52px;
+  transition: height 0.3s ease, width 0.3s ease;
+  width: 180px;
 }
 
 @media screen and (min-width: 800px) {
   .page-service #headerSite #logoSite {
-    height: 56px;
-    width: 106.667px;
+    height: 68px;
+    width: 230px;
   }
 }
 
 @media screen and (min-width: 1650px) {
   .page-service #headerSite #logoSite {
-    height: 56px;
-    width: 157.333px;
+    height: 80px;
+    width: 270px;
   }
 }
 
 .page-service.is-header-scrolled #headerSite #logoSite {
-  height: 34px;
-  width: 88px;
+  height: 40px;
+  width: 160px;
 }
 
 @media screen and (min-width: 800px) {
   .page-service.is-header-scrolled #headerSite #logoSite {
-    height: 38px;
-    width: 92px;
+    height: 48px;
+    width: 185px;
   }
 }
 
 @media screen and (min-width: 1650px) {
   .page-service.is-header-scrolled #headerSite #logoSite {
-    height: 42px;
-    width: 118px;
+    height: 54px;
+    width: 210px;
   }
 }
 
