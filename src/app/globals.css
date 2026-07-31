@@ -26,8 +26,8 @@
 
 /* Service / inner pages — compact header + extra shrink on scroll (home unchanged) */
 .page-service {
-  --site-header-offset: 78px;
-  --site-header-offset-scrolled: 64px;
+  --site-header-offset: 92px;
+  --site-header-offset-scrolled: 72px;
 }
 
 .page-service #fullSite {
@@ -47,15 +47,15 @@
 
 @media screen and (min-width: 800px) {
   .page-service {
-    --site-header-offset: 81.333px;
-    --site-header-offset-scrolled: 72px;
+    --site-header-offset: 110px;
+    --site-header-offset-scrolled: 84px;
   }
 }
 
 @media screen and (min-width: 1160px) {
   .page-service {
-    --site-header-offset: 122.5px;
-    --site-header-offset-scrolled: 78px;
+    --site-header-offset: 140px;
+    --site-header-offset-scrolled: 90px;
   }
 }
 
@@ -86,61 +86,61 @@
 }
 
 #headerSite #logoSite {
-  height: 52px !important;
+  height: 64px !important;
   transition: height 0.3s ease, width 0.3s ease;
-  width: 180px !important;
+  width: 220px !important;
 }
 
 @media screen and (min-width: 800px) {
   #headerSite #logoSite {
-    height: 68px !important;
-    width: 230px !important;
+    height: 84px !important;
+    width: 290px !important;
   }
 }
 
 @media screen and (min-width: 1650px) {
   #headerSite #logoSite {
-    height: 88px !important;
-    width: 280px !important;
+    height: 102px !important;
+    width: 340px !important;
   }
 }
 
 .page-service #headerSite #logoSite {
-  height: 52px;
+  height: 64px;
   transition: height 0.3s ease, width 0.3s ease;
-  width: 180px;
+  width: 220px;
 }
 
 @media screen and (min-width: 800px) {
   .page-service #headerSite #logoSite {
-    height: 68px;
-    width: 230px;
+    height: 84px;
+    width: 290px;
   }
 }
 
 @media screen and (min-width: 1650px) {
   .page-service #headerSite #logoSite {
-    height: 80px;
-    width: 270px;
+    height: 96px;
+    width: 320px;
   }
 }
 
 .page-service.is-header-scrolled #headerSite #logoSite {
-  height: 40px;
-  width: 160px;
+  height: 48px;
+  width: 185px;
 }
 
 @media screen and (min-width: 800px) {
   .page-service.is-header-scrolled #headerSite #logoSite {
-    height: 48px;
-    width: 185px;
+    height: 58px;
+    width: 220px;
   }
 }
 
 @media screen and (min-width: 1650px) {
   .page-service.is-header-scrolled #headerSite #logoSite {
-    height: 54px;
-    width: 210px;
+    height: 64px;
+    width: 250px;
   }
 }
 
