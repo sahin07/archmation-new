@@ -4945,11 +4945,11 @@ hr {
 
 @media screen and (max-width: 1159px) {
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu {
-		background: #000;
+		background: #fff;
 		border-radius: 0;
 		display: none;
-		margin-left: 1.5em;
-		padding: 0.5rem 0;
+		margin-left: 0;
+		padding: 0.5rem 0 0.5rem 12px;
 	}
 
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children.is-open > ul.sub-menu {
@@ -4957,7 +4957,8 @@ hr {
 	}
 
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu li a {
-		font-size: 2rem !important;
+		color: #222 !important;
+		font-size: 1.05rem !important;
 		font-weight: 500 !important;
 	}
 

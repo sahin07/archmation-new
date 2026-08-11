@@ -24,7 +24,7 @@
 		padding-right: 0 !important;
 	}
 
-	.page-template-accueil:not(.page-service) .widthGlobalContent,
+	.page-template-accueil:not(.page-service) .widthGlobalContent:not(.headerSiteContent),
 	.page-template-accueil:not(.page-service) .bloc-header-titre-accueil-contenu {
 		box-sizing: border-box !important;
 		padding-left: 20px !important;

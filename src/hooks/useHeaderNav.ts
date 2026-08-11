@@ -92,24 +92,45 @@ function initMobileServiceDropdown(root: ParentNode) {
   return () => cleanups.forEach((cleanup) => cleanup());
 }
 
+function setMobileNavOpen(
+  navicon: HTMLElement,
+  overlay: HTMLElement,
+  open: boolean,
+) {
+  navicon.classList.toggle("open", open);
+  overlay.classList.toggle("open", open);
+  overlay.classList.toggle("close", !open && overlay.classList.contains("close"));
+  if (open) overlay.classList.remove("close");
+  document.body.classList.toggle("menu-open", open);
+
+  const nav = overlay.querySelector<HTMLElement>("#navSite");
+  nav?.classList.toggle("height-transition-hidden", !open);
+}
+
 function initNavicon(root: ParentNode) {
   const navicon = root.querySelector<HTMLElement>("#navicon");
   const overlay = root.querySelector<HTMLElement>(".overlayHeaderMenu");
   if (!navicon || !overlay) return undefined;
 
-  const onNaviconClick = () => {
-    navicon.classList.toggle("open");
-    overlay.classList.toggle("open");
-    document.body.classList.toggle("menu-open");
+  const onNaviconClick = (event: Event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    setMobileNavOpen(navicon, overlay, !overlay.classList.contains("open"));
   };
 
-  navicon.addEventListener("click", onNaviconClick);
+  navicon.addEventListener("click", onNaviconClick, true);
   return () => {
-    navicon.removeEventListener("click", onNaviconClick);
-    navicon.classList.remove("open");
-    overlay.classList.remove("open");
-    document.body.classList.remove("menu-open");
+    navicon.removeEventListener("click", onNaviconClick, true);
+    setMobileNavOpen(navicon, overlay, false);
   };
+}
+
+/** Legacy app.js also binds #navicon; both handlers toggle and cancel each other. */
+export function unbindLegacyNaviconHandler() {
+  const jq = (
+    window as Window & { jQuery?: (selector: string) => { off: (event: string) => void } }
+  ).jQuery;
+  jq?.("#navicon").off("click");
 }
 
 type HeaderScrollOptions = {

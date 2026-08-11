@@ -14,7 +14,7 @@ import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
 import { HOME_VIDEO_GALLERY_CONTENT } from "@/content/video-gallery";
-import { initHeaderNav } from "@/hooks/useHeaderNav";
+import { initHeaderNav, unbindLegacyNaviconHandler } from "@/hooks/useHeaderNav";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import "@/components/home-responsive.css";
@@ -177,6 +177,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         window as Window & { __archmationNudgeLoaderImages?: () => void }
       ).__archmationNudgeLoaderImages?.();
       document.dispatchEvent(new Event("DOMContentLoaded", { bubbles: true }));
+      unbindLegacyNaviconHandler();
       window.dispatchEvent(new Event("scroll"));
 
       const host = htmlHostRef.current;
