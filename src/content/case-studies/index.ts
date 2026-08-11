@@ -52,7 +52,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
       "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=500&h=300&fit=crop",
     category: "3D Printing",
     excerpt: "Discover how strategic positioning led to 340% revenue growth",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/scaling-towards-profitability",
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
     category: "E-Commerce",
     excerpt: "A complete case study on data-driven optimization strategies",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/cherie-335-percent-roas",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
       "https://images.unsplash.com/photo-1506869640319-fe1a24fd76d8?w=500&h=300&fit=crop",
     category: "SEO & PPC",
     excerpt: "Proven techniques for sustainable organic growth",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/sahil-machines-website-traffic-growth",
   },
   {
     id: 4,
@@ -80,7 +80,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=300&fit=crop",
     category: "Real Estate",
     excerpt: "Leveraging digital strategies to dominate the real estate market",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/real-estate-marketing-excellence",
   },
   {
     id: 5,
@@ -90,7 +90,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
     category: "Education",
     excerpt:
       "How to reach millions of students through effective digital marketing",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/edtech-revolution-scaling-online-learning",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ export const CASE_STUDY_POSTS: readonly CaseStudyPost[] = [
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=300&fit=crop",
     category: "Manufacturing",
     excerpt: "Industrial sector success stories with data-driven strategies",
-    href: "https://archmation.com/our-work/",
+    href: "/blogs/manufacturing-b2b-lead-generation",
   },
 ] as const;
 

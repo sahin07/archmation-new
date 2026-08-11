@@ -12,6 +12,7 @@ import {
 import { decodeWordPressHtml } from "@/lib/wordpress/utils";
 
 export const revalidate = 300;
+export const dynamicParams = true;
 
 const getSidebarData = unstable_cache(
   async () => {
@@ -31,8 +32,12 @@ type BlogDetailPageProps = {
 };
 
 export async function generateStaticParams() {
-  const slugs = await fetchAllPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  try {
+    const slugs = await fetchAllPostSlugs();
+    return slugs.map((slug) => ({ slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({
