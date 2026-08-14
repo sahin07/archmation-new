@@ -19,40 +19,35 @@ const videos: VideoItem[] = [
     id: 1,
     title: "Piano Milling Machine",
     company: "Suraj Machines",
-    thumbnail:
-      "https://images.unsplash.com/photo-1581092162562-40038f60416c?w=400&q=80",
+    thumbnail: "/images/work/suraj-machines.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 2,
     title: "CNC Milling Process",
     company: "Industrial Tech",
-    thumbnail:
-      "https://images.unsplash.com/photo-1585399361892-f51c236efb9b?w=400&q=80",
+    thumbnail: "/images/work/cnc-milling.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 3,
     title: "Product Testimonial",
     company: "Brand Partner",
-    thumbnail:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&q=80",
+    thumbnail: "/images/work/product-testimonial.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 4,
     title: "Corporate Event",
     company: "Event Coverage",
-    thumbnail:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80",
+    thumbnail: "/images/work/corporate-event.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 5,
     title: "Behind the Scenes",
     company: "Studio Production",
-    thumbnail:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400&q=80",
+    thumbnail: "/images/work/behind-the-scenes.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];

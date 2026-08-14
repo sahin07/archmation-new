@@ -2950,7 +2950,7 @@ hr {
 
 .page-template-accueil #accueilVideoGallery.archmation-videos .archmation-videos__card,
 .page-template-accueil.page-service .archmation-videos-shell.archmation-videos .archmation-videos__card{
-	background: transparent;
+	background: #1a1a1a;
 	border: none;
 	border-radius: 12px;
 	cursor: pointer;
@@ -11339,7 +11339,9 @@ hr {
 
 .page-template-accueil.page-service .archmation-industry-contact h2.archmation-industry-hero__title {
 	font-family: Saira, "Saira Fallback" !important;
-	font-style: italic !important;
+	font-size: clamp(28px, 4vw, 42px) !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
 }
 
 .page-template-accueil.page-service .archmation-dream-team h2.archmation-industry-hero__title {
