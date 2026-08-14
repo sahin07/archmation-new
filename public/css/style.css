@@ -495,7 +495,7 @@ hr {
 	--archmation-section-eyebrow-letter-spacing: 0.3em;
 	--archmation-section-title-color: #fff;
 	--archmation-section-title-font-size: clamp(36px, 5vw, 56px);
-	--archmation-section-title-font-weight: 400;
+	--archmation-section-title-font-weight: 700;
 	--archmation-section-title-line-height: 1.15;
 }
 
@@ -552,13 +552,13 @@ hr {
 .page-template-accueil.page-service .archmation-industry-faq__title,
 .page-template-accueil.page-service .archmation-videos-shell.archmation-videos .archmation-videos__title {
 	color: var(--archmation-section-title-color) !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: var(--archmation-section-title-font-size);
-	font-style: italic;
+	font-style: normal;
 	font-weight: var(--archmation-section-title-font-weight);
 	line-height: var(--archmation-section-title-line-height);
 	margin: 0;
-	text-wrap: balance;
+	text-wrap: wrap;
 }
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__title-accent,
@@ -577,7 +577,7 @@ hr {
 .page-template-accueil.page-service .archmation-industry-expertise__title-accent,
 .page-template-accueil.page-service .archmation-videos-shell.archmation-videos .archmation-videos__title-accent {
 	color: var(--archmation-section-title-color);
-	font-style: italic;
+	font-style: normal;
 	font-weight: var(--archmation-section-title-font-weight);
 }
 
@@ -930,8 +930,14 @@ hr {
 	gap: 0.5rem;
 }
 
+.page-template-accueil #accueilFondNoir .archmation-expertise__title {
+	font-family: Saira, "Saira Fallback" !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+}
+
 .page-template-accueil #accueilFondNoir .archmation-expertise__title--italic {
-	font-style: italic;
+	font-style: normal;
 }
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__quote {
@@ -978,7 +984,7 @@ hr {
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__quote-text {
 	color: rgba(255, 255, 255, 0.5);
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 14px;
 	font-style: italic;
 	line-height: 1.6;
@@ -1052,7 +1058,7 @@ hr {
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__watermark {
 	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(128px, 18vw, 192px);
 	font-weight: 700;
 	left: -32px;
@@ -1120,14 +1126,14 @@ hr {
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__score-value {
 	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(40px, 4vw, 48px);
 	font-weight: 600;
 }
 
 .page-template-accueil #accueilFondNoir .archmation-expertise__score-plus {
 	color: rgba(255, 255, 255, 0.4);
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(26px, 2.5vw, 30px);
 }
 
@@ -1427,7 +1433,7 @@ hr {
 
 .page-template-accueil #accueilIndustries.archmation-industries .archmation-industries__panel-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(28px, 4vw, 36px);
 	font-style: italic;
 	font-weight: 400;
@@ -1756,7 +1762,7 @@ hr {
 
 .page-template-accueil #accueilProcess.archmation-process .archmation-process__step-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(20px, 2.2vw, 24px);
 	font-weight: 400;
 	line-height: 1.25;
@@ -2041,7 +2047,7 @@ hr {
 
 .page-template-accueil #accueilValue.archmation-value .archmation-value__card-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(24px, 2.5vw, 30px);
 	font-weight: 400;
 	line-height: 1.2;
@@ -2470,7 +2476,7 @@ hr {
 
 .page-template-accueil .archmation-clients__modal-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0;
@@ -2727,7 +2733,7 @@ hr {
 
 .page-template-accueil #accueilStats.archmation-stats .archmation-stats__counter {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(40px, 5vw, 60px);
 	font-weight: 700;
 	line-height: 1;
@@ -3238,7 +3244,7 @@ hr {
 
 .page-template-accueil .archmation-videos__modal-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(22px, 3vw, 32px);
 	font-weight: 400;
 	margin: 0 0 8px;
@@ -3520,7 +3526,7 @@ hr {
 .page-template-accueil #accueilBlogs.archmation-blogs .archmation-blogs__card-title {
 	color: #fff !important;
 	display: -webkit-box;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 18px;
 	font-weight: 600;
 	-webkit-box-orient: vertical;
@@ -3686,7 +3692,7 @@ hr {
 .page-template-accueil #accueilTemoignages .prestaCollaborationsTitre h2,
 .page-template-accueil #accueilTemoignages .archmation-clients-say__title {
 	color: #000 !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size);
 	font-style: italic;
 	font-weight: var(--archmation-section-title-font-weight) !important;
@@ -3700,7 +3706,7 @@ hr {
 .page-template-accueil #accueilTemoignages .prestaCollaborationsTitre h2 strong,
 .page-template-accueil #accueilTemoignages .archmation-clients-say__title strong {
 	color: #000 !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: inherit !important;
 	font-style: italic;
 	font-weight: var(--archmation-section-title-font-weight) !important;
@@ -4008,7 +4014,7 @@ hr {
 .page-template-accueil #accueilFaq.archmation-faq .archmation-faq__question {
 	color: #fff;
 	flex: 1;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.35;
@@ -4227,7 +4233,7 @@ hr {
 
 .page-template-accueil #accueilQSN.archmation-about .archmation-about__image-quote {
 	color: rgba(255, 255, 255, 0.3);
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 12px;
 	font-style: italic;
 	left: 33%;
@@ -4624,7 +4630,7 @@ hr {
 
 .page-template-accueil #archmationFooter.archmation-footer .archmation-footer__brand-name {
 	color: #fff;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 1.1;
@@ -4983,7 +4989,7 @@ hr {
 
 #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a {
 	background: linear-gradient(180deg, #f85b3d 0%, #c42204 100%);
-	border-radius: 3px;
+	border-radius: 9999px;
 	color: #fff !important;
 	font-size: 1rem;
 	font-weight: 700;
@@ -8056,7 +8062,7 @@ hr {
 
 .page-template-accueil.page-service .archmation-development__features-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(28px, 3vw, 30px);
 	font-style: italic;
 	font-weight: 700;
@@ -8844,7 +8850,7 @@ hr {
 
 .page-template-accueil.page-service .archmation-how-it-works__step-title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(20px, 2.2vw, 24px);
 	font-weight: 400;
 	line-height: 1.25;
@@ -9077,7 +9083,7 @@ hr {
 
 .page-template-accueil.page-service .archmation-timely-delivery__title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: Saira, "Saira Fallback";
 	font-size: clamp(28px, 3.5vw, 36px);
 	font-weight: 700;
 	line-height: 1.2;
@@ -10701,7 +10707,7 @@ hr {
 }
 
 .page-template-accueil.page-service .archmation-industry-services__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -10986,7 +10992,7 @@ hr {
 
 .page-template-accueil.page-service .archmation-industry-expertise__title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size) !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
@@ -11003,7 +11009,7 @@ hr {
 	background-clip: text !important;
 	background-image: linear-gradient(90deg, #f472b6, #d8b4fe) !important;
 	color: transparent !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: inherit !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
@@ -11249,18 +11255,18 @@ hr {
 }
 
 .page-template-accueil.page-service .archmation-industry-services__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 }
 
 /* Industry expertise — enforce typography over legacy app.css */
 .page-template-accueil.page-service .archmation-industry-expertise h2.archmation-industry-expertise__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-expertise span.archmation-industry-expertise__title-accent {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
@@ -11279,7 +11285,7 @@ hr {
 
 /* Industry hero — enforce typography over legacy app.css */
 .page-template-accueil.page-service .archmation-industry-hero h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
@@ -11297,7 +11303,7 @@ hr {
 
 /* Industry solutions — enforce typography over legacy app.css */
 .page-template-accueil.page-service .archmation-industry-solutions h2.archmation-industry-solutions__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
@@ -11314,14 +11320,14 @@ hr {
 
 /* Industry FAQ — enforce typography */
 .page-template-accueil.page-service .archmation-industry-faq h2.archmation-industry-faq__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-faq span.archmation-industry-faq__title-accent {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
 }
@@ -11332,17 +11338,17 @@ hr {
 }
 
 .page-template-accueil.page-service .archmation-industry-contact h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
 .page-template-accueil.page-service .archmation-dream-team h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
 .page-template-accueil.page-service .archmation-lead-circuit h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
@@ -11355,7 +11361,7 @@ hr {
 }
 
 .page-template-accueil.page-service .archmation-master-marketing h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
@@ -11382,7 +11388,7 @@ hr {
 }
 
 .page-template-accueil.page-service .archmation-instructor h2.archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
@@ -11413,12 +11419,12 @@ hr {
 }
 
 .page-template-accueil.page-service .our-services-page .archmation-full-spectrum h2.archmation-full-spectrum__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
 .page-template-accueil.page-service .our-services-page .archmation-digital-wizards h2.archmation-digital-wizards__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-style: italic !important;
 }
 
@@ -11438,7 +11444,7 @@ hr {
 
 .page-template-accueil.page-service .our-services-page .archmation-digital-wizards .archmation-digital-wizards__title-line,
 .page-template-accueil.page-service .our-services-page .archmation-digital-wizards .archmation-digital-wizards__title-accent {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 }
 
 /* Industry pages — mobile padding enforce (must load after base rules) */

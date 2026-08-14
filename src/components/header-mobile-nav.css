@@ -52,6 +52,7 @@
     align-items: stretch !important;
     display: flex !important;
     flex-direction: column !important;
+    font-family: Saira, "Saira Fallback" !important;
     padding: 12px 20px 48px !important;
     text-align: left !important;
   }
@@ -69,6 +70,7 @@
     align-items: center !important;
     color: #111 !important;
     display: flex !important;
+    font-family: Saira, "Saira Fallback" !important;
     font-size: 1.6rem !important;
     font-weight: 600 !important;
     height: auto !important;
@@ -106,6 +108,7 @@
     background: #fff !important;
     color: #555 !important;
     display: flex !important;
+    font-family: Saira, "Saira Fallback" !important;
     font-size: 1rem !important;
     font-weight: 400 !important;
     height: auto !important;
@@ -128,8 +131,10 @@
   }
 
   #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a {
+    border-radius: 9999px !important;
     color: #fff !important;
     display: flex !important;
+    font-family: Saira, "Saira Fallback" !important;
     font-size: 0.95rem !important;
     justify-content: center !important;
     text-align: center !important;

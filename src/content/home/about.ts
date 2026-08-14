@@ -2,8 +2,8 @@ import type { AboutWhoContent } from "@/content/about/types";
 
 export const HOME_ABOUT_CONTENT: AboutWhoContent = {
   label: "Who Are We",
-  title: "Pioneers of a",
-  titleAccent: "Digital Future",
+  title: "Pioneers of a Digital Future",
+  titleAccent: "",
   paragraphs: [
     {
       variant: "primary",

@@ -166,10 +166,15 @@ export default function WhoAreWeSection({ content }: WhoAreWeSectionProps) {
               animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: active ? 0.4 : 0 }}
             >
-              {content.title}{" "}
-              <span className="archmation-about__title-accent">
-                {content.titleAccent}
-              </span>
+              {content.title}
+              {content.titleAccent ? (
+                <>
+                  {" "}
+                  <span className="archmation-about__title-accent">
+                    {content.titleAccent}
+                  </span>
+                </>
+              ) : null}
             </motion.h2>
 
             <motion.div

@@ -1,4 +1,4 @@
-const DEFAULT_WORDPRESS_API_URL = "https://archmation.com/wp-json/wp/v2";
+const DEFAULT_WORDPRESS_API_URL = "https://blog.archmation.com/wp-json/wp/v2";
 
 export const WORDPRESS_API_BASE =
   process.env.NEXT_PUBLIC_WORDPRESS_API_URL ??

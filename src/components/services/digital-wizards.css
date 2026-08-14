@@ -135,9 +135,9 @@
 
 .page-template-accueil.page-service .our-services-page .archmation-digital-wizards__title {
 	color: var(--archmation-section-title-color) !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size) !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: var(--archmation-section-title-font-weight) !important;
 	line-height: var(--archmation-section-title-line-height) !important;
 	margin: 0 !important;
@@ -150,7 +150,7 @@
 	display: block !important;
 	font-family: inherit !important;
 	font-size: inherit !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: inherit !important;
 	line-height: inherit !important;
 }

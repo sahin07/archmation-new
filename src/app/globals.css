@@ -4,7 +4,43 @@
 @source "../app/**/*.{js,ts,jsx,tsx}";
 
 @theme {
-  --font-heading: "Playfair Display", Georgia, serif;
+  --font-heading: Saira, "Saira Fallback";
+}
+
+.page-template-accueil [class$="__title"],
+.page-template-accueil [class$="__title-accent"],
+.page-template-accueil [class*="__title--"] {
+  font-family: Saira, "Saira Fallback" !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
+.page-template-accueil #accueilQSN.archmation-about .archmation-about__title {
+  text-wrap: wrap !important;
+  white-space: normal !important;
+}
+
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu,
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li,
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li a,
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li a span {
+  font-family: Saira, "Saira Fallback" !important;
+}
+
+#archmationFooter.archmation-footer,
+#archmationFooter.archmation-footer p,
+#archmationFooter.archmation-footer a,
+#archmationFooter.archmation-footer h4,
+#archmationFooter.archmation-footer li,
+#archmationFooter.archmation-footer span {
+  font-family: Saira, "Saira Fallback" !important;
+}
+
+.page-template-accueil [class$="__cta"],
+.page-template-accueil [class$="__cta-btn"],
+.page-template-accueil [class$="__read-btn"],
+#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta > a {
+  border-radius: 9999px !important;
 }
 
 @utility bg-gradient-radial {

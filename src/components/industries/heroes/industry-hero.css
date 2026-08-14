@@ -89,9 +89,9 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-hero__title {
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size) !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: 400 !important;
 	line-height: var(--archmation-section-title-line-height) !important;
 	margin: 0 !important;
@@ -107,7 +107,7 @@
 	display: inline !important;
 	font-family: inherit !important;
 	font-size: inherit !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: inherit !important;
 	line-height: inherit !important;
 }

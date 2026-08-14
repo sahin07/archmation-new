@@ -143,9 +143,9 @@
 
 .page-template-accueil.page-service .archmation-industry-solutions__title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size) !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: 400 !important;
 	letter-spacing: normal !important;
 	line-height: var(--archmation-section-title-line-height) !important;

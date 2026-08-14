@@ -70,7 +70,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,500&family=Tenor+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Tenor+Sans&display=swap"
           rel="stylesheet"
         />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />

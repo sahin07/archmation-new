@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "archmation.com",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "blog.archmation.com",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
   async redirects() {

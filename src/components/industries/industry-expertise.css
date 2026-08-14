@@ -316,9 +316,9 @@
 
 .page-template-accueil.page-service .archmation-industry-expertise__title {
 	color: #fff !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: var(--archmation-section-title-font-size) !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: 400 !important;
 	letter-spacing: normal !important;
 	line-height: var(--archmation-section-title-line-height) !important;
@@ -333,9 +333,9 @@
 	background-clip: text !important;
 	background-image: linear-gradient(90deg, #f472b6, #d8b4fe) !important;
 	color: transparent !important;
-	font-family: "Playfair Display", Georgia, serif !important;
+	font-family: Saira, "Saira Fallback" !important;
 	font-size: inherit !important;
-	font-style: italic !important;
+	font-style: normal !important;
 	font-weight: 400 !important;
 	-webkit-text-fill-color: transparent !important;
 }
