@@ -74,9 +74,9 @@ export default function PrimaryIndustriesSection({
 }: PrimaryIndustriesSectionProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const active = useSectionReveal(rootRef, {
-    amount: 0.35,
-    margin: "0px 0px -22% 0px",
-    delay: 500,
+    amount: 0.12,
+    margin: "0px 0px -8% 0px",
+    delay: 150,
   });
 
   return (

@@ -15,12 +15,25 @@ export function closeServiceDropdowns(root: ParentNode) {
   });
 }
 
+/** Clear legacy app.js inline styles that force every mobile submenu open. */
+export function resetMobileSubmenuInlineStyles(root: ParentNode) {
+  root
+    .querySelectorAll<HTMLElement>("#header-menu li.menu-item-has-children > ul.sub-menu")
+    .forEach((submenu) => {
+      submenu.style.removeProperty("display");
+      submenu.style.removeProperty("visibility");
+    });
+}
+
 export function closeMobileNavOverlay(root: ParentNode) {
   const navicon = root.querySelector<HTMLElement>("#navicon");
   const overlay = root.querySelector<HTMLElement>(".overlayHeaderMenu");
   navicon?.classList.remove("open");
   overlay?.classList.remove("open");
+  overlay?.classList.remove("close");
   document.body.classList.remove("menu-open");
+  resetMobileSubmenuInlineStyles(root);
+  closeServiceDropdowns(root);
 }
 
 export function closeAllHeaderMenus(root: ParentNode) {
@@ -43,6 +56,9 @@ function initMobileServiceDropdown(root: ParentNode) {
     event.preventDefault();
     event.stopPropagation();
 
+    // Clear legacy inline display:block so CSS .is-open can control visibility.
+    resetMobileSubmenuInlineStyles(root);
+
     const isOpen = item.classList.toggle("is-open");
     link.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
@@ -52,6 +68,11 @@ function initMobileServiceDropdown(root: ParentNode) {
         other.querySelector("a")?.setAttribute("aria-expanded", "false");
       }
     });
+
+    // Drop sticky focus so caret doesn't stay flipped after close on mobile.
+    if (!isOpen) {
+      link.blur();
+    }
   };
 
   const onDocumentClick = (event: MouseEvent) => {
@@ -99,8 +120,13 @@ function setMobileNavOpen(
 ) {
   navicon.classList.toggle("open", open);
   overlay.classList.toggle("open", open);
-  overlay.classList.toggle("close", !open && overlay.classList.contains("close"));
-  if (open) overlay.classList.remove("close");
+  if (open) {
+    overlay.classList.remove("close");
+  } else {
+    overlay.classList.remove("close");
+    resetMobileSubmenuInlineStyles(overlay);
+    closeServiceDropdowns(overlay);
+  }
   document.body.classList.toggle("menu-open", open);
 
   const nav = overlay.querySelector<HTMLElement>("#navSite");
@@ -112,10 +138,15 @@ function initNavicon(root: ParentNode) {
   const overlay = root.querySelector<HTMLElement>(".overlayHeaderMenu");
   if (!navicon || !overlay) return undefined;
 
+  // Prefer our toggle only — legacy app.js also binds and double-toggles.
+  unbindLegacyNaviconHandler();
+
   const onNaviconClick = (event: Event) => {
     event.preventDefault();
+    event.stopPropagation();
     event.stopImmediatePropagation();
-    setMobileNavOpen(navicon, overlay, !overlay.classList.contains("open"));
+    const nextOpen = !overlay.classList.contains("open");
+    setMobileNavOpen(navicon, overlay, nextOpen);
   };
 
   navicon.addEventListener("click", onNaviconClick, true);
@@ -125,12 +156,22 @@ function initNavicon(root: ParentNode) {
   };
 }
 
-/** Legacy app.js also binds #navicon; both handlers toggle and cancel each other. */
+/** Legacy app.js also binds #navicon and forces mobile submenus open. */
 export function unbindLegacyNaviconHandler() {
   const jq = (
-    window as Window & { jQuery?: (selector: string) => { off: (event: string) => void } }
+    window as Window & {
+      jQuery?: (
+        selector: string,
+      ) => {
+        off: (events: string) => unknown;
+      };
+    }
   ).jQuery;
-  jq?.("#navicon").off("click");
+  if (!jq) return;
+  jq("#navicon").off("click");
+  // Stop legacy hover / mobile "show all submenus" behavior from fighting our toggle.
+  jq("#navSite #header-menu li").off("mouseenter mouseleave mouseover mouseout");
+  jq("#header-menu .sub-menu a").off("click");
 }
 
 type HeaderScrollOptions = {
@@ -191,10 +232,24 @@ export function initHeaderScroll(
 }
 
 export function initHeaderNav(host: ParentNode) {
+  resetMobileSubmenuInlineStyles(host);
+  unbindLegacyNaviconHandler();
   const cleanupDropdown = initMobileServiceDropdown(host);
   const cleanupNavicon = initNavicon(host);
 
+  // If legacy app.js re-binds after us (async script load), unbind again shortly.
+  const rebindGuard = window.setTimeout(() => {
+    unbindLegacyNaviconHandler();
+    resetMobileSubmenuInlineStyles(host);
+  }, 0);
+  const rebindGuardLate = window.setTimeout(() => {
+    unbindLegacyNaviconHandler();
+    resetMobileSubmenuInlineStyles(host);
+  }, 500);
+
   return () => {
+    window.clearTimeout(rebindGuard);
+    window.clearTimeout(rebindGuardLate);
     cleanupDropdown?.();
     cleanupNavicon?.();
   };

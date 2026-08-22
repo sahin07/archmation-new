@@ -12,6 +12,26 @@ type SectionRevealOptions = {
   delay?: number;
 };
 
+const MOBILE_MQ = "(max-width: 1023px)";
+
+/**
+ * On mobile, sections are often taller than the viewport.
+ * A high `amount` (e.g. 0.35) can never be reached → content stays opacity 0.
+ */
+function useMobileViewport() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_MQ);
+    const sync = () => setIsMobile(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  return isMobile;
+}
+
 export function useSectionReveal<T extends Element>(
   ref: RefObject<T | null>,
   {
@@ -22,10 +42,16 @@ export function useSectionReveal<T extends Element>(
   }: SectionRevealOptions = {},
 ) {
   const motionReady = usePageMotionReady();
+  const isMobile = useMobileViewport();
+
+  const resolvedAmount = isMobile ? Math.min(amount, 0.08) : amount;
+  const resolvedMargin = isMobile ? "0px 0px -5% 0px" : margin;
+  const resolvedDelay = isMobile ? Math.min(delay, 120) : delay;
+
   const inView = useInView(ref, {
     once,
-    amount,
-    margin: margin as `${number}px ${number}px ${number}px ${number}px`,
+    amount: resolvedAmount,
+    margin: resolvedMargin as `${number}px ${number}px ${number}px ${number}px`,
   });
 
   const prefersReducedMotion = useMemo(() => {
@@ -38,7 +64,10 @@ export function useSectionReveal<T extends Element>(
   const shouldReveal = motionReady && (inView || prefersReducedMotion);
 
   useEffect(() => {
-    if (delay <= 0) return;
+    if (resolvedDelay <= 0) {
+      setDelayedActive(shouldReveal);
+      return;
+    }
 
     if (!shouldReveal) {
       if (!once) setDelayedActive(false);
@@ -50,11 +79,11 @@ export function useSectionReveal<T extends Element>(
       return;
     }
 
-    const timer = window.setTimeout(() => setDelayedActive(true), delay);
+    const timer = window.setTimeout(() => setDelayedActive(true), resolvedDelay);
     return () => window.clearTimeout(timer);
-  }, [shouldReveal, delay, prefersReducedMotion, once]);
+  }, [shouldReveal, resolvedDelay, prefersReducedMotion, once]);
 
-  if (delay <= 0) {
+  if (resolvedDelay <= 0) {
     return shouldReveal;
   }
 

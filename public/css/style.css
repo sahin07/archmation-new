@@ -3963,10 +3963,13 @@ hr {
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+	position: relative;
+	z-index: 2;
 }
 
 .page-template-accueil #accueilFaq.archmation-faq .archmation-faq__item {
 	position: relative;
+	z-index: 2;
 }
 
 .page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger {
@@ -3980,12 +3983,14 @@ hr {
 	display: flex;
 	gap: 16px;
 	padding: 20px 24px;
+	position: relative;
 	text-align: left;
 	transition:
 		background-color 0.3s ease,
 		border-color 0.3s ease,
 		box-shadow 0.3s ease;
 	width: 100%;
+	z-index: 2;
 }
 
 .page-template-accueil #accueilFaq.archmation-faq .archmation-faq__trigger.is-hovered {
@@ -4881,19 +4886,26 @@ hr {
 	vertical-align: middle;
 }
 
-#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:hover > a,
-#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:focus-within > a,
+/* Open-state caret/color — .is-open only on touch; hover/focus on desktop below */
 #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children.is-open > a {
 	color: #005e7f;
 }
 
-#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:hover > a span::after,
-#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:focus-within > a span::after,
 #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children.is-open > a span::after {
 	transform: translateY(1px) rotate(180deg);
 }
 
 @media screen and (min-width: 1160px) {
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:hover > a,
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:focus-within > a {
+		color: #005e7f;
+	}
+
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:hover > a span::after,
+	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children:focus-within > a span::after {
+		transform: translateY(1px) rotate(180deg);
+	}
+
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu {
 		background: #000 !important;
 		border: none;
@@ -4951,15 +4963,18 @@ hr {
 
 @media screen and (max-width: 1159px) {
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu {
-		background: #fff;
+		background: #fff !important;
 		border-radius: 0;
-		display: none;
+		display: none !important;
 		margin-left: 0;
+		max-height: none !important;
 		padding: 0.5rem 0 0.5rem 12px;
+		visibility: hidden !important;
 	}
 
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children.is-open > ul.sub-menu {
-		display: block;
+		display: block !important;
+		visibility: visible !important;
 	}
 
 	#headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu li a {

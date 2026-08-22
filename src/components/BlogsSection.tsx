@@ -226,9 +226,9 @@ export default function BlogsSection({
 }: BlogsSectionProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const active = useSectionReveal(rootRef, {
-    amount: 0.2,
-    margin: "0px 0px -18% 0px",
-    delay: 500,
+    amount: 0.1,
+    margin: "0px 0px -8% 0px",
+    delay: 120,
   });
 
   const displayPosts = posts ?? CASE_STUDY_POSTS;
@@ -285,7 +285,7 @@ export default function BlogsSection({
         ) : null}
 
         <div className="archmation-blogs__grid">
-          {isLoading
+          {isLoading && !displayPosts.length
             ? Array.from({ length: LOADING_PLACEHOLDER_COUNT }, (_, index) => (
                 <LoadingCard key={`loading-${index}`} />
               ))

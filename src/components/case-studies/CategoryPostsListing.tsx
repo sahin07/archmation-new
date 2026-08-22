@@ -30,12 +30,16 @@ export default function CategoryPostsListing({
       const posts = await fetchPosts();
       return posts.map(mapWordPressPostToCard);
     },
+    staleTime: 60_000,
+    // Avoid hanging on skeleton forever if the network is slow.
+    retry: 1,
   });
 
   return (
     <BlogsSection
       posts={data}
-      isLoading={isLoading}
+      // Keep fallback cards visible while fetching — don't blank the section.
+      isLoading={isLoading && !data}
       isError={isError}
       showViewAllCta={showViewAllCta}
       section={section}

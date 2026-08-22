@@ -51,12 +51,15 @@
 	display: flex !important;
 	flex-direction: column !important;
 	gap: 12px !important;
+	position: relative !important;
 	width: 100% !important;
+	z-index: 2 !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-faq__item {
 	position: relative !important;
 	width: 100% !important;
+	z-index: 2 !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-faq__trigger {
@@ -68,6 +71,8 @@
 	color: inherit !important;
 	cursor: pointer !important;
 	display: flex !important;
+	position: relative !important;
+	z-index: 2 !important;
 	font-family: inherit !important;
 	gap: 16px !important;
 	padding: 20px 24px !important;

@@ -42,7 +42,8 @@ export function usePageMotionReady(): boolean {
       }
     }
 
-    const fallback = window.setTimeout(() => setReady(true), 4000);
+    // Don't leave sections stuck invisible if the legacy loader never flips.
+    const fallback = window.setTimeout(() => setReady(true), 1500);
 
     return () => {
       observer.disconnect();
