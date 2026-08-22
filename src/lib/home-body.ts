@@ -20,6 +20,8 @@ export const STATS_MARKER = "<!-- @react:stats -->";
 export const STATS_END = "<!-- @react:statsEnd -->";
 export const VIDEOS_MARKER = "<!-- @react:videos -->";
 export const VIDEOS_END = "<!-- @react:videosEnd -->";
+export const DREAM_TEAM_MARKER = "<!-- @react:dreamTeam -->";
+export const DREAM_TEAM_END = "<!-- @react:dreamTeamEnd -->";
 export const BLOGS_MARKER = "<!-- @react:blogs -->";
 export const BLOGS_END = "<!-- @react:blogsEnd -->";
 export const FAQ_MARKER = "<!-- @react:faq -->";
@@ -47,6 +49,7 @@ const STATS_SHELL =
   '<section id="accueilStats" class="sectionPaddingBottom archmation-stats"><div id="react-stats-root"></div></section>';
 const VIDEOS_SHELL =
   '<section id="accueilVideoGallery" class="sectionPaddingBottom archmation-videos"><div id="react-videos-root"></div></section>';
+const DREAM_TEAM_MOUNT = '<div id="react-dream-team-root"></div>';
 const BLOGS_SHELL =
   '<section id="accueilBlogs" class="sectionPaddingBottom archmation-blogs"><div id="react-blogs-root"></div></section>';
 const FAQ_SHELL =
@@ -181,6 +184,23 @@ export function ensureVideosMarkers(html: string): string {
   }
 
   const markers = `\n    ${VIDEOS_MARKER}\n    ${VIDEOS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert dream team markers before blogs when sync-html drops them. */
+export function ensureDreamTeamMarkers(html: string): string {
+  if (hasMarkerPair(html, DREAM_TEAM_MARKER, DREAM_TEAM_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(BLOGS_MARKER);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${DREAM_TEAM_MARKER} and ${DREAM_TEAM_END}, or ${BLOGS_MARKER}. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${DREAM_TEAM_MARKER}\n    ${DREAM_TEAM_END}\n\n\n    `;
   return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
 }
 
@@ -324,6 +344,13 @@ export function buildHomeBodyHtml(bodyHtml: string): string {
     VIDEOS_MARKER,
     VIDEOS_END,
     () => VIDEOS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureDreamTeamMarkers(html),
+    DREAM_TEAM_MARKER,
+    DREAM_TEAM_END,
+    () => DREAM_TEAM_MOUNT,
   );
 
   html = replaceBetweenMarkers(

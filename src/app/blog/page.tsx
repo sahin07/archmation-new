@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BlogArchivePageSection from "@/components/case-studies/BlogArchivePageSection";
+import { defaultOpenGraphImages } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
   title: "Blog | Archmation Studios",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Marketing insights and digital strategy articles from Archmation Studios.",
     url: "https://archmation.com/blog",
+    images: defaultOpenGraphImages,
   },
 };
 

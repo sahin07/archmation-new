@@ -10,6 +10,7 @@ import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
 import ValueSection from "@/components/ValueSection";
 import HomeBlogsSection from "@/components/case-studies/HomeBlogsSection";
+import DreamTeamSection from "@/components/about/DreamTeamSection";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
@@ -33,6 +34,7 @@ type ReactMounts = {
   clients: HTMLElement | null;
   stats: HTMLElement | null;
   videos: HTMLElement | null;
+  dreamTeam: HTMLElement | null;
   blogs: HTMLElement | null;
   faq: HTMLElement | null;
   clientsSay: HTMLElement | null;
@@ -66,6 +68,7 @@ function readReactMounts(host: HTMLElement): ReactMounts {
     clients: host.querySelector<HTMLElement>("#react-clients-root"),
     stats: host.querySelector<HTMLElement>("#react-stats-root"),
     videos: host.querySelector<HTMLElement>("#react-videos-root"),
+    dreamTeam: host.querySelector<HTMLElement>("#react-dream-team-root"),
     blogs: host.querySelector<HTMLElement>("#react-blogs-root"),
     faq: host.querySelector<HTMLElement>("#react-faq-root"),
     clientsSay: host.querySelector<HTMLElement>("#react-clients-say-root"),
@@ -86,6 +89,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     clients: null,
     stats: null,
     videos: null,
+    dreamTeam: null,
     blogs: null,
     faq: null,
     clientsSay: null,
@@ -114,6 +118,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         clients: null,
         stats: null,
         videos: null,
+        dreamTeam: null,
         blogs: null,
         faq: null,
         clientsSay: null,
@@ -228,6 +233,15 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
               content={HOME_VIDEO_GALLERY_CONTENT}
             />,
             mounts.videos,
+          )
+        : null}
+      {mounts.dreamTeam
+        ? createPortal(
+            <DreamTeamSection
+              key={`dream-team-${sectionKey}`}
+              sectionId="accueilDreamTeam"
+            />,
+            mounts.dreamTeam,
           )
         : null}
       {mounts.blogs

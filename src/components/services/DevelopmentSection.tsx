@@ -13,6 +13,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
+import { SITE_BROCHURE_FILENAME, SITE_BROCHURE_HREF } from "@/lib/site-brochure";
 import { getDevelopmentSectionContent } from "@/content/service-sections";
 import type { ServiceSlug } from "@/content/services";
 
@@ -265,8 +266,9 @@ export default function DevelopmentSection({
                 })}
               </motion.div>
 
-              <motion.button
-                type="button"
+              <motion.a
+                href={SITE_BROCHURE_HREF}
+                download={SITE_BROCHURE_FILENAME}
                 className="archmation-development__cta"
                 initial={{ opacity: 0, y: 20 }}
                 animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -275,7 +277,7 @@ export default function DevelopmentSection({
                 whileTap={{ scale: 0.97 }}
               >
                 <span>{ctaLabel}</span>
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         </div>

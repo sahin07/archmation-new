@@ -1,4 +1,5 @@
 import type { MasterMarketingContent } from "./types";
+import { SITE_BROCHURE_HREF } from "@/lib/site-brochure";
 
 export const MASTER_MARKETING_CONTENT: MasterMarketingContent = {
   badge: "WELCOME TO THE LEAD CIRCUIT",
@@ -15,7 +16,7 @@ export const MASTER_MARKETING_CONTENT: MasterMarketingContent = {
   },
   secondaryCta: {
     label: "DOWNLOAD BROCHURE",
-    href: "#",
+    href: SITE_BROCHURE_HREF,
   },
   card: {
     preface: "YOU'RE",

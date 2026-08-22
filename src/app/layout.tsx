@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import FloatingSocialButtons from "@/components/FloatingSocialButtons";
+import {
+  defaultOpenGraphImages,
+  defaultTwitterImages,
+} from "@/lib/site-metadata";
 import "./globals.css";
 import "@/components/home-brand-gradient.css";
 import "@/components/header-mobile-nav.css";
@@ -19,16 +23,12 @@ export const metadata: Metadata = {
       "Lead generation, performance marketing, video marketing, SEO, branding and web solutions for B2B and B2C businesses.",
     url: "https://archmation.com/",
     siteName: "Archmation Studios",
-    images: [
-      {
-        url: "/images/oroya_page_accueil.png",
-        width: 1908,
-        height: 910,
-        type: "image/png",
-      },
-    ],
+    images: defaultOpenGraphImages,
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    images: defaultTwitterImages,
+  },
   robots: {
     index: true,
     follow: true,

@@ -1,4 +1,5 @@
 import type { LeadCircuitContent } from "./types";
+import { SITE_BROCHURE_HREF } from "@/lib/site-brochure";
 
 export const LEAD_CIRCUIT_CONTENT: LeadCircuitContent = {
   eyebrow: "INDUSTRY BASED LEARNING - NO FLUFF, NO EXTRAS",
@@ -48,6 +49,6 @@ export const LEAD_CIRCUIT_CONTENT: LeadCircuitContent = {
   },
   cta: {
     label: "DOWNLOAD BROCHURE",
-    href: "#",
+    href: SITE_BROCHURE_HREF,
   },
 };

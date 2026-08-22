@@ -1,4 +1,5 @@
 import type { PrimaryIndustriesContent } from "./types";
+import { SITE_BROCHURE_HREF } from "@/lib/site-brochure";
 
 export const PRIMARY_INDUSTRIES_SHARED_CONTENT: PrimaryIndustriesContent = {
   title: "Our Primary Industries",
@@ -22,7 +23,7 @@ export const PRIMARY_INDUSTRIES_SHARED_CONTENT: PrimaryIndustriesContent = {
   ],
   cta: {
     label: "Download Brochure",
-    href: "https://archmation.com/contact/",
-    openInNewTab: true,
+    href: SITE_BROCHURE_HREF,
+    openInNewTab: false,
   },
 };

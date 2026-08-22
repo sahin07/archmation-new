@@ -31,6 +31,8 @@ const STATS_MARKER = "<!-- @react:stats -->";
 const STATS_END = "<!-- @react:statsEnd -->";
 const VIDEOS_MARKER = "<!-- @react:videos -->";
 const VIDEOS_END = "<!-- @react:videosEnd -->";
+const DREAM_TEAM_MARKER = "<!-- @react:dreamTeam -->";
+const DREAM_TEAM_END = "<!-- @react:dreamTeamEnd -->";
 const BLOGS_MARKER = "<!-- @react:blogs -->";
 const BLOGS_END = "<!-- @react:blogsEnd -->";
 const FAQ_MARKER = "<!-- @react:faq -->";
@@ -71,6 +73,10 @@ function hasStatsMarkers(html) {
 
 function hasVideosMarkers(html) {
   return hasMarkerPair(html, VIDEOS_MARKER, VIDEOS_END);
+}
+
+function hasDreamTeamMarkers(html) {
+  return hasMarkerPair(html, DREAM_TEAM_MARKER, DREAM_TEAM_END);
 }
 
 function hasBlogsMarkers(html) {
@@ -168,6 +174,19 @@ if (!hasVideosMarkers(bodyHtml)) {
   } else {
     console.warn(
       "Missing videos React markers; add <!-- @react:videos --> to index.html.",
+    );
+  }
+}
+
+if (!hasDreamTeamMarkers(bodyHtml)) {
+  const anchorIdx = bodyHtml.indexOf(BLOGS_MARKER);
+  if (anchorIdx !== -1) {
+    const markers = `\n    ${DREAM_TEAM_MARKER}\n    ${DREAM_TEAM_END}\n\n\n    `;
+    bodyHtml = bodyHtml.slice(0, anchorIdx) + markers + bodyHtml.slice(anchorIdx);
+    console.warn("Inserted missing dream team React markers before blogs section.");
+  } else {
+    console.warn(
+      "Missing dream team React markers; add <!-- @react:dreamTeam --> before blogs in index.html.",
     );
   }
 }

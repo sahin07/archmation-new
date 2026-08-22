@@ -21,7 +21,13 @@ const GRADIENT_CLASS: Record<DreamTeamGradientKey, string> = {
   "cyan-blue": "archmation-dream-team__gradient--cyan-blue",
 };
 
-export default function DreamTeamSection() {
+type DreamTeamSectionProps = {
+  sectionId?: string;
+};
+
+export default function DreamTeamSection({
+  sectionId = "aboutDreamTeam",
+}: DreamTeamSectionProps) {
   const content = ABOUT_DREAM_TEAM_CONTENT;
   const rootRef = useRef<HTMLElement>(null);
   const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
@@ -36,7 +42,7 @@ export default function DreamTeamSection() {
   return (
     <section
       ref={rootRef}
-      id="aboutDreamTeam"
+      id={sectionId}
       className={`archmation-dream-team${active ? " is-inview" : ""}`}
       aria-labelledby={titleId}
     >

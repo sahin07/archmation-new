@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CaseStudiesArchivePageSection from "@/components/case-studies/CaseStudiesArchivePageSection";
+import { defaultOpenGraphImages } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
   title: "Get the Latest Buzz | Archmation Studios",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Insights, articles, and case studies from the marketing world.",
     url: "https://archmation.com/case-studies",
+    images: defaultOpenGraphImages,
   },
 };
 

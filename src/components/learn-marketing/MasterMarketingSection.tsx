@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { MASTER_MARKETING_CONTENT } from "@/content/learn-marketing";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
+import { SITE_BROCHURE_FILENAME } from "@/lib/site-brochure";
 import "@/components/industries/heroes/industry-hero.css";
 import "@/components/learn-marketing/learn-section-inner.css";
 import "@/components/learn-marketing/master-marketing.css";
@@ -81,6 +82,7 @@ export default function MasterMarketingSection() {
               </motion.a>
               <motion.a
                 href={content.secondaryCta.href}
+                download={SITE_BROCHURE_FILENAME}
                 className="archmation-master-marketing__cta archmation-master-marketing__cta--secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

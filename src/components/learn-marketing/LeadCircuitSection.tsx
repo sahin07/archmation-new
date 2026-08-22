@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { LEAD_CIRCUIT_CONTENT } from "@/content/learn-marketing";
 import type { LeadCircuitModuleIcon } from "@/content/learn-marketing/types";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
+import { SITE_BROCHURE_FILENAME } from "@/lib/site-brochure";
 import "@/components/industries/heroes/industry-hero.css";
 import "@/components/learn-marketing/learn-section-inner.css";
 import "@/components/learn-marketing/lead-circuit.css";
@@ -173,6 +174,7 @@ export default function LeadCircuitSection() {
             <div className="archmation-lead-circuit__cta-wrap">
               <motion.a
                 href={content.cta.href}
+                download={SITE_BROCHURE_FILENAME}
                 className="archmation-industry-hero__cta archmation-lead-circuit__cta"
                 whileHover={{ scale: 1.05, x: 3 }}
                 whileTap={{ scale: 0.95 }}

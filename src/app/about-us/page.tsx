@@ -5,6 +5,7 @@ import AboutImpactStats from "@/components/about/AboutImpactStats";
 import AboutPrimaryIndustries from "@/components/about/AboutPrimaryIndustries";
 import AboutValue from "@/components/about/AboutValue";
 import AboutWhoAreWe from "@/components/about/AboutWhoAreWe";
+import { defaultOpenGraphImages } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
   title: "About Us | Archmation Studios",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Meet the Archmation Studios dream team — digital marketing specialists in Bangalore driving growth for brands worldwide.",
     url: "https://archmation.com/about-us",
+    images: defaultOpenGraphImages,
   },
 };
 

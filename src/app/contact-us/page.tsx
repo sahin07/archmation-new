@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactClientLogos from "@/components/contact/ContactClientLogos";
 import ContactReachOut from "@/components/contact/ContactReachOut";
+import { defaultOpenGraphImages } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
   title: "Contact Us | Archmation Studios",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     description:
       "Get in touch with Archmation Studios. See the businesses we've helped and reach out for digital marketing, web development, SEO, and branding services.",
     url: "https://archmation.com/contact-us",
+    images: defaultOpenGraphImages,
   },
 };
 

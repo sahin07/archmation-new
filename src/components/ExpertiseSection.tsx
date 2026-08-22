@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
+import { FLOATING_SOCIAL_LINKS } from "@/content/social-links";
+import { SITE_BROCHURE_FILENAME, SITE_BROCHURE_HREF } from "@/lib/site-brochure";
 
 const arrowStroke = {
   fill: "none",
@@ -166,8 +168,10 @@ export default function ExpertiseSection() {
               transition={{ duration: 0.65, delay: 0.6, ease: easeOut }}
             >
               <a
-                href="#footerContact"
+                href={FLOATING_SOCIAL_LINKS.whatsapp.href}
                 className="archmation-expertise__btn archmation-expertise__btn--primary"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Talk to us
                 <svg
@@ -186,10 +190,9 @@ export default function ExpertiseSection() {
                 </svg>
               </a>
               <a
-                href="https://archmation.com/contact/"
+                href={SITE_BROCHURE_HREF}
+                download={SITE_BROCHURE_FILENAME}
                 className="archmation-expertise__btn archmation-expertise__btn--ghost"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <svg
                   className="archmation-expertise__btn-icon"

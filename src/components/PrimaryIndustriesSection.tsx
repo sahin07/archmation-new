@@ -25,6 +25,7 @@ import type {
   PrimaryIndustryIconKey,
 } from "@/content/primary-industries/types";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
+import { SITE_BROCHURE_FILENAME } from "@/lib/site-brochure";
 
 const INDUSTRY_ICONS: Record<PrimaryIndustryIconKey, LucideIcon> = {
   "real-estate": Building2,
@@ -199,6 +200,7 @@ export default function PrimaryIndustriesSection({
 
             <motion.a
               href={content.cta.href}
+              download={SITE_BROCHURE_FILENAME}
               className="archmation-industries__cta"
               target={content.cta.openInNewTab ? "_blank" : undefined}
               rel={content.cta.openInNewTab ? "noopener noreferrer" : undefined}

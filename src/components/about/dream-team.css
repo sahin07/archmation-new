@@ -1,6 +1,6 @@
 /* About — Dream Team section */
 
-.page-template-accueil.page-service .archmation-dream-team {
+.page-template-accueil .archmation-dream-team {
 	box-sizing: border-box !important;
 	color: #fff !important;
 	display: block !important;
@@ -12,10 +12,10 @@
 	width: 100% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__inner {
+.page-template-accueil .archmation-dream-team__inner {
 	box-sizing: border-box !important;
 	margin: 0 auto !important;
-	max-width: 1280px !important;
+	max-width: 1440px !important;
 	padding: 0 16px !important;
 	position: relative !important;
 	width: 100% !important;
@@ -23,20 +23,20 @@
 }
 
 @media screen and (min-width: 640px) {
-	.page-template-accueil.page-service .archmation-dream-team__inner {
+	.page-template-accueil .archmation-dream-team__inner {
 		padding-left: 24px !important;
 		padding-right: 24px !important;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.page-template-accueil.page-service .archmation-dream-team__inner {
+	.page-template-accueil .archmation-dream-team__inner {
 		padding-left: 32px !important;
 		padding-right: 32px !important;
 	}
 }
 
-.page-template-accueil.page-service .archmation-dream-team__header {
+.page-template-accueil .archmation-dream-team__header {
 	display: flex !important;
 	flex-direction: column !important;
 	gap: 24px !important;
@@ -45,7 +45,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.page-template-accueil.page-service .archmation-dream-team__header {
+	.page-template-accueil .archmation-dream-team__header {
 		align-items: flex-start !important;
 		flex-direction: row !important;
 		justify-content: space-between !important;
@@ -53,7 +53,7 @@
 	}
 }
 
-.page-template-accueil.page-service .archmation-dream-team__intro {
+.page-template-accueil .archmation-dream-team__intro {
 	display: flex !important;
 	flex-direction: column !important;
 	gap: 16px !important;
@@ -61,17 +61,17 @@
 	width: 100% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__intro .archmation-industry-hero__label,
-.page-template-accueil.page-service .archmation-dream-team__intro .archmation-industry-hero__title {
+.page-template-accueil .archmation-dream-team__intro .archmation-industry-hero__label,
+.page-template-accueil .archmation-dream-team__intro .archmation-industry-hero__title {
 	margin: 0 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__quote {
+.page-template-accueil .archmation-dream-team__quote {
 	margin: 0 !important;
 	max-width: 320px !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__grid {
+.page-template-accueil .archmation-dream-team__grid {
 	display: grid !important;
 	gap: 24px !important;
 	grid-template-columns: minmax(0, 1fr) !important;
@@ -82,18 +82,24 @@
 }
 
 @media screen and (min-width: 640px) {
-	.page-template-accueil.page-service .archmation-dream-team__grid {
+	.page-template-accueil .archmation-dream-team__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 	}
 }
 
-@media screen and (min-width: 1024px) {
-	.page-template-accueil.page-service .archmation-dream-team__grid {
-		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+@media screen and (min-width: 768px) {
+	.page-template-accueil .archmation-dream-team__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 	}
 }
 
-.page-template-accueil.page-service .archmation-dream-team__item {
+@media screen and (min-width: 1024px) {
+	.page-template-accueil .archmation-dream-team__grid {
+		grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil .archmation-dream-team__item {
 	display: block !important;
 	list-style: none !important;
 	margin: 0 !important;
@@ -101,7 +107,7 @@
 	padding: 0 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card {
+.page-template-accueil .archmation-dream-team__card {
 	aspect-ratio: 1 / 1 !important;
 	background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(2, 6, 23, 0.6)) !important;
 	border: 1px solid rgba(148, 163, 184, 0.2) !important;
@@ -117,13 +123,13 @@
 	width: 100% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover {
+.page-template-accueil .archmation-dream-team__card:hover {
 	border-color: rgba(244, 114, 182, 0.35) !important;
 	box-shadow: 0 16px 40px rgba(168, 85, 247, 0.12) !important;
 	transform: translateY(-4px) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-tint {
+.page-template-accueil .archmation-dream-team__card-tint {
 	inset: 0 !important;
 	opacity: 0.08 !important;
 	pointer-events: none !important;
@@ -132,18 +138,18 @@
 	z-index: 2 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover .archmation-dream-team__card-tint {
+.page-template-accueil .archmation-dream-team__card:hover .archmation-dream-team__card-tint {
 	opacity: 0.18 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__media {
+.page-template-accueil .archmation-dream-team__media {
 	inset: 0 !important;
 	overflow: hidden !important;
 	position: absolute !important;
 	z-index: 0 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__photo {
+.page-template-accueil .archmation-dream-team__photo {
 	display: block !important;
 	height: 100% !important;
 	object-fit: cover !important;
@@ -152,11 +158,11 @@
 	width: 100% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover .archmation-dream-team__photo {
+.page-template-accueil .archmation-dream-team__card:hover .archmation-dream-team__photo {
 	transform: scale(1.06) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__photo-overlay {
+.page-template-accueil .archmation-dream-team__photo-overlay {
 	background: linear-gradient(
 		to top,
 		rgba(0, 0, 0, 0.88) 0%,
@@ -169,7 +175,7 @@
 	z-index: 1 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__photo-fallback {
+.page-template-accueil .archmation-dream-team__photo-fallback {
 	align-items: center !important;
 	display: flex !important;
 	height: 100% !important;
@@ -177,7 +183,7 @@
 	width: 100% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-hover-glow {
+.page-template-accueil .archmation-dream-team__card-hover-glow {
 	inset: 0 !important;
 	opacity: 0 !important;
 	pointer-events: none !important;
@@ -186,16 +192,16 @@
 	z-index: 3 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover .archmation-dream-team__card-hover-glow {
+.page-template-accueil .archmation-dream-team__card:hover .archmation-dream-team__card-hover-glow {
 	opacity: 1 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-glow {
+.page-template-accueil .archmation-dream-team__card-glow {
 	filter: blur(24px) !important;
 	position: absolute !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-glow--tl {
+.page-template-accueil .archmation-dream-team__card-glow--tl {
 	background: linear-gradient(135deg, rgba(236, 72, 153, 0.35), transparent) !important;
 	height: 50% !important;
 	left: 0 !important;
@@ -203,7 +209,7 @@
 	width: 50% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-glow--br {
+.page-template-accueil .archmation-dream-team__card-glow--br {
 	background: linear-gradient(315deg, rgba(6, 182, 212, 0.35), transparent) !important;
 	bottom: 0 !important;
 	height: 50% !important;
@@ -211,7 +217,7 @@
 	width: 50% !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-footer {
+.page-template-accueil .archmation-dream-team__card-footer {
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.45), transparent) !important;
 	bottom: 0 !important;
 	box-sizing: border-box !important;
@@ -222,7 +228,7 @@
 	z-index: 4 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__name {
+.page-template-accueil .archmation-dream-team__name {
 	color: #f9a8d4 !important;
 	font-family: avenir-lt-pro, sans-serif !important;
 	font-size: 18px !important;
@@ -232,11 +238,11 @@
 	transition: color 0.3s ease !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover .archmation-dream-team__name {
+.page-template-accueil .archmation-dream-team__card:hover .archmation-dream-team__name {
 	color: #fbcfe8 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__role {
+.page-template-accueil .archmation-dream-team__role {
 	color: #fff !important;
 	font-family: avenir-lt-pro, sans-serif !important;
 	font-size: 11px !important;
@@ -247,7 +253,7 @@
 	text-transform: uppercase !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line {
+.page-template-accueil .archmation-dream-team__card-line {
 	bottom: 0 !important;
 	height: 4px !important;
 	left: 0 !important;
@@ -257,7 +263,7 @@
 	z-index: 5 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__avatar-initials {
+.page-template-accueil .archmation-dream-team__avatar-initials {
 	color: #fff !important;
 	font-family: avenir-lt-pro, sans-serif !important;
 	font-size: 36px !important;
@@ -265,93 +271,240 @@
 	line-height: 1 !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card:hover .archmation-dream-team__card-line {
+.page-template-accueil .archmation-dream-team__card:hover .archmation-dream-team__card-line {
 	width: 100% !important;
 }
 
 /* Member gradient themes — tints & avatars */
-.page-template-accueil.page-service .archmation-dream-team__gradient--pink-rose {
+.page-template-accueil .archmation-dream-team__gradient--pink-rose {
 	background: linear-gradient(135deg, #ec4899, #e11d48) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--purple-indigo {
+.page-template-accueil .archmation-dream-team__gradient--purple-indigo {
 	background: linear-gradient(135deg, #a855f7, #4f46e5) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--blue-cyan {
+.page-template-accueil .archmation-dream-team__gradient--blue-cyan {
 	background: linear-gradient(135deg, #3b82f6, #0891b2) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--violet-purple {
+.page-template-accueil .archmation-dream-team__gradient--violet-purple {
 	background: linear-gradient(135deg, #8b5cf6, #9333ea) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--orange-red {
+.page-template-accueil .archmation-dream-team__gradient--orange-red {
 	background: linear-gradient(135deg, #f97316, #dc2626) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--green-emerald {
+.page-template-accueil .archmation-dream-team__gradient--green-emerald {
 	background: linear-gradient(135deg, #22c55e, #059669) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--pink-rose-soft {
+.page-template-accueil .archmation-dream-team__gradient--pink-rose-soft {
 	background: linear-gradient(135deg, #f472b6, #f43f5e) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__gradient--cyan-blue {
+.page-template-accueil .archmation-dream-team__gradient--cyan-blue {
 	background: linear-gradient(135deg, #06b6d4, #2563eb) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--pink-rose {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--pink-rose {
 	background: linear-gradient(90deg, #ec4899, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--purple-indigo {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--purple-indigo {
 	background: linear-gradient(90deg, #a855f7, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--blue-cyan {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--blue-cyan {
 	background: linear-gradient(90deg, #3b82f6, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--violet-purple {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--violet-purple {
 	background: linear-gradient(90deg, #8b5cf6, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--orange-red {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--orange-red {
 	background: linear-gradient(90deg, #f97316, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--green-emerald {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--green-emerald {
 	background: linear-gradient(90deg, #22c55e, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--pink-rose-soft {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--pink-rose-soft {
 	background: linear-gradient(90deg, #f472b6, transparent) !important;
 }
 
-.page-template-accueil.page-service .archmation-dream-team__card-line.archmation-dream-team__gradient--cyan-blue {
+.page-template-accueil .archmation-dream-team__card-line.archmation-dream-team__gradient--cyan-blue {
 	background: linear-gradient(90deg, #06b6d4, transparent) !important;
 }
 
 @media screen and (max-width: 767px) {
-	.page-template-accueil.page-service .archmation-dream-team {
+	.page-template-accueil .archmation-dream-team {
 		padding: clamp(48px, 10vw, 64px) 0 !important;
 	}
 
-	.page-template-accueil.page-service .archmation-dream-team__header {
+	.page-template-accueil .archmation-dream-team__header {
 		margin-bottom: 40px !important;
 	}
 
-	.page-template-accueil.page-service .archmation-dream-team__avatar-initials {
+	.page-template-accueil .archmation-dream-team__avatar-initials {
 		font-size: 28px !important;
 	}
 }
 
+/* Hero background + typography (home uses page-oroya, not page-service) */
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg {
+	inset: 0 !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg-base,
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg-gradient,
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg-grid {
+	inset: 0 !important;
+	position: absolute !important;
+}
+
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg-spotlight {
+	border-radius: 9999px !important;
+	filter: blur(64px) !important;
+	position: absolute !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil .archmation-dream-team .archmation-industry-hero__bg-shimmer {
+	inset: 0 !important;
+	overflow: hidden !important;
+	pointer-events: none !important;
+	position: absolute !important;
+}
+
+.page-template-accueil.page-oroya .archmation-dream-team .archmation-industry-hero__label {
+	color: var(--archmation-section-eyebrow-color) !important;
+	display: block !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: var(--archmation-section-eyebrow-font-size) !important;
+	font-weight: var(--archmation-section-eyebrow-font-weight) !important;
+	letter-spacing: var(--archmation-section-eyebrow-letter-spacing) !important;
+	margin: 0 !important;
+	text-transform: uppercase !important;
+}
+
+.page-template-accueil.page-oroya .archmation-dream-team h2.archmation-industry-hero__title {
+	color: var(--archmation-section-title-color) !important;
+	font-family: Saira, "Saira Fallback" !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 !important;
+	max-width: none !important;
+	text-wrap: balance;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-oroya .archmation-dream-team .archmation-industry-hero__title-accent {
+	color: var(--archmation-section-title-color) !important;
+	display: inline !important;
+	font-family: inherit !important;
+	font-size: inherit !important;
+	font-style: normal !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+.page-template-accueil.page-oroya .archmation-dream-team .archmation-industry-hero__desc {
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	font-weight: 400 !important;
+	line-height: 1.7 !important;
+}
+
+/* Homepage Dream Team — decorative hero background layers */
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-base {
+	background: var(--archmation-brand-blue-dark) !important;
+}
+
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-grid {
+	background-image:
+		linear-gradient(0deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px) !important;
+	background-size: 80px 80px !important;
+	opacity: 1 !important;
+	z-index: 0 !important;
+}
+
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--tr {
+	animation: archmation-industry-hero-glow 2s ease-in-out infinite !important;
+	background: rgba(168, 85, 247, 0.3) !important;
+	height: 320px !important;
+	right: 25% !important;
+	top: -128px !important;
+	width: 320px !important;
+}
+
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--bl {
+	animation: archmation-industry-hero-glow 2s ease-in-out infinite !important;
+	background: rgba(59, 130, 246, 0.2) !important;
+	bottom: -128px !important;
+	height: 384px !important;
+	left: 25% !important;
+	width: 384px !important;
+}
+
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--mid {
+	background: rgba(99, 102, 241, 0.15) !important;
+	height: 320px !important;
+	right: -160px !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	width: 320px !important;
+}
+
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-shimmer::after {
+	animation: archmation-industry-hero-shimmer 2s infinite !important;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.05),
+		transparent
+	) !important;
+	content: "" !important;
+	inset: 0 !important;
+	position: absolute !important;
+}
+
+@media screen and (max-width: 767px) {
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--tr,
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--bl,
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--mid {
+		height: 10rem !important;
+		width: 10rem !important;
+	}
+
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--tr {
+		right: -2rem !important;
+		top: -3rem !important;
+	}
+
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--bl {
+		bottom: -3rem !important;
+		left: -2rem !important;
+	}
+
+	.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team .archmation-industry-hero__bg-spotlight--mid {
+		right: -3rem !important;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
-	.page-template-accueil.page-service .archmation-dream-team__card,
-	.page-template-accueil.page-service .archmation-dream-team__photo,
-	.page-template-accueil.page-service .archmation-dream-team__card-line {
+	.page-template-accueil .archmation-dream-team__card,
+	.page-template-accueil .archmation-dream-team__photo,
+	.page-template-accueil .archmation-dream-team__card-line {
 		transition: none !important;
 	}
 }

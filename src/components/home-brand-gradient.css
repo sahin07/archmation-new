@@ -134,6 +134,25 @@
 	background: var(--archmation-brand-blue-deep);
 }
 
+.page-template-accueil.page-oroya #accueilDreamTeam.archmation-dream-team {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya
+	#accueilDreamTeam.archmation-dream-team
+	.archmation-industry-hero__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya
+	#accueilDreamTeam.archmation-dream-team
+	.archmation-industry-hero__bg-gradient {
+	background:
+		radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+		radial-gradient(circle at 20% 80%, rgba(0, 94, 127, 0.14) 0%, transparent 50%),
+		var(--archmation-section-bg-mesh-135) !important;
+}
+
 .page-template-accueil.page-oroya #accueilBlogs.archmation-blogs {
 	background: var(--archmation-section-bg) !important;
 }

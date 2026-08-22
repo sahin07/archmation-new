@@ -10,6 +10,10 @@ import {
   fetchAllPostSlugs,
 } from "@/lib/wordpress";
 import { decodeWordPressHtml } from "@/lib/wordpress/utils";
+import {
+  defaultOpenGraphImages,
+  defaultTwitterImages,
+} from "@/lib/site-metadata";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -68,7 +72,7 @@ export async function generateMetadata({
       url: `https://archmation.com${canonical}`,
       images: yoast?.og_image?.[0]?.url
         ? [{ url: yoast.og_image[0].url }]
-        : undefined,
+        : defaultOpenGraphImages,
     },
     twitter: {
       title: yoast?.twitter_title ?? yoast?.og_title ?? fallbackTitle,
@@ -76,6 +80,9 @@ export async function generateMetadata({
         yoast?.twitter_description ??
         yoast?.og_description ??
         yoast?.description,
+      images: yoast?.og_image?.[0]?.url
+        ? [yoast.og_image[0].url]
+        : defaultTwitterImages,
     },
     robots:
       yoast?.robots?.index === "noindex"

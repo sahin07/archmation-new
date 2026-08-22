@@ -4,6 +4,7 @@ import LearnMarketingClientLogos from "@/components/learn-marketing/LearnMarketi
 import LearnMarketingReachOut from "@/components/learn-marketing/LearnMarketingReachOut";
 import LeadCircuitSection from "@/components/learn-marketing/LeadCircuitSection";
 import MasterMarketingSection from "@/components/learn-marketing/MasterMarketingSection";
+import { defaultOpenGraphImages } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
   title: "Learn with Us | Archmation Studios",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     description:
       "Master marketing that actually works. The Lead Circuit — industry-based learning with no fluff. Foundations, funnels, paid media, SEO, content, and AI.",
     url: "https://archmation.com/learn-marketing",
+    images: defaultOpenGraphImages,
   },
 };
 
