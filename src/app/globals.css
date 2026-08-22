@@ -60,20 +60,20 @@
   animation: slide-grid 40s linear infinite;
 }
 
-/* Service / inner pages — compact header + extra shrink on scroll (home unchanged) */
+/* Service / inner pages — compact header (home unchanged) */
 .page-service {
-  --site-header-offset: 96px;
-  --site-header-offset-scrolled: 72px;
+  --site-header-offset: 90px;
+  --site-header-offset-scrolled: 90px;
 }
 
 .page-service #fullSite {
-  background: #000;
+  background: linear-gradient(180deg, #005e7f 0%, #003f6a 100%);
   max-width: 100%;
   width: 100%;
 }
 
 .page-service .site-chrome__main {
-  background: #000;
+  background: linear-gradient(180deg, #005e7f 0%, #003f6a 100%);
   max-width: 100%;
   overflow-x: clip;
   padding-top: var(--site-header-offset);
@@ -83,33 +83,20 @@
 
 @media screen and (min-width: 800px) {
   .page-service {
-    --site-header-offset: 118px;
-    --site-header-offset-scrolled: 88px;
+    --site-header-offset: 110px;
+    --site-header-offset-scrolled: 110px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1650px) {
   .page-service {
-    --site-header-offset: 145px;
-    --site-header-offset-scrolled: 92px;
+    --site-header-offset: 120px;
+    --site-header-offset-scrolled: 120px;
   }
 }
 
 .page-service.is-header-scrolled {
   --site-header-offset: var(--site-header-offset-scrolled);
-}
-
-/* Override legacy app.css #headerSite.small heights on inner pages only */
-.page-service #headerSite {
-  height: var(--site-header-offset) !important;
-  transition:
-    height 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.page-service.is-header-scrolled #headerSite {
-  height: var(--site-header-offset-scrolled) !important;
 }
 
 #headerSite #logoSite img {
@@ -150,6 +137,11 @@
     top: 96px !important;
     width: 100% !important;
     z-index: 20 !important;
+  }
+
+  .page-service #headerSite .overlay.overlayHeaderMenu.overlay-scale {
+    height: calc(100dvh - var(--site-header-offset)) !important;
+    top: var(--site-header-offset) !important;
   }
 
   #headerSite .overlay.overlayHeaderMenu.overlay-scale.open {
@@ -203,6 +195,21 @@
   #headerSite.small {
     height: 120px !important;
   }
+}
+
+/* Inner pages: main padding must match compact header height */
+.page-service #headerSite,
+.page-service #headerSite.small {
+  height: var(--site-header-offset) !important;
+  transition:
+    height 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.page-service.is-header-scrolled #headerSite,
+.page-service.is-header-scrolled #headerSite.small {
+  height: var(--site-header-offset-scrolled) !important;
 }
 
 #headerSite #logoSite {
@@ -299,4 +306,36 @@
   opacity: 1;
   transform: scale(1);
   visibility: visible;
+}
+
+/* Site loader — Archmation GIF */
+#loading-center-absolute .archmation-site-loader__gif {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-height: min(42vh, 280px);
+  max-width: min(70vw, 280px);
+  object-fit: contain;
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+  #loading-center-absolute .archmation-site-loader__gif {
+    max-height: min(40vh, 360px);
+    max-width: min(50vw, 360px);
+  }
+}
+
+/* Site loader — percentage + progress bar gradient */
+#percentage-text {
+  background: linear-gradient(90deg, #003f6a 0%, #005e7f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#progress-bar {
+  background: linear-gradient(90deg, #003f6a 0%, #005e7f 100%);
+  background-color: transparent;
 }

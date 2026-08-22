@@ -10,7 +10,7 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions {
-	background: #000 !important;
+	background: var(--archmation-section-bg) !important;
 	box-sizing: border-box !important;
 	color: #fff !important;
 	display: block !important;
@@ -30,7 +30,7 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__bg-gradient {
-	background: linear-gradient(135deg, #020617 0%, #000 50%, #0f172a 100%) !important;
+	background: var(--archmation-section-bg-mesh-135) !important;
 	inset: 0 !important;
 	position: absolute !important;
 }
@@ -260,19 +260,19 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__card--1 .archmation-industry-solutions__card-inner {
-	background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+	background: linear-gradient(135deg, #004a70, #003f6a) !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__card--2 .archmation-industry-solutions__card-inner {
-	background: linear-gradient(135deg, #1e293b, #334155, #0f172a) !important;
+	background: linear-gradient(135deg, #005e7f, #004a70, #003f6a) !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__card--3 .archmation-industry-solutions__card-inner {
-	background: linear-gradient(135deg, #0f172a, #000) !important;
+	background: linear-gradient(135deg, #003f6a, #002d4d) !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__card--4 .archmation-industry-solutions__card-inner {
-	background: linear-gradient(135deg, #1e293b, #000) !important;
+	background: linear-gradient(135deg, #004a70, #003f6a) !important;
 }
 
 .page-template-accueil.page-service .archmation-industry-solutions__card:hover .archmation-industry-solutions__card-inner {

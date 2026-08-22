@@ -163,7 +163,6 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
 };`,
       );
       await appendScript("/js/index.js");
-      await appendScript("/js/lottie_svg.min.js");
       await appendScript("/js/isotope.pkgd.min.js");
       await appendScript("/js/fancybox.umd.js");
       await appendScript("/js/imagesloaded.min.js");

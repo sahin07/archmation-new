@@ -1,0 +1,297 @@
+/* Archmation brand blue gradient (#005e7f → #003f6a) — home + service pages */
+.page-template-accueil.page-oroya {
+	--archmation-brand-blue-dark: #003f6a;
+	--archmation-brand-blue-light: #005e7f;
+	--archmation-brand-blue-mid: #004a70;
+	--archmation-brand-blue-deep: #002d4d;
+	--archmation-section-bg: linear-gradient(180deg, #005e7f 0%, #003f6a 100%);
+	--archmation-section-bg-mesh-135: linear-gradient(
+		135deg,
+		#003f6a 0%,
+		#005e7f 45%,
+		#002d4d 100%
+	);
+	--archmation-section-bg-mesh-br: linear-gradient(
+		to bottom right,
+		#003f6a,
+		#004a70,
+		#003f6a
+	);
+	--archmation-section-bg-mesh-vertical: linear-gradient(
+		to bottom,
+		#005e7f 0%,
+		#003f6a 50%,
+		#004a70 100%
+	);
+}
+
+/* --------------------------------------------------------------------------
+   Homepage dark sections
+   -------------------------------------------------------------------------- */
+.page-template-accueil.page-oroya #accueilFondNoir {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilFondNoir.sectionPaddingBottom,
+.page-template-accueil.page-oroya #accueilIndustries.archmation-industries.sectionPaddingBottom {
+	padding-bottom: 0 !important;
+}
+
+.page-template-accueil.page-oroya #accueilFondNoir .archmation-services__bg-base {
+	background: var(--archmation-brand-blue-mid);
+}
+
+.page-template-accueil.page-oroya #accueilFondNoir .archmation-services__bg-gradient {
+	background: var(--archmation-section-bg-mesh-135);
+}
+
+.page-template-accueil.page-oroya #accueilQSN.archmation-about {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilIndustries.archmation-industries,
+.page-template-accueil.page-oroya
+	#accueilIndustries.archmation-industries
+	.archmation-industries__root {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilProcess.archmation-process {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilProcess.archmation-process .archmation-process__bg-base {
+	background: var(--archmation-brand-blue-mid);
+}
+
+.page-template-accueil.page-oroya
+	#accueilProcess.archmation-process
+	.archmation-process__bg-gradient {
+	background: var(--archmation-section-bg-mesh-135);
+}
+
+.page-template-accueil.page-oroya #accueilValue.archmation-value {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilValue.archmation-value .archmation-value__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya
+	#accueilValue.archmation-value
+	.archmation-value__bg-vertical {
+	background: linear-gradient(180deg, #005e7f 0%, #003f6a 40%, #004a70 100%);
+}
+
+.page-template-accueil.page-oroya #accueilClients.archmation-clients {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilClients.archmation-clients .archmation-clients__bg-base {
+	background: var(--archmation-brand-blue-deep);
+}
+
+.page-template-accueil.page-oroya
+	#accueilClients.archmation-clients
+	.archmation-clients__bg-mesh {
+	background: linear-gradient(135deg, #004a70 0%, #003f6a 50%, #005e7f 100%);
+}
+
+.page-template-accueil.page-oroya #accueilStats.archmation-stats {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilStats.archmation-stats .archmation-stats__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya
+	#accueilStats.archmation-stats
+	.archmation-stats__bg-gradient {
+	background: var(--archmation-section-bg-mesh-br);
+}
+
+.page-template-accueil.page-oroya #accueilVideoGallery.archmation-videos {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya
+	#accueilVideoGallery.archmation-videos
+	.archmation-videos__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya
+	#accueilVideoGallery.archmation-videos
+	.archmation-videos__bg-mesh {
+	background: var(--archmation-section-bg-mesh-vertical);
+}
+
+.page-template-accueil.page-oroya
+	#accueilVideoGallery.archmation-videos
+	.archmation-videos__card {
+	background: var(--archmation-brand-blue-deep);
+}
+
+.page-template-accueil.page-oroya #accueilBlogs.archmation-blogs {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilBlogs.archmation-blogs .archmation-blogs__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya #accueilBlogs.archmation-blogs .archmation-blogs__bg-mesh {
+	background: var(--archmation-section-bg-mesh-br);
+}
+
+.page-template-accueil.page-oroya #accueilFaq.archmation-faq {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #accueilFaq.archmation-faq .archmation-faq__bg-base {
+	background: var(--archmation-brand-blue-dark);
+}
+
+.page-template-accueil.page-oroya #accueilFaq.archmation-faq .archmation-faq__bg-mesh {
+	background: linear-gradient(to bottom right, #003f6a, #002d4d, #004a70);
+}
+
+/* --------------------------------------------------------------------------
+   Service pages — page shell + shared dark sections
+   -------------------------------------------------------------------------- */
+.page-template-accueil.page-oroya.page-service #fullSite,
+.page-template-accueil.page-oroya.page-service .site-chrome__main {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .service-fond-noir {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-video-marketing-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-web-tech-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-performance-marketing-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-seo-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-branding-design-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-industry-hero__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-edtech-hero__bg-base {
+	background: var(--archmation-brand-blue-dark) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-video-marketing-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-web-tech-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-performance-marketing-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-seo-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-branding-design-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-edtech-hero__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-industry-hero__bg-gradient {
+	background:
+		radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+		radial-gradient(circle at 20% 80%, rgba(0, 94, 127, 0.14) 0%, transparent 50%),
+		var(--archmation-section-bg-mesh-135) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-development,
+.page-template-accueil.page-oroya.page-service .archmation-how-it-works,
+.page-template-accueil.page-oroya.page-service .archmation-timely-delivery,
+.page-template-accueil.page-oroya.page-service .archmation-branding-portfolio,
+.page-template-accueil.page-oroya.page-service .archmation-graphic-design-portfolio,
+.page-template-accueil.page-oroya.page-service .archmation-videos-shell.archmation-videos {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-development__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-branding-portfolio__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-graphic-design-portfolio__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-videos-shell.archmation-videos .archmation-videos__bg-base {
+	background: var(--archmation-brand-blue-dark) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-how-it-works__bg-base,
+.page-template-accueil.page-oroya.page-service .archmation-timely-delivery__bg-base {
+	background: var(--archmation-brand-blue-mid) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-development__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-how-it-works__bg-gradient,
+.page-template-accueil.page-oroya.page-service .archmation-timely-delivery__bg-gradient {
+	background: var(--archmation-section-bg-mesh-135) !important;
+	opacity: 0.85;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-branding-portfolio__bg-gradient {
+	background:
+		radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+		radial-gradient(circle at 20% 80%, rgba(0, 94, 127, 0.1) 0%, transparent 50%),
+		linear-gradient(180deg, #004a70 0%, #003f6a 100%) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-graphic-design-portfolio__bg-gradient {
+	background: linear-gradient(180deg, #005e7f 0%, #003f6a 100%) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-videos-shell.archmation-videos .archmation-videos__bg-mesh {
+	background: var(--archmation-section-bg-mesh-vertical) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-videos-shell.archmation-videos .archmation-videos__card {
+	background: var(--archmation-brand-blue-deep) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .our-services-page .archmation-full-spectrum,
+.page-template-accueil.page-oroya.page-service .our-services-page .archmation-digital-wizards {
+	background: var(--archmation-section-bg-mesh-br) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Inner pages — industry, learn marketing, contact extras
+   -------------------------------------------------------------------------- */
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions__bg-gradient {
+	background: var(--archmation-section-bg-mesh-135) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-expertise {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-expertise__bg-gradient {
+	background: var(--archmation-section-bg-mesh-135) !important;
+	display: block !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions__card-icon-wrap--purple {
+	background: linear-gradient(135deg, #004a70, #003f6a) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions__card-icon-wrap--blue {
+	background: linear-gradient(135deg, #005e7f, #004a70) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions__card-icon-wrap--green {
+	background: linear-gradient(135deg, #004a70, #002d4d) !important;
+}
+
+.page-template-accueil.page-oroya.page-service .archmation-industry-solutions__card-icon-wrap--orange {
+	background: linear-gradient(135deg, #005e7f, #003f6a) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Footer (home + service)
+   -------------------------------------------------------------------------- */
+.page-template-accueil.page-oroya #archmationFooter.archmation-footer {
+	background: var(--archmation-section-bg) !important;
+}
+
+.page-template-accueil.page-oroya #archmationFooter.archmation-footer .archmation-footer__bg-base {
+	background: var(--archmation-brand-blue-dark) !important;
+}
+
+.page-template-accueil.page-oroya #archmationFooter.archmation-footer .archmation-footer__bg-mesh {
+	background: linear-gradient(to top, #003f6a, #004568, #002d4d) !important;
+}

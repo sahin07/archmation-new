@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import FloatingSocialButtons from "@/components/FloatingSocialButtons";
 import "./globals.css";
+import "@/components/home-brand-gradient.css";
 import "@/components/header-mobile-nav.css";
 
 export const metadata: Metadata = {

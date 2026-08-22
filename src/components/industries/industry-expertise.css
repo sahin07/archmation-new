@@ -43,7 +43,7 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-expertise {
-	background: linear-gradient(180deg, #581c87 0%, #6b21a8 50%, #581c87 100%) !important;
+	background: var(--archmation-section-bg) !important;
 	box-sizing: border-box !important;
 	display: block !important;
 	isolation: isolate;
@@ -452,8 +452,8 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-expertise__stat {
-	background: linear-gradient(135deg, #7e22ce, #581c87) !important;
-	border: 1px solid rgba(168, 85, 247, 0.5) !important;
+	background: linear-gradient(135deg, #005e7f, #003f6a) !important;
+	border: 1px solid rgba(0, 94, 127, 0.5) !important;
 	border-radius: 8px !important;
 	margin: 0 !important;
 	overflow: hidden !important;
@@ -507,8 +507,8 @@
 }
 
 .page-template-accueil.page-service .archmation-industry-expertise__cta-card {
-	background: linear-gradient(135deg, #7e22ce, #581c87) !important;
-	border: 1px solid rgba(168, 85, 247, 0.5) !important;
+	background: linear-gradient(135deg, #005e7f, #003f6a) !important;
+	border: 1px solid rgba(0, 94, 127, 0.5) !important;
 	border-radius: 12px !important;
 	margin: 0 !important;
 	overflow: hidden !important;

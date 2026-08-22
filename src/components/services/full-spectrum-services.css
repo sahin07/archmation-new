@@ -21,7 +21,7 @@
 }
 
 .page-template-accueil.page-service .our-services-page .archmation-full-spectrum {
-	background: linear-gradient(to bottom right, #000 0%, #020617 50%, #000 100%) !important;
+	background: var(--archmation-section-bg-mesh-br) !important;
 	box-sizing: border-box !important;
 	color: #fff !important;
 	isolation: isolate !important;

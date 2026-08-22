@@ -121,7 +121,7 @@
   #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu li a:hover,
   #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu li.current-menu-item > a,
   #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-has-children > ul.sub-menu li.current_page_item > a {
-    color: #c42204 !important;
+    color: #005e7f !important;
   }
 
   #headerSite .overlay.overlayHeaderMenu #navSite #header-menu li.menu-item-cta {
