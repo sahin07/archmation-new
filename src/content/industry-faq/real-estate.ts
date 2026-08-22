@@ -8,7 +8,7 @@ export const REAL_ESTATE_FAQ_CONTENT = {
   lede:
     "Learn how we help developers, brokers, and property brands generate leads, build visibility, and close more deals online.",
   ctaLabel: "Contact Us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   items: [
     {
       id: 1,

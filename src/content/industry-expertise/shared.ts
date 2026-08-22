@@ -12,7 +12,7 @@ const SHARED_CTA = {
   ctaDescription:
     "Our customized marketing strategies have consistently driven growth, increased brand visibility, and generated high-quality leads, ensuring you stay ahead of the competition.",
   ctaLabel: "ENQUIRE NOW",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
 } as const;
 
 export const REAL_ESTATE_EXPERTISE_CONTENT = {
@@ -53,7 +53,7 @@ export const B2B_EXPERTISE_CONTENT = {
   ctaDescription:
     "Whether it's boosting brand awareness or generating leads, our transparent approach ensures you're always informed and confident in the outcomes.",
   ctaLabel: "ENQUIRE NOW",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
 } satisfies IndustryExpertiseContent;
 
 export const MANUFACTURING_EXPERTISE_CONTENT = {
@@ -78,5 +78,5 @@ export const MANUFACTURING_EXPERTISE_CONTENT = {
   ctaDescription:
     "Our data-driven strategies have helped our clients increase their market share and grow their revenue",
   ctaLabel: "REQUEST DEMO",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
 } satisfies IndustryExpertiseContent;

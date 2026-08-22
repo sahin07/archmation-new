@@ -25,7 +25,7 @@ export const PERFORMANCE_MARKETING_HERO_CONTENT = {
   secondaryDescription:
     "From Facebook to Instagram, LinkedIn, and beyond, we'll make sure you generate leads from every corner.",
   ctaLabel: "Let's Go!",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   analyticsIcons: [
     {
       id: 1,

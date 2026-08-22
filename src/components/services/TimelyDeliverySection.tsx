@@ -21,7 +21,7 @@ const defaultContent: Required<TimelyDeliverySectionContent> = {
   description:
     "We adhere to strict timelines to ensure your brand identity is ready for deployment as scheduled",
   ctaLabel: "Contact Us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   imageSrc: "/images/timely-delivery-bg.jpg",
   imageAlt: "Team working on timely delivery",
 };

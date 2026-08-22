@@ -8,7 +8,7 @@ export const MANUFACTURING_FAQ_CONTENT = {
   lede:
     "Find out how we help manufacturers reach industrial buyers, strengthen their digital presence, and grow revenue.",
   ctaLabel: "Contact Us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   items: [
     {
       id: 1,

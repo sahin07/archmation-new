@@ -24,7 +24,7 @@ export const BRANDING_DESIGN_HERO_CONTENT = {
   secondaryDescription:
     "We've successfully crafted brand identities for over 20 clients across diverse industries, including AdTech, EdTech, Web-3, FMCG, and more",
   ctaLabel: "Let's Dive In",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   monitorTagline: "Engaging you with Creative Design",
   designIcons: [
     {

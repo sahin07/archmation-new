@@ -9,7 +9,7 @@ export const B2B_SOLUTIONS_CONTENT = {
     },
   ],
   ctaLabel: "Contact us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   solutions: [
     {
       id: 1,
@@ -55,7 +55,7 @@ export const REAL_ESTATE_SOLUTIONS_CONTENT = {
     },
   ],
   ctaLabel: "CONTACT US",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   solutions: [
     {
       id: 1,

@@ -9,7 +9,7 @@ export const B2B_HERO_CONTENT = {
   description:
     "We help B2B companies grow with tailored marketing and branding strategies that generate qualified leads and drive measurable results",
   ctaLabel: "Contact us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   features: [
     {
       icon: "🎯",

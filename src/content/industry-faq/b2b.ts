@@ -8,7 +8,7 @@ export const B2B_FAQ_CONTENT = {
   lede:
     "Get answers about our B2B marketing services, lead generation approach, and how we help you reach decision-makers.",
   ctaLabel: "Contact Us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   items: [
     {
       id: 1,

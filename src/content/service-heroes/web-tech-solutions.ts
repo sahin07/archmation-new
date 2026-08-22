@@ -20,7 +20,7 @@ export const WEB_TECH_HERO_CONTENT = {
   secondaryDescription:
     "Our expert team offers professional web solutions, including website maintenance and optimization.",
   ctaLabel: "Connect Now",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   stats: [
     { label: "Projects", value: "500+" },
     { label: "Clients", value: "200+" },

@@ -132,7 +132,7 @@ export default function FAQSection() {
               transition={{ delay: 0.5, duration: 0.8, ease: easeOut }}
             >
               <motion.a
-                href="https://archmation.com/contact/"
+                href="/contact-us"
                 className="archmation-faq__contact-btn"
                 whileHover={{ scale: 1.05, x: 3 }}
                 whileTap={{ scale: 0.95 }}

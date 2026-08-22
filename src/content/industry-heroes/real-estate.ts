@@ -9,7 +9,7 @@ export const REAL_ESTATE_HERO_CONTENT = {
   description:
     "We help real estate professionals grow with tailored marketing and branding strategies that attract qualified buyers and drive property sales",
   ctaLabel: "Contact us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   features: [
     {
       icon: "🔑",

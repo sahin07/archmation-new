@@ -9,7 +9,7 @@ export const MANUFACTURING_SOLUTIONS_CONTENT = {
     },
   ],
   ctaLabel: "Contact us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   solutions: [
     {
       id: 1,

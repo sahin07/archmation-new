@@ -24,7 +24,7 @@ export const SEO_HERO_CONTENT = {
   secondaryDescription:
     "Partner with us and unlock your website's potential with strategic SEO tactics.",
   ctaLabel: "Let's Optimize",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   seoIcons: [
     {
       id: 1,

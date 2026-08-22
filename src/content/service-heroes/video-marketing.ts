@@ -7,7 +7,7 @@ export const VIDEO_MARKETING_HERO_CONTENT = {
   secondaryDescription:
     "Our expert team offers video production, video advertising, and video strategy solutions to elevate your brand. Partner with us for impactful video marketing services and achieve outstanding digital results.",
   ctaLabel: "Book a Shoot!",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   video: {
     channelInitial: "A",
     channelTitle: "Living Like a JEE Aspirant ft @TechnoGamerz",

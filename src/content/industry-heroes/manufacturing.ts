@@ -9,7 +9,7 @@ export const MANUFACTURING_HERO_CONTENT = {
   description:
     "We deliver strategic marketing solutions that drive results for the manufacturing industry",
   ctaLabel: "Contact us",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   features: [
     {
       icon: "🏭",

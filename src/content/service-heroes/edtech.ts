@@ -24,7 +24,7 @@ export const EDTECH_HERO_CONTENT = {
   secondaryDescription:
     "Our expert team enhances educational experiences and drives academic success through cutting-edge technology",
   ctaLabel: "Let's Talk",
-  ctaHref: "https://archmation.com/contact/",
+  ctaHref: "/contact-us",
   educationIcons: [
     {
       id: 1,
