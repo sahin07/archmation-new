@@ -3,6 +3,7 @@ import path from "path";
 import { injectGoodReadsNavLink } from "@/content/case-studies";
 import { injectIndustryNavLinks } from "@/content/industries";
 import { injectServiceNavLinks } from "@/content/services";
+import { injectSocialLinks } from "@/content/social-links";
 import { normalizeInternalLinks } from "@/lib/internal-links";
 
 export function buildSiteHeaderHtml(): string {
@@ -22,6 +23,7 @@ export function buildSiteHeaderHtml(): string {
   header = injectServiceNavLinks(header);
   header = injectIndustryNavLinks(header);
   header = injectGoodReadsNavLink(header);
+  header = injectSocialLinks(header);
   header = normalizeInternalLinks(header);
 
   return header.replace(

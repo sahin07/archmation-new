@@ -17,6 +17,30 @@ if (!bodyMatch) {
 // Scripts are wired separately in HomeClient (innerHTML does not execute <script>).
 let bodyHtml = bodyMatch[1].replace(/<script[\s\S]*?<\/script>/gi, "").trim();
 
+const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/archmation.studios",
+  linkedin: "https://www.linkedin.com/company/archmation-studios",
+  instagram: "https://www.instagram.com/archmation.studios",
+};
+
+function injectSocialLinks(html) {
+  return html
+    .replace(
+      /(<a href=")[^"]*(" target="_blank" class="rsIcon facebook-icon">)/g,
+      `$1${SOCIAL_LINKS.facebook}$2`,
+    )
+    .replace(
+      /(<a href=")[^"]*(" target="_blank" class="rsIcon linkedin-icon">)/g,
+      `$1${SOCIAL_LINKS.linkedin}$2`,
+    )
+    .replace(
+      /(<a href=")[^"]*(" target="_blank" class="rsIcon instagram-icon">)/g,
+      `$1${SOCIAL_LINKS.instagram}$2`,
+    );
+}
+
+bodyHtml = injectSocialLinks(bodyHtml);
+
 const ABOUT_MARKER = "<!-- @react:about -->";
 const ABOUT_END = "<!-- @react:aboutEnd -->";
 const INDUSTRIES_MARKER = "<!-- @react:industries -->";

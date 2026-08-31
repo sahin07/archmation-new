@@ -231,11 +231,51 @@ export function initHeaderScroll(
   };
 }
 
+function initHeroScrollDown(root: ParentNode) {
+  const links = root.querySelectorAll<HTMLAnchorElement>("a.scroll-down-circle");
+  const cleanups: (() => void)[] = [];
+
+  const onClick = (event: Event) => {
+    const link = event.currentTarget as HTMLAnchorElement;
+    const href = link.getAttribute("href");
+    if (!href?.startsWith("#")) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    const targetId = href.slice(1);
+    const target =
+      document.getElementById(targetId) ??
+      root.querySelector<HTMLElement>(`#${CSS.escape(targetId)}`);
+    if (!target) return;
+
+    const header = document.querySelector<HTMLElement>("#headerSite");
+    const offset = Number(link.dataset.offset ?? "30");
+    const headerHeight = header?.offsetHeight ?? 0;
+    const top =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      offset;
+
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  };
+
+  links.forEach((link) => {
+    link.addEventListener("click", onClick, true);
+    cleanups.push(() => link.removeEventListener("click", onClick, true));
+  });
+
+  return () => cleanups.forEach((cleanup) => cleanup());
+}
+
 export function initHeaderNav(host: ParentNode) {
   resetMobileSubmenuInlineStyles(host);
   unbindLegacyNaviconHandler();
   const cleanupDropdown = initMobileServiceDropdown(host);
   const cleanupNavicon = initNavicon(host);
+  const cleanupHeroScroll = initHeroScrollDown(host);
 
   // If legacy app.js re-binds after us (async script load), unbind again shortly.
   const rebindGuard = window.setTimeout(() => {
@@ -252,6 +292,7 @@ export function initHeaderNav(host: ParentNode) {
     window.clearTimeout(rebindGuardLate);
     cleanupDropdown?.();
     cleanupNavicon?.();
+    cleanupHeroScroll?.();
   };
 }
 

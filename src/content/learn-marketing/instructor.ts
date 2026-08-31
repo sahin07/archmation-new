@@ -1,4 +1,5 @@
 import type { InstructorContent } from "./types";
+import { SOCIAL_LINKS } from "@/content/social-links";
 
 export const INSTRUCTOR_CONTENT: InstructorContent = {
   title: "About your Instructor",
@@ -22,6 +23,6 @@ export const INSTRUCTOR_CONTENT: InstructorContent = {
   },
   cta: {
     label: "VISIT LINKEDIN",
-    href: "https://www.linkedin.com/company/archmation",
+    href: SOCIAL_LINKS.linkedin.href,
   },
 };

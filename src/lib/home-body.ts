@@ -1,5 +1,6 @@
 import { injectIndustryNavLinks } from "@/content/industries";
 import { injectServiceNavLinks } from "@/content/services";
+import { injectSocialLinks } from "@/content/social-links";
 import { normalizeInternalLinks } from "@/lib/internal-links";
 
 export const EXPERTISE_MARKER = "<!-- @react:expertise -->";
@@ -34,7 +35,7 @@ export const ACCUEIL_FOND_NOIR_START = "<!-- @react:accueilFondNoir -->";
 export const EXPERTISE_SECTION_MARKER = "<!-- @react:ExpertiseSection -->";
 
 const EXPERTISE_MOUNT = '<div id="react-expertise-root"></div>';
-const SERVICES_MOUNT = '<div id="react-services-root"></div>';
+const SERVICES_MOUNT = '<div id="accueilServices"></div>';
 const ABOUT_SHELL =
   '<section id="accueilQSN" class="sectionPaddingBottom archmation-about"><div id="react-about-root"></div></section>';
 const INDUSTRIES_SHELL =
@@ -281,6 +282,7 @@ function replaceBetweenMarkers(
 export function buildHomeBodyHtml(bodyHtml: string): string {
   let html = injectServiceNavLinks(bodyHtml);
   html = injectIndustryNavLinks(html);
+  html = injectSocialLinks(html);
 
   html = replaceBetweenMarkers(
     html,

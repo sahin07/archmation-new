@@ -16,7 +16,7 @@ export const ABOUT_DREAM_TEAM_CONTENT: DreamTeamContent = {
     },
     {
       id: "2",
-      name: "Anand Grandhi",
+      name: "Anand",
       role: "AI AUTOMATION SPECIALIST",
       initials: "AG",
       image: "/images/teams/1-300x300.jpg",
@@ -24,7 +24,7 @@ export const ABOUT_DREAM_TEAM_CONTENT: DreamTeamContent = {
     },
     {
       id: "3",
-      name: "Akivito Achumi",
+      name: "Akivito",
       role: "PERFORMANCE MARKETER",
       initials: "AA",
       image: "/images/teams/Akivito.png",
@@ -32,7 +32,7 @@ export const ABOUT_DREAM_TEAM_CONTENT: DreamTeamContent = {
     },
     {
       id: "4",
-      name: "Soumya Hosmani",
+      name: "Soumya",
       role: "MARKETING COORDINATOR",
       initials: "SH",
       image: "/images/teams/Soumya Hosmani Marketing Coordinator.png",
@@ -40,7 +40,7 @@ export const ABOUT_DREAM_TEAM_CONTENT: DreamTeamContent = {
     },
     {
       id: "5",
-      name: "Anam Afreen",
+      name: "Anam",
       role: "SEO CONSULTANT",
       initials: "AF",
       image: "/images/teams/Anam.jpeg",

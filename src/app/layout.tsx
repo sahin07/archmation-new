@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import FloatingSocialButtons from "@/components/FloatingSocialButtons";
+import { SOCIAL_PROFILE_URLS } from "@/content/social-links";
 import {
   defaultOpenGraphImages,
   defaultTwitterImages,
@@ -40,6 +41,14 @@ export const metadata: Metadata = {
 
 const bodyClass =
   "home wp-singular page-template page-template-templates page-template-accueil page-template-templatesaccueil-php page page-id-2 wp-theme-oroyaV2 page-oroya";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Archmation Studios",
+  url: "https://archmation.com/",
+  sameAs: [...SOCIAL_PROFILE_URLS],
+};
 
 export default function RootLayout({
   children,
@@ -118,6 +127,12 @@ var mt_captcha_service2 = document.createElement('script');mt_captcha_service2.a
         </Script>
         <Script src="/js/mtcaptcha.min.js" strategy="beforeInteractive" />
         <Script src="/js/mtcaptcha2.min.js" strategy="beforeInteractive" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </head>
       <body className={bodyClass} suppressHydrationWarning>
         {children}

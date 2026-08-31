@@ -60,7 +60,7 @@ function appendScript(src?: string, inline?: string): Promise<void> {
 function readReactMounts(host: HTMLElement): ReactMounts {
   return {
     expertise: host.querySelector<HTMLElement>("#react-expertise-root"),
-    services: host.querySelector<HTMLElement>("#react-services-root"),
+    services: host.querySelector<HTMLElement>("#accueilServices"),
     about: host.querySelector<HTMLElement>("#react-about-root"),
     industries: host.querySelector<HTMLElement>("#react-industries-root"),
     process: host.querySelector<HTMLElement>("#react-process-root"),

@@ -1,6 +1,8 @@
 /* Industry FAQ — layout + accordion (background uses hero classes from industry-hero.css / style.css) */
 
 .page-template-accueil.page-service .archmation-industry-faq {
+	--faq-font-question: 22px;
+	--faq-font-paragraph: 18px;
 	box-sizing: border-box !important;
 	color: #fff !important;
 	display: block !important;
@@ -110,9 +112,9 @@
 	color: #fff !important;
 	flex: 1 !important;
 	font-family: avenir-lt-pro, sans-serif !important;
-	font-size: 14px !important;
+	font-size: var(--faq-font-question) !important;
 	font-style: normal !important;
-	font-weight: 700 !important;
+	font-weight: 600 !important;
 	line-height: 1.35 !important;
 	margin: 0 !important;
 	min-width: 0 !important;
@@ -144,15 +146,23 @@
 .page-template-accueil.page-service .archmation-industry-faq__answer-text {
 	color: rgba(255, 255, 255, 0.6) !important;
 	font-family: avenir-lt-pro, sans-serif !important;
-	font-size: 14px !important;
+	font-size: var(--faq-font-paragraph) !important;
 	font-style: normal !important;
 	font-weight: 400 !important;
-	line-height: 1.6 !important;
+	line-height: 1.5 !important;
 	margin: 12px 0 0 !important;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .archmation-industry-faq {
+		--faq-font-paragraph: 20px;
+	}
 }
 
 @media screen and (max-width: 767px) {
 	.page-template-accueil.page-service .archmation-industry-faq {
+		--faq-font-question: 20px;
+		--faq-font-paragraph: 16px;
 		padding: clamp(32px, 8vw, 48px) 0 !important;
 	}
 

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import {
   ArrowUpRight,
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 import { GOOD_READS_HREF } from "@/content/case-studies";
 import { getServiceHref, SERVICE_NAV } from "@/content/services";
+import { SOCIAL_LINKS } from "@/content/social-links";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
 type FooterLink = {
@@ -55,14 +57,19 @@ const footerColumns: FooterColumn[] = [
 const socialLinks: { icon: LucideIcon; label: string; href: string }[] = [
   { icon: Mail, label: "Email", href: "mailto:hello@archmation.com" },
   {
+    icon: Facebook,
+    label: SOCIAL_LINKS.facebook.label,
+    href: SOCIAL_LINKS.facebook.href,
+  },
+  {
     icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/archmation",
+    label: SOCIAL_LINKS.linkedin.label,
+    href: SOCIAL_LINKS.linkedin.href,
   },
   {
     icon: Instagram,
-    label: "Instagram",
-    href: "https://www.instagram.com/archmation",
+    label: SOCIAL_LINKS.instagram.label,
+    href: SOCIAL_LINKS.instagram.href,
   },
 ];
 

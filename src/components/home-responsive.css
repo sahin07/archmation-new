@@ -245,6 +245,10 @@
    Value (#accueilValue)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
+	.page-template-accueil:not(.page-service) #accueilValue.archmation-value {
+		--value-font-body: 16px;
+	}
+
 	.page-template-accueil:not(.page-service) #accueilValue.archmation-value .archmation-value__layout {
 		gap: 20px !important;
 	}
@@ -347,6 +351,12 @@
 	.page-template-accueil:not(.page-service) #accueilFaq.archmation-faq .archmation-faq__root {
 		padding-bottom: clamp(48px, 10vw, 64px) !important;
 		padding-top: clamp(48px, 10vw, 64px) !important;
+	}
+
+	.page-template-accueil:not(.page-service) #accueilFaq.archmation-faq {
+		--faq-font-question: 20px;
+		--faq-font-lede: 16px;
+		--faq-font-paragraph: 16px;
 	}
 }
 
