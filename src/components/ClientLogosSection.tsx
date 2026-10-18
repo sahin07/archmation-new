@@ -29,6 +29,10 @@ export default function ClientLogosSection({ content }: ClientLogosSectionProps)
   const currentClient =
     selectedClient !== null ? clients[selectedClient] : null;
 
+  const indexedClients = clients.map((client, index) => ({ client, index }));
+  const splitAt = Math.ceil(indexedClients.length / 2);
+  const rows = [indexedClients.slice(0, splitAt), indexedClients.slice(splitAt)];
+
   useEffect(() => {
     setPortalReady(true);
   }, []);
@@ -240,32 +244,43 @@ export default function ClientLogosSection({ content }: ClientLogosSectionProps)
           </motion.div>
 
           <motion.div
-            className="archmation-clients__grid"
+            className="archmation-clients__marquee"
             initial={{ opacity: 0, y: 30 }}
             animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2, ease: easeOut }}
           >
-            {clients.map((client, index) => (
-              <motion.button
-                key={client.name}
-                type="button"
-                className="archmation-clients__tile"
-                onClick={() => openClient(index)}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={active ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: 0.05 * index, ease: easeOut }}
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
+            {rows.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className={`archmation-clients__row archmation-clients__row--${
+                  rowIndex === 0 ? "left" : "right"
+                }`}
               >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="archmation-clients__logo"
-                  loading="lazy"
-                />
-                <span className="archmation-clients__shine" aria-hidden="true" />
-                <span className="archmation-clients__tile-label">{client.name}</span>
-              </motion.button>
+                <div className="archmation-clients__track">
+                  {[...row, ...row].map(({ client, index }, i) => {
+                    const isClone = i >= row.length;
+                    return (
+                      <button
+                        key={`${client.name}-${i}`}
+                        type="button"
+                        className="archmation-clients__tile"
+                        onClick={() => openClient(index)}
+                        aria-hidden={isClone || undefined}
+                        tabIndex={isClone ? -1 : undefined}
+                      >
+                        <img
+                          src={client.logo}
+                          alt={isClone ? "" : client.name}
+                          className="archmation-clients__logo"
+                          loading="lazy"
+                        />
+                        <span className="archmation-clients__shine" aria-hidden="true" />
+                        <span className="archmation-clients__tile-label">{client.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             ))}
           </motion.div>
         </div>

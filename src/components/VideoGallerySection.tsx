@@ -6,15 +6,18 @@ import { ArrowRight, ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { createPortal } from "react-dom";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
-type VideoItem = {
+export type VideoItem = {
   id: number;
   title: string;
-  company: string;
-  thumbnail: string;
-  videoUrl: string;
+  company?: string;
+  thumbnail?: string;
+  /** YouTube embed URL, played in an iframe. */
+  videoUrl?: string;
+  /** Local video file, played with a native video element. */
+  videoSrc?: string;
 };
 
-const videos: VideoItem[] = [
+const defaultVideos: VideoItem[] = [
   {
     id: 1,
     title: "Piano Milling Machine",
@@ -58,11 +61,15 @@ const GAP = 16;
 export type VideoGallerySectionContent = {
   titleBefore?: string;
   titleAccent?: string;
+  videos?: VideoItem[];
+  showViewMore?: boolean;
 };
 
 const defaultContent: Required<VideoGallerySectionContent> = {
   titleBefore: "Glimpses of our",
   titleAccent: "Work",
+  videos: defaultVideos,
+  showViewMore: true,
 };
 
 type VideoGallerySectionProps = {
@@ -92,7 +99,10 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
   const rootRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const [selectedVideo, setSelectedVideo] = useState<number | null>(null);
-  const { titleBefore, titleAccent } = { ...defaultContent, ...content };
+  const { titleBefore, titleAccent, videos, showViewMore } = {
+    ...defaultContent,
+    ...content,
+  };
   const [carouselPosition, setCarouselPosition] = useState(0);
   const [slideStep, setSlideStep] = useState(0);
   const [portalReady, setPortalReady] = useState(false);
@@ -199,13 +209,24 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.1 }}
                 >
-                  <iframe
-                    src={`${currentVideo.videoUrl}?autoplay=1`}
-                    title={currentVideo.title}
-                    className="archmation-videos__modal-iframe"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  {currentVideo.videoSrc ? (
+                    <video
+                      src={currentVideo.videoSrc}
+                      title={currentVideo.title}
+                      className="archmation-videos__modal-iframe"
+                      controls
+                      autoPlay
+                      playsInline
+                    />
+                  ) : (
+                    <iframe
+                      src={`${currentVideo.videoUrl}?autoplay=1`}
+                      title={currentVideo.title}
+                      className="archmation-videos__modal-iframe"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )}
                 </motion.div>
 
                 <motion.div
@@ -215,7 +236,9 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
                   transition={{ delay: 0.2 }}
                 >
                   <h3 className="archmation-videos__modal-title">{currentVideo.title}</h3>
-                  <p className="archmation-videos__modal-meta">{currentVideo.company}</p>
+                  {currentVideo.company ? (
+                    <p className="archmation-videos__modal-meta">{currentVideo.company}</p>
+                  ) : null}
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -251,17 +274,15 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
           </motion.div>
 
           <div className="archmation-videos__carousel">
-            <motion.button
+            <button
               type="button"
               className="archmation-videos__nav archmation-videos__nav--prev"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
               onClick={() => scroll("left")}
               disabled={carouselPosition === 0}
               aria-label="Previous videos"
             >
               <ChevronLeft className="archmation-videos__nav-icon" strokeWidth={1.5} />
-            </motion.button>
+            </button>
 
             <div ref={viewportRef} className="archmation-videos__viewport">
               <motion.div
@@ -280,12 +301,23 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
                     transition={{ duration: 0.5, delay: index * 0.1, ease: easeOut }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className="archmation-videos__thumb"
-                      loading="lazy"
-                    />
+                    {video.thumbnail || !video.videoSrc ? (
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="archmation-videos__thumb"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <video
+                        src={`${video.videoSrc}#t=0.5`}
+                        className="archmation-videos__thumb"
+                        muted
+                        playsInline
+                        preload="metadata"
+                        aria-hidden="true"
+                      />
+                    )}
                     <div className="archmation-videos__card-overlay" aria-hidden="true" />
                     <div className="archmation-videos__play-wrap" aria-hidden="true">
                       <div className="archmation-videos__play-btn">
@@ -294,41 +326,43 @@ export default function VideoGallerySection({ content }: VideoGallerySectionProp
                     </div>
                     <div className="archmation-videos__card-meta">
                       <p className="archmation-videos__card-title">{video.title}</p>
-                      <p className="archmation-videos__card-company">{video.company}</p>
+                      {video.company ? (
+                        <p className="archmation-videos__card-company">{video.company}</p>
+                      ) : null}
                     </div>
                   </motion.button>
                 ))}
               </motion.div>
             </div>
 
-            <motion.button
+            <button
               type="button"
               className="archmation-videos__nav archmation-videos__nav--next"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
               onClick={() => scroll("right")}
               disabled={carouselPosition === maxScroll}
               aria-label="Next videos"
             >
               <ChevronRight className="archmation-videos__nav-icon" strokeWidth={1.5} />
-            </motion.button>
+            </button>
           </div>
 
-          <motion.div
-            className="archmation-videos__cta-wrap"
-            initial={{ opacity: 0, y: 20 }}
-            animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: easeOut }}
-          >
-            <a href="https://archmation.com/our-work/" className="archmation-videos__cta">
-              View More
-              <ArrowRight
-                className="archmation-videos__cta-icon"
-                strokeWidth={2}
-                aria-hidden="true"
-              />
-            </a>
-          </motion.div>
+          {showViewMore ? (
+            <motion.div
+              className="archmation-videos__cta-wrap"
+              initial={{ opacity: 0, y: 20 }}
+              animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: easeOut }}
+            >
+              <a href="https://archmation.com/our-work/" className="archmation-videos__cta">
+                View More
+                <ArrowRight
+                  className="archmation-videos__cta-icon"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+              </a>
+            </motion.div>
+          ) : null}
         </div>
       </div>
       {modal}

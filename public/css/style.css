@@ -2226,28 +2226,43 @@ hr {
 	text-align: center;
 }
 
-.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
-	display: grid;
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__marquee {
+	display: flex;
+	flex-direction: column;
 	gap: 16px;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+	mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 	margin-top: 64px;
 }
 
-@media screen and (min-width: 768px) {
-	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__row {
+	overflow: hidden;
+	width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
+/* padding-right equals the gap so translating by -50% lands exactly on the cloned set */
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__track {
+	animation: archmation-clients-marquee 45s linear infinite;
+	display: flex;
+	gap: 16px;
+	padding-right: 16px;
+	width: max-content;
 }
 
-@media screen and (min-width: 1280px) {
-	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__grid {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__row--right .archmation-clients__track {
+	animation-direction: reverse;
+}
+
+.page-template-accueil #accueilClients.archmation-clients .archmation-clients__row:hover .archmation-clients__track {
+	animation-play-state: paused;
+}
+
+@keyframes archmation-clients-marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
 	}
 }
 
@@ -2258,6 +2273,7 @@ hr {
 	border-radius: 12px;
 	cursor: pointer;
 	display: flex;
+	flex: 0 0 200px;
 	font: inherit;
 	height: 96px;
 	justify-content: center;
@@ -2272,6 +2288,7 @@ hr {
 
 @media screen and (min-width: 768px) {
 	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__tile {
+		flex-basis: 240px;
 		height: 112px;
 	}
 }
@@ -2502,6 +2519,14 @@ hr {
 	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__logo,
 	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__shine {
 		transition: none;
+	}
+
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__track {
+		animation: none;
+	}
+
+	.page-template-accueil #accueilClients.archmation-clients .archmation-clients__row {
+		overflow-x: auto;
 	}
 }
 
@@ -3242,6 +3267,7 @@ hr {
 	border: 0;
 	height: 100%;
 	inset: 0;
+	object-fit: contain;
 	position: absolute;
 	width: 100%;
 }
