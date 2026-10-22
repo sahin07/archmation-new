@@ -3,6 +3,7 @@ import ServiceHero from "@/components/services/ServiceHero";
 import ServiceSpecificSections, {
   ServiceBrandingPortfolioSection,
   ServiceVideoMarketingLongFormSection,
+  ServiceWebsitesPortfolioSection,
 } from "@/components/services/ServiceSpecificSections";
 import DevelopmentSection from "@/components/services/DevelopmentSection";
 import HowItWorksSection from "@/components/services/HowItWorksSection";
@@ -32,6 +33,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <div id="serviceFondNoir" className="service-fond-noir">
         <DevelopmentSection serviceSlug={slug} />
         <ServiceVideoMarketingLongFormSection slug={slug} />
+        <ServiceWebsitesPortfolioSection slug={slug} />
         <ServiceBrandingPortfolioSection slug={slug} />
         <HowItWorksSection serviceSlug={slug} />
         <TimelyDeliverySection serviceSlug={slug} />

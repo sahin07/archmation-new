@@ -6,6 +6,7 @@ import {
 import ServiceVideoGallerySection from "@/components/services/ServiceVideoGallerySection";
 import BrandingPortfolioSection from "@/components/services/BrandingPortfolioSection";
 import GraphicDesignPortfolioSection from "@/components/services/GraphicDesignPortfolioSection";
+import WebsitesPortfolioSection from "@/components/services/WebsitesPortfolioSection";
 
 type ServiceSpecificSectionsProps = {
   slug: ServiceSlug;
@@ -36,6 +37,17 @@ export function ServiceVideoMarketingLongFormSection({
   return (
     <ServiceVideoGallerySection content={LONG_FORM_VIDEO_GALLERY_CONTENT} />
   );
+}
+
+/** Websites portfolio after development on web-tech-solutions only. */
+export function ServiceWebsitesPortfolioSection({
+  slug,
+}: ServiceSpecificSectionsProps) {
+  if (slug !== "web-tech-solutions") {
+    return null;
+  }
+
+  return <WebsitesPortfolioSection />;
 }
 
 /** Branding portfolio grids before How It Works on branding-design only. */

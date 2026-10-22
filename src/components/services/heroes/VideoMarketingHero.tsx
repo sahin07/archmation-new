@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
 import { VIDEO_MARKETING_HERO_CONTENT } from "@/content/service-heroes/video-marketing";
@@ -26,6 +26,8 @@ export default function VideoMarketingHero() {
     ctaHref,
     video,
   } = VIDEO_MARKETING_HERO_CONTENT;
+  const [playing, setPlaying] = useState(false);
+  const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`;
 
   return (
     <section
@@ -129,56 +131,87 @@ export default function VideoMarketingHero() {
             <div className="archmation-video-marketing-hero__visual-glow archmation-video-marketing-hero__visual-glow--tr" aria-hidden="true" />
             <div className="archmation-video-marketing-hero__visual-glow archmation-video-marketing-hero__visual-glow--bl" aria-hidden="true" />
 
-            <div className="archmation-video-marketing-hero__player">
-              <div
-                className="archmation-video-marketing-hero__player-bg"
-                aria-hidden="true"
-              />
-              <div
-                className="archmation-video-marketing-hero__player-pattern"
-                aria-hidden="true"
-              />
-              <div
-                className="archmation-video-marketing-hero__player-vignette"
-                aria-hidden="true"
-              />
+            <div
+              className={`archmation-video-marketing-hero__player${
+                playing ? " is-playing" : ""
+              }`}
+              role={playing ? undefined : "button"}
+              tabIndex={playing ? undefined : 0}
+              aria-label={playing ? undefined : `Play video: ${video.overlayTitle}`}
+              onClick={() => setPlaying(true)}
+              onKeyDown={(event) => {
+                if (!playing && (event.key === "Enter" || event.key === " ")) {
+                  event.preventDefault();
+                  setPlaying(true);
+                }
+              }}
+            >
+              {playing ? (
+                <iframe
+                  className="archmation-video-marketing-hero__iframe"
+                  src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`}
+                  title={video.channelTitle}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              ) : (
+                <>
+                  <img
+                    className="archmation-video-marketing-hero__thumb"
+                    src={`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="archmation-video-marketing-hero__player-vignette"
+                    aria-hidden="true"
+                  />
 
-              <div className="archmation-video-marketing-hero__player-header">
-                <div className="archmation-video-marketing-hero__avatar">
-                  {video.channelInitial}
-                </div>
-                <div className="archmation-video-marketing-hero__channel">
-                  <p className="archmation-video-marketing-hero__channel-title">
-                    {video.channelTitle}
-                  </p>
-                  <p className="archmation-video-marketing-hero__channel-subtitle">
-                    {video.channelSubtitle}
-                  </p>
-                </div>
-              </div>
+                  <div className="archmation-video-marketing-hero__player-header">
+                    <div className="archmation-video-marketing-hero__avatar">
+                      {video.channelInitial}
+                    </div>
+                    <div className="archmation-video-marketing-hero__channel">
+                      <p className="archmation-video-marketing-hero__channel-title">
+                        {video.channelTitle}
+                      </p>
+                      <p className="archmation-video-marketing-hero__channel-subtitle">
+                        {video.channelSubtitle}
+                      </p>
+                    </div>
+                  </div>
 
-              <div className="archmation-video-marketing-hero__play-wrap">
-                <div className="archmation-video-marketing-hero__play-btn">
-                  <span aria-hidden="true">▶</span>
-                </div>
-              </div>
+                  <div className="archmation-video-marketing-hero__play-wrap">
+                    <div className="archmation-video-marketing-hero__play-btn">
+                      <span aria-hidden="true">▶</span>
+                    </div>
+                  </div>
 
-              <div className="archmation-video-marketing-hero__player-footer">
-                <div className="archmation-video-marketing-hero__duration">
-                  {video.durationLabel}
-                </div>
-                <div className="archmation-video-marketing-hero__overlay-copy">
-                  <p className="archmation-video-marketing-hero__overlay-title">
-                    {video.overlayTitle}
-                  </p>
-                  <p className="archmation-video-marketing-hero__overlay-subtitle">
-                    {video.overlaySubtitle}
-                  </p>
-                </div>
-                <div className="archmation-video-marketing-hero__youtube-btn">
-                  {video.youtubeLabel}
-                </div>
-              </div>
+                  <div className="archmation-video-marketing-hero__player-footer">
+                    <div className="archmation-video-marketing-hero__duration">
+                      {video.durationLabel}
+                    </div>
+                    <div className="archmation-video-marketing-hero__overlay-copy">
+                      <p className="archmation-video-marketing-hero__overlay-title">
+                        {video.overlayTitle}
+                      </p>
+                      <p className="archmation-video-marketing-hero__overlay-subtitle">
+                        {video.overlaySubtitle}
+                      </p>
+                    </div>
+                    <a
+                      className="archmation-video-marketing-hero__youtube-btn"
+                      href={watchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      {video.youtubeLabel}
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>

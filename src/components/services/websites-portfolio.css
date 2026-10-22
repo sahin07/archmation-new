@@ -1,0 +1,228 @@
+/* Web & Tech Solutions — "Websites we have Created" */
+
+.page-template-accueil.page-service .our-services-page .archmation-websites {
+	background: #fff !important;
+	box-sizing: border-box !important;
+	color: #0f172a !important;
+	padding: clamp(64px, 8vw, 112px) 0 !important;
+	position: relative !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__inner {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 1280px !important;
+	padding: 0 30px !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 800px) {
+	.page-template-accueil.page-service .our-services-page .archmation-websites__inner {
+		padding: 0 4% !important;
+	}
+}
+
+@media screen and (min-width: 1650px) {
+	.page-template-accueil.page-service .our-services-page .archmation-websites__inner {
+		padding: 0 !important;
+	}
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__header {
+	margin: 0 auto clamp(40px, 5vw, 64px) !important;
+	max-width: 720px !important;
+	text-align: center !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__title {
+	color: #0f172a !important;
+	font-family: Saira, "Saira Fallback" !important;
+	font-size: var(--archmation-section-title-font-size) !important;
+	font-style: normal !important;
+	font-weight: var(--archmation-section-title-font-weight, 700) !important;
+	letter-spacing: normal !important;
+	line-height: var(--archmation-section-title-line-height) !important;
+	margin: 0 0 20px !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__subheading {
+	color: #475569 !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: clamp(16px, 1.8vw, 18px) !important;
+	line-height: 1.7 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__grid {
+	display: grid !important;
+	gap: clamp(20px, 2.5vw, 32px) !important;
+	grid-template-columns: minmax(0, 1fr) !important;
+}
+
+@media screen and (min-width: 640px) {
+	.page-template-accueil.page-service .our-services-page .archmation-websites__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-template-accueil.page-service .our-services-page .archmation-websites__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__card {
+	background: #fff !important;
+	border: 1px solid #e2e8f0 !important;
+	border-radius: 16px !important;
+	box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06) !important;
+	color: inherit !important;
+	display: flex !important;
+	flex-direction: column !important;
+	overflow: hidden !important;
+	text-decoration: none !important;
+	transition:
+		border-color 0.35s ease,
+		box-shadow 0.35s ease,
+		translate 0.35s ease !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__card:hover,
+.page-template-accueil.page-service .our-services-page .archmation-websites__card:focus-visible {
+	border-color: #cbd5e1 !important;
+	box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14) !important;
+	translate: 0 -6px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__browser {
+	background: #f1f5f9 !important;
+	border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__browser-bar {
+	align-items: center !important;
+	display: flex !important;
+	gap: 6px !important;
+	padding: 10px 14px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__dot {
+	border-radius: 9999px !important;
+	display: inline-block !important;
+	flex-shrink: 0 !important;
+	height: 10px !important;
+	width: 10px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__dot--red {
+	background: #f87171 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__dot--amber {
+	background: #fbbf24 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__dot--green {
+	background: #34d399 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__address {
+	background: #fff !important;
+	border-radius: 6px !important;
+	color: #64748b !important;
+	flex: 1 !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 12px !important;
+	margin-left: 8px !important;
+	overflow: hidden !important;
+	padding: 4px 10px !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__screen {
+	aspect-ratio: 16 / 10 !important;
+	background: #e2e8f0 !important;
+	overflow: hidden !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__image {
+	display: block !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	object-position: top center !important;
+	transition: transform 0.6s ease !important;
+	width: 100% !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__card:hover .archmation-websites__image {
+	transform: scale(1.05) !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__meta {
+	align-items: center !important;
+	display: flex !important;
+	gap: 16px !important;
+	justify-content: space-between !important;
+	padding: 18px 20px 20px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__meta-text {
+	min-width: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__name {
+	color: #0f172a !important;
+	font-family: Saira, "Saira Fallback" !important;
+	font-size: 20px !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	line-height: 1.25 !important;
+	margin: 0 0 4px !important;
+	text-transform: none !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__category {
+	color: #64748b !important;
+	font-family: avenir-lt-pro, sans-serif !important;
+	font-size: 14px !important;
+	line-height: 1.4 !important;
+	margin: 0 !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__visit {
+	align-items: center !important;
+	border: 1px solid #e2e8f0 !important;
+	border-radius: 9999px !important;
+	color: #0f172a !important;
+	display: inline-flex !important;
+	flex-shrink: 0 !important;
+	height: 40px !important;
+	justify-content: center !important;
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease !important;
+	width: 40px !important;
+}
+
+.page-template-accueil.page-service .our-services-page .archmation-websites__card:hover .archmation-websites__visit {
+	background: #0f172a !important;
+	border-color: #0f172a !important;
+	color: #fff !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-template-accueil.page-service .our-services-page .archmation-websites__card,
+	.page-template-accueil.page-service .our-services-page .archmation-websites__image {
+		transition: none !important;
+	}
+
+	.page-template-accueil.page-service .our-services-page .archmation-websites__card:hover,
+	.page-template-accueil.page-service .our-services-page .archmation-websites__card:hover .archmation-websites__image {
+		transform: none !important;
+		translate: none !important;
+	}
+}

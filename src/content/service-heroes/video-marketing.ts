@@ -9,6 +9,7 @@ export const VIDEO_MARKETING_HERO_CONTENT = {
   ctaLabel: "Book a Shoot!",
   ctaHref: "/contact-us",
   video: {
+    youtubeId: "_XCMS4NyTZ8",
     channelInitial: "A",
     channelTitle: "Living Like a JEE Aspirant ft @TechnoGamerz",
     channelSubtitle: "Unacademy Spotlight",
