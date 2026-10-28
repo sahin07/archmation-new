@@ -14,6 +14,7 @@ import DreamTeamSection from "@/components/about/DreamTeamSection";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import VideoGallerySection from "@/components/VideoGallerySection";
+import WebsitesPortfolioSection from "@/components/services/WebsitesPortfolioSection";
 import { HOME_VIDEO_GALLERY_CONTENT } from "@/content/video-gallery";
 import { initHeaderNav, unbindLegacyNaviconHandler } from "@/hooks/useHeaderNav";
 import { useEffect, useRef, useState } from "react";
@@ -34,6 +35,7 @@ type ReactMounts = {
   clients: HTMLElement | null;
   stats: HTMLElement | null;
   videos: HTMLElement | null;
+  websites: HTMLElement | null;
   dreamTeam: HTMLElement | null;
   blogs: HTMLElement | null;
   faq: HTMLElement | null;
@@ -68,6 +70,7 @@ function readReactMounts(host: HTMLElement): ReactMounts {
     clients: host.querySelector<HTMLElement>("#react-clients-root"),
     stats: host.querySelector<HTMLElement>("#react-stats-root"),
     videos: host.querySelector<HTMLElement>("#react-videos-root"),
+    websites: host.querySelector<HTMLElement>("#react-websites-root"),
     dreamTeam: host.querySelector<HTMLElement>("#react-dream-team-root"),
     blogs: host.querySelector<HTMLElement>("#react-blogs-root"),
     faq: host.querySelector<HTMLElement>("#react-faq-root"),
@@ -89,6 +92,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
     clients: null,
     stats: null,
     videos: null,
+    websites: null,
     dreamTeam: null,
     blogs: null,
     faq: null,
@@ -118,6 +122,7 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
         clients: null,
         stats: null,
         videos: null,
+        websites: null,
         dreamTeam: null,
         blogs: null,
         faq: null,
@@ -233,6 +238,12 @@ export default function HomeClient({ bodyHtml }: HomeClientProps) {
               content={HOME_VIDEO_GALLERY_CONTENT}
             />,
             mounts.videos,
+          )
+        : null}
+      {mounts.websites
+        ? createPortal(
+            <WebsitesPortfolioSection key={`websites-${sectionKey}`} />,
+            mounts.websites,
           )
         : null}
       {mounts.dreamTeam

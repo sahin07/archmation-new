@@ -21,6 +21,8 @@ export const STATS_MARKER = "<!-- @react:stats -->";
 export const STATS_END = "<!-- @react:statsEnd -->";
 export const VIDEOS_MARKER = "<!-- @react:videos -->";
 export const VIDEOS_END = "<!-- @react:videosEnd -->";
+export const WEBSITES_MARKER = "<!-- @react:websites -->";
+export const WEBSITES_END = "<!-- @react:websitesEnd -->";
 export const DREAM_TEAM_MARKER = "<!-- @react:dreamTeam -->";
 export const DREAM_TEAM_END = "<!-- @react:dreamTeamEnd -->";
 export const BLOGS_MARKER = "<!-- @react:blogs -->";
@@ -50,6 +52,7 @@ const STATS_SHELL =
   '<section id="accueilStats" class="sectionPaddingBottom archmation-stats"><div id="react-stats-root"></div></section>';
 const VIDEOS_SHELL =
   '<section id="accueilVideoGallery" class="sectionPaddingBottom archmation-videos"><div id="react-videos-root"></div></section>';
+const WEBSITES_MOUNT = '<div id="react-websites-root"></div>';
 const DREAM_TEAM_MOUNT = '<div id="react-dream-team-root"></div>';
 const BLOGS_SHELL =
   '<section id="accueilBlogs" class="sectionPaddingBottom archmation-blogs"><div id="react-blogs-root"></div></section>';
@@ -185,6 +188,23 @@ export function ensureVideosMarkers(html: string): string {
   }
 
   const markers = `\n    ${VIDEOS_MARKER}\n    ${VIDEOS_END}\n\n\n    `;
+  return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
+}
+
+/** Insert websites markers before dream team when sync-html drops them. */
+export function ensureWebsitesMarkers(html: string): string {
+  if (hasMarkerPair(html, WEBSITES_MARKER, WEBSITES_END)) {
+    return html;
+  }
+
+  const anchorIdx = html.indexOf(DREAM_TEAM_MARKER);
+  if (anchorIdx === -1) {
+    throw new Error(
+      `home-body.html must contain ${WEBSITES_MARKER} and ${WEBSITES_END}, or ${DREAM_TEAM_MARKER}. Run sync-html after updating index.html.`,
+    );
+  }
+
+  const markers = `\n    ${WEBSITES_MARKER}\n    ${WEBSITES_END}\n\n\n    `;
   return html.slice(0, anchorIdx) + markers + html.slice(anchorIdx);
 }
 
@@ -346,6 +366,13 @@ export function buildHomeBodyHtml(bodyHtml: string): string {
     VIDEOS_MARKER,
     VIDEOS_END,
     () => VIDEOS_SHELL,
+  );
+
+  html = replaceBetweenMarkers(
+    ensureWebsitesMarkers(html),
+    WEBSITES_MARKER,
+    WEBSITES_END,
+    () => WEBSITES_MOUNT,
   );
 
   html = replaceBetweenMarkers(
